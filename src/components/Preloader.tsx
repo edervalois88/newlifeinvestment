@@ -19,135 +19,99 @@ export default function Preloader() {
       transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
       className="fixed inset-0 z-[100] bg-base-300 flex items-center justify-center overflow-hidden"
     >
-      <div className="relative flex flex-col items-center">
-        {/* Glow halo behind the logo trace */}
-        <motion.div
-          animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.3, 0.1] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute inset-0 m-auto w-32 h-32 bg-primary/20 rounded-full blur-[40px] z-0"
-        />
+      <div className="flex flex-col items-center px-6">
+        <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-12 scale-75 sm:scale-90 md:scale-100 mb-12">
+          
+          {/* Símbolo a la izquierda (o arriba en mobile) */}
+          <div className="relative w-[100px] md:w-[120px] h-[140px] md:h-[160px]">
+            <svg
+              viewBox="0 0 100 130"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+            >
+              <motion.path
+                d="M35 110 C20 105 15 90 25 75 C35 60 45 50 35 30 C25 10 35 5 40 5 C45 5 48 15 42 30 C35 50 25 65 30 80 C35 95 50 100 35 110 Z"
+                stroke="#f7e7ce"
+                strokeWidth="0.8"
+                fill="#f7e7ce"
+                initial={{ pathLength: 0, fillOpacity: 0 }}
+                animate={{ pathLength: loading ? 1 : 0, fillOpacity: loading ? 1 : 0 }}
+                transition={{ pathLength: { duration: 2 }, fillOpacity: { duration: 1, delay: 1.2 } }}
+              />
+              <motion.path
+                d="M50 95 C45 80 45 60 55 40 C65 20 60 10 55 10 C50 10 48 20 52 40 C56 60 56 80 50 95 Z"
+                stroke="#f7e7ce"
+                strokeWidth="0.8"
+                fill="#f7e7ce"
+                initial={{ pathLength: 0, fillOpacity: 0 }}
+                animate={{ pathLength: loading ? 1 : 0, fillOpacity: loading ? 1 : 0 }}
+                transition={{ pathLength: { duration: 1.8, delay: 0.3 }, fillOpacity: { duration: 1, delay: 1.5 } }}
+              />
+              <motion.path
+                d="M65 80 C60 70 65 55 70 40 C75 25 72 20 68 20 C64 20 62 30 65 45 C68 60 68 70 65 80 Z"
+                stroke="#f7e7ce"
+                strokeWidth="0.8"
+                fill="#f7e7ce"
+                initial={{ pathLength: 0, fillOpacity: 0 }}
+                animate={{ pathLength: loading ? 1 : 0, fillOpacity: loading ? 1 : 0 }}
+                transition={{ pathLength: { duration: 1.5, delay: 0.6 }, fillOpacity: { duration: 1, delay: 1.8 } }}
+              />
+              <motion.path
+                d="M28 120 L33 115 L38 120 L33 125 Z"
+                fill="#f7e7ce"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: loading ? 1 : 0, opacity: loading ? 1 : 0 }}
+                transition={{ duration: 0.5, delay: 2, ease: "backOut" }}
+                style={{ transformOrigin: "33px 120px" }}
+              />
+            </svg>
+          </div>
 
-        {/* Animated Custom SVG Logo Path */}
-        <div className="relative z-10 w-[180px] h-[220px]">
-          <svg
-            viewBox="0 0 200 240"
-            width="100%"
-            height="100%"
-            className="absolute inset-0"
-          >
-            {/* LEFT BIG SWOOPING ARC — the thick leftmost calligraphic stroke */}
-            <motion.path
-              d="
-                M 62 20
-                C 58 10, 50 8, 44 14
-                C 36 22, 32 36, 28 54
-                C 22 78, 14 104, 18 128
-                C 22 148, 34 162, 50 168
-                C 62 172, 76 170, 84 162
-                C 90 156, 90 148, 84 142
-                C 80 136, 72 134, 66 138
-                C 58 144, 56 154, 60 162
-                C 62 168, 64 168, 62 164
-                C 56 154, 56 142, 62 136
-                C 68 130, 76 132, 80 140
-                C 84 148, 82 158, 76 164
-                C 68 172, 54 174, 42 168
-                C 28 160, 18 144, 16 124
-                C 12 98, 20 68, 28 44
-                C 34 24, 44 8, 54 10
-                C 60 12, 66 18, 62 20 Z
-              "
-              fill="#b8962e"
-              initial={{ opacity: 0, pathLength: 0 }}
-              animate={{ opacity: loading ? 1 : 0, pathLength: loading ? 1 : 0 }}
-              transition={{ duration: 1.8, ease: "easeOut" }}
+          {/* Textos a la derecha (o abajo en mobile) */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <motion.h1
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: loading ? 1 : 0, x: 0 }}
+              transition={{ duration: 1, delay: 1.5 }}
+              className="text-white font-playfair text-4xl sm:text-5xl md:text-6xl tracking-tight mb-2 flex items-baseline gap-1"
+            >
+              New Life
+            </motion.h1>
+            
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: loading ? 1 : 0 }}
+              transition={{ duration: 1.5, delay: 1.8 }}
+              className="w-full h-[1px] bg-primary/40 origin-left mb-3"
             />
 
-            {/* CENTER TALL CURVED STROKE */}
-            <motion.path
-              d="
-                M 90 30
-                C 88 20, 82 16, 78 20
-                C 72 26, 72 40, 74 56
-                C 76 72, 80 88, 82 108
-                C 84 126, 84 146, 80 160
-                C 78 170, 76 172, 78 168
-                C 82 160, 84 142, 84 122
-                C 84 100, 82 78, 80 58
-                C 78 38, 76 22, 82 16
-                C 86 12, 92 16, 94 26
-                C 96 36, 94 50, 92 30
-                Z
-              "
-              fill="#b8962e"
-              initial={{ opacity: 0, pathLength: 0 }}
-              animate={{ opacity: loading ? 1 : 0, pathLength: loading ? 1 : 0 }}
-              transition={{ duration: 1.6, delay: 0.3, ease: "easeOut" }}
-            />
-
-            {/* RIGHT SLIMMER CALLIGRAPHIC STROKE */}
-            <motion.path
-              d="
-                M 118 44
-                C 116 34, 110 28, 106 34
-                C 102 40, 104 56, 106 72
-                C 108 88, 110 102, 110 116
-                C 110 128, 108 136, 106 130
-                C 104 122, 104 106, 104 90
-                C 104 72, 104 54, 106 40
-                C 108 28, 114 24, 118 30
-                C 122 36, 122 50, 120 44
-                Z
-              "
-              fill="#b8962e"
-              initial={{ opacity: 0, pathLength: 0 }}
-              animate={{ opacity: loading ? 1 : 0, pathLength: loading ? 1 : 0 }}
-              transition={{ duration: 1.4, delay: 0.6, ease: "easeOut" }}
-            />
-
-            {/* BOTTOM BASE HORIZONTAL CONNECTOR (the horizontal sweep near bottom) */}
-            <motion.path
-              d="
-                M 18 164
-                C 28 172, 46 176, 62 174
-                C 78 172, 90 164, 88 160
-                C 86 156, 78 158, 66 160
-                C 52 162, 34 162, 20 156
-                C 16 154, 14 156, 18 164 Z
-              "
-              fill="#b8962e"
+            <motion.div
               initial={{ opacity: 0 }}
-              animate={{ opacity: loading ? 1 : 0 }}
-              transition={{ duration: 1, delay: 0.9, ease: "easeOut" }}
-            />
-
-            {/* DIAMOND at bottom */}
-            <motion.path
-              d="M 66 192 L 74 182 L 82 192 L 74 202 Z"
-              fill="#b8962e"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: loading ? 1 : 0, scale: loading ? 1 : 0 }}
-              transition={{ duration: 0.5, delay: 1.4, ease: "backOut" }}
-              style={{ transformOrigin: '74px 192px' }}
-            />
-          </svg>
+              animate={{ opacity: loading ? 0.7 : 0 }}
+              transition={{ duration: 1, delay: 2.2 }}
+              className="flex items-center gap-2 md:gap-3 text-primary tracking-[0.2em] md:tracking-[0.4em] uppercase text-[9px] sm:text-[10px] md:text-xs font-medium"
+            >
+              <span>INVESTMENTS</span>
+              <span className="w-1 h-1 bg-primary rounded-full hidden sm:block" />
+              <span>AE</span>
+            </motion.div>
+          </div>
         </div>
 
-        {/* Brand Text Fading In instead of the JPG */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: loading ? 1 : 0, y: 0 }}
-          transition={{ duration: 1, delay: 1.8, ease: "easeOut" }}
-          className="relative z-20 mt-6 text-center"
-        >
-          <span className="font-playfair text-xl md:text-2xl text-primary tracking-widest uppercase drop-shadow-[0_0_10px_rgba(247,231,206,0.3)]">
-            New Life
-          </span>
-          <br />
-          <span className="text-secondary tracking-[0.3em] uppercase text-xs font-light">
-            Investments USA
-          </span>
-        </motion.div>
+        {/* Minimal Progress Bar */}
+        <div className="w-32 md:w-48 h-[1px] bg-white/5 relative overflow-hidden">
+          <motion.div
+            initial={{ x: "-100%" }}
+            animate={{ x: loading ? "100%" : "0%" }}
+            transition={{ 
+              duration: 3, 
+              repeat: loading ? Infinity : 0, 
+              ease: "easeInOut" 
+            }}
+            className="absolute inset-0 bg-primary/40"
+          />
+        </div>
       </div>
     </motion.div>
   );

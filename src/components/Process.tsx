@@ -39,7 +39,7 @@ export default function Process() {
           {/* Central Connector Line */}
           <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent -translate-y-1/2 hidden xl:block" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-8 xl:gap-12 relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8 xl:gap-12 relative">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (

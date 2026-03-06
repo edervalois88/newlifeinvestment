@@ -16,27 +16,28 @@ export default function About() {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="order-2 lg:order-1"
           >
-            <h2 className="text-4xl md:text-5xl font-playfair mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair mb-8">
               <span className="text-neutral">{t('aboutTitle').split(',')[0]}</span>
               <br />
               <span className="text-primary italic">{t('aboutTitle').split(',')[1]}</span>
             </h2>
-            <p className="text-neutral/70 text-lg leading-relaxed mb-10 max-w-xl">
+            <p className="text-neutral/70 text-base md:text-lg leading-relaxed mb-10 max-w-xl">
               {t('aboutDesc')}
             </p>
-            <div className="flex gap-8 border-t border-white/5 pt-10">
+            <div className="grid grid-cols-2 sm:flex gap-4 sm:gap-8 border-t border-white/5 pt-10">
               <div>
-                <span className="block text-3xl font-playfair text-primary italic mb-2">15+</span>
-                <span className="text-xs uppercase tracking-widest text-neutral/50 font-medium">Años de Exp.</span>
+                <span className="block text-2xl md:text-3xl font-playfair text-primary italic mb-2">15+</span>
+                <span className="text-[10px] uppercase tracking-widest text-neutral/50 font-medium whitespace-nowrap">Años de Exp.</span>
               </div>
               <div>
-                <span className="block text-3xl font-playfair text-primary italic mb-2">3</span>
-                <span className="text-xs uppercase tracking-widest text-neutral/50 font-medium">Sedes Globales</span>
+                <span className="block text-2xl md:text-3xl font-playfair text-primary italic mb-2">3</span>
+                <span className="text-[10px] uppercase tracking-widest text-neutral/50 font-medium whitespace-nowrap">Sedes Globales</span>
               </div>
-              <div>
-                <span className="block text-3xl font-playfair text-primary italic mb-2">100%</span>
-                <span className="text-xs uppercase tracking-widest text-neutral/50 font-medium">Integridad</span>
+              <div className="col-span-2 sm:col-span-1">
+                <span className="block text-2xl md:text-3xl font-playfair text-primary italic mb-2">100%</span>
+                <span className="text-[10px] uppercase tracking-widest text-neutral/50 font-medium whitespace-nowrap">Integridad</span>
               </div>
             </div>
           </motion.div>
@@ -46,7 +47,7 @@ export default function About() {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            className="relative order-1 lg:order-2"
           >
             <div className="aspect-[4/5] relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
               <Image

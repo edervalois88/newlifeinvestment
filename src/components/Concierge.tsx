@@ -32,12 +32,13 @@ export default function Concierge() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
+            className="order-2 lg:order-1"
           >
             <span className="text-primary tracking-widest uppercase text-xs font-bold mb-4 block italic">Exclusividad</span>
-            <h2 className="text-5xl md:text-6xl font-playfair mb-8 text-neutral italic">
+            <h2 className="text-4xl md:text-6xl font-playfair mb-8 text-neutral italic">
               {t('conciergeTitle')}
             </h2>
-            <p className="text-neutral/60 text-xl leading-relaxed mb-12 max-w-lg">
+            <p className="text-neutral/60 text-lg md:text-xl leading-relaxed mb-12 max-w-lg">
               {t('conciergeDesc')}
             </p>
 
@@ -66,13 +67,13 @@ export default function Concierge() {
           </motion.div>
 
           {/* Visual Showcase */}
-          <div className="relative">
+          <div className="relative order-1 lg:order-2">
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="aspect-square relative rounded-full overflow-hidden border border-primary/10 group shadow-[0_0_80px_rgba(247,231,206,0.1)]"
+              className="aspect-square relative rounded-full overflow-hidden border border-primary/10 group shadow-[0_0_80px_rgba(247,231,206,0.1)] max-w-md mx-auto"
             >
               <Image 
                 src="/riyadh.png"
