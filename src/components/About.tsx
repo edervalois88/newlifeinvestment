@@ -1,0 +1,78 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { motion } from 'motion/react';
+import Image from 'next/image';
+
+export default function About() {
+  const t = useTranslations('About');
+
+  return (
+    <section id="about" className="py-32 bg-base-300 relative overflow-hidden">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-playfair mb-8">
+              <span className="text-neutral">{t('aboutTitle').split(',')[0]}</span>
+              <br />
+              <span className="text-primary italic">{t('aboutTitle').split(',')[1]}</span>
+            </h2>
+            <p className="text-neutral/70 text-lg leading-relaxed mb-10 max-w-xl">
+              {t('aboutDesc')}
+            </p>
+            <div className="flex gap-8 border-t border-white/5 pt-10">
+              <div>
+                <span className="block text-3xl font-playfair text-primary italic mb-2">15+</span>
+                <span className="text-xs uppercase tracking-widest text-neutral/50 font-medium">Años de Exp.</span>
+              </div>
+              <div>
+                <span className="block text-3xl font-playfair text-primary italic mb-2">3</span>
+                <span className="text-xs uppercase tracking-widest text-neutral/50 font-medium">Sedes Globales</span>
+              </div>
+              <div>
+                <span className="block text-3xl font-playfair text-primary italic mb-2">100%</span>
+                <span className="text-xs uppercase tracking-widest text-neutral/50 font-medium">Integridad</span>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="aspect-[4/5] relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+              <Image
+                src="/hero.jpg"
+                alt="Architecture and Excellence"
+                fill
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-base-300/80 to-transparent" />
+            </div>
+            
+            {/* Elegant Floating Badge */}
+            <motion.div
+              animate={{ y: [0, -20, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+              className="absolute -bottom-8 -left-8 glass-elegant border border-primary/20 p-8 rounded-2xl shadow-2xl z-20 backdrop-blur-xl"
+            >
+              <div className="text-primary font-playfair text-2xl mb-1 italic">NLI</div>
+              <div className="text-[10px] uppercase tracking-[0.3em] text-neutral/60 font-semibold">Division Mexico</div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[120px] rounded-full translate-x-1/2 -z-0" />
+    </section>
+  );
+}

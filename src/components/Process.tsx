@@ -1,0 +1,72 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { motion } from 'motion/react';
+import { 
+  CreditCard, 
+  Home, 
+  GraduationCap, 
+  Car, 
+  Sparkles 
+} from 'lucide-react';
+
+const steps = [
+  { key: 'Step1', icon: CreditCard },
+  { key: 'Step2', icon: Home },
+  { key: 'Step3', icon: GraduationCap },
+  { key: 'Step4', icon: Car },
+  { key: 'Step5', icon: Sparkles },
+];
+
+export default function Process() {
+  const t = useTranslations('Process');
+
+  return (
+    <section id="process" className="py-32 bg-base-200 overflow-hidden">
+      <div className="container mx-auto px-6 relative z-10">
+        <motion.div
+           initial={{ y: 20, opacity: 0 }}
+           whileInView={{ y: 0, opacity: 1 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.8 }}
+           className="text-center mb-24"
+        >
+          <span className="text-primary tracking-[0.4em] uppercase text-xs font-bold mb-4 block italic">5 Pasos Clave</span>
+          <h2 className="text-4xl md:text-5xl font-playfair">{t('processTitle')}</h2>
+        </motion.div>
+
+        <div className="relative">
+          {/* Central Connector Line */}
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent -translate-y-1/2 hidden xl:block" />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-8 xl:gap-12 relative">
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <motion.div
+                  key={step.key}
+                  initial={{ y: 30, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="bg-base-300 p-8 rounded-3xl border border-white/5 hover:border-primary/20 transition-all duration-500 shadow-xl relative z-10 text-center">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-8 transition-all duration-500 group-hover:scale-110 group-hover:bg-primary group-hover:text-black text-primary">
+                      <Icon className="w-8 h-8" />
+                    </div>
+                    <span className="block text-primary/50 text-xs font-bold tracking-widest uppercase mb-4">Paso 0{index + 1}</span>
+                    <h3 className="text-lg font-playfair mb-4 leading-snug">
+                      {t(`process${step.key}`)}
+                    </h3>
+                    <div className="w-8 h-1 bg-primary/20 mx-auto rounded-full group-hover:w-16 group-hover:bg-primary transition-all duration-500" />
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

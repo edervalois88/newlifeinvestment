@@ -1,0 +1,87 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "franchises": "Franchises",
+    "process": "Process",
+    "concierge": "Concierge",
+    "gateway": "Gateway to Riyadh",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "title": "Strategic Expansion from Mexico",
+    "subtitle": "Bridging capital and vision across the Americas and the Middle East.",
+    "cta": "Discover the Concierge Service"
+  },
+  "Services": {
+    "title": "Premium Concierge Services",
+    "immigration": {
+      "title": "Immigration (USA)",
+      "desc": "Bespoke visa and residency pathways for high-net-worth individuals expanding into the US."
+    },
+    "franchise": {
+      "title": "Franchise Selection",
+      "desc": "Curated investment opportunities in top-tier global franchises."
+    },
+    "brand": {
+      "title": "Brand Architecture",
+      "desc": "Crafting resilient brand identities for new and expanding enterprises."
+    }
+  },
+  "Gateway": {
+    "title": "The Mexico - Saudi Arabia Gateway",
+    "desc": "Unlock reciprocal investment channels. Access the Riyadh expansion network directly from our Mexico Division."
+  },
+  "Contact": {
+    "title": "Connect With Us",
+    "name": "Full Name",
+    "email": "Email Address",
+    "message": "Inquiry Details",
+    "send": "Send Message Request"
+  },
+  "About": {
+    "aboutTitle": "Global Vision, Mexican Heart",
+    "aboutDesc": "We are the strategic bridge for Mexican families and entrepreneurs looking to expand their horizons to the USA and Saudi Arabia. Our integrity is your greatest asset."
+  },
+  "Process": {
+    "processTitle": "Your Relocation in 5 Steps",
+    "processStep1": "Financial Opening & Credit",
+    "processStep2": "Premium Residence Selection",
+    "processStep3": "Elite Academic Enrollment",
+    "processStep4": "Personal Logistics & Licensing",
+    "processStep5": "Lifestyle Management (Concierge)"
+  },
+  "Concierge": {
+    "conciergeTitle": "Concierge Services",
+    "conciergeDesc": "Delegate every logistical detail to us. From full moving services to managing your new home before your arrival."
+  },
+  "Metadata": {
+    "title": "Strategic Global Expansion | New Life Investments MX",
+    "keywords": "Investment Migration, Luxury Relocation, Brand Architecture"
+  },
+  "SuccessStories": {
+    "title": "Success Stories",
+    "storyAtitle": "From Mexico City to Houston: The E-2 Visa Pathway",
+    "storyAdesc": "Fast, clear, and secure legal navigation for your US expansion.",
+    "storyBtitle": "Brand Architecture in the Kingdom: Scaling Mexican Businesses in Saudi Arabia",
+    "storyBdesc": "Ensuring brand compliance and cultural alignment seamlessly."
+  },
+  "Expertise": {
+    "title": "Our Competitive Edge",
+    "subtitle": "Why choose New Life Investments USA",
+    "integrityTitle": "Integrity",
+    "integrityDesc": "We operate with complete transparency and an ethical foundation in every international transaction.",
+    "experienceTitle": "Experience",
+    "experienceDesc": "Over a decade navigating complex cross-border regulations and high-stakes investments.",
+    "teamTitle": "Expert Team",
+    "teamDesc": "A multicultural taskforce of lawyers, brokers, and consultants at your disposal."
+  },
+  "FAQ": {
+    "title": "Frequent Q&A",
+    "q1": "How long does the E-2 Visa process take?",
+    "a1": "Typically ranging from 3 to 6 months depending on the consulate and application quality.",
+    "q2": "Do you handle real estate closing completely remotely?",
+    "a2": "Yes, our Concierge service provides full representation, legal clearance, and digital closing solutions."
+  }
+}
