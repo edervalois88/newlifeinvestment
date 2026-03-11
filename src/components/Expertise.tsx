@@ -29,7 +29,7 @@ export default function Expertise() {
   ];
 
   return (
-    <section id="expertise" className="py-24 bg-base-300 relative border-b border-white/5">
+    <section id="expertise" className="py-24 bg-primary relative border-b border-white/5">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           
@@ -40,11 +40,11 @@ export default function Expertise() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-secondary tracking-widest uppercase text-sm font-medium mb-4">{t('subtitle')}</h3>
-            <h2 className="text-4xl md:text-5xl font-playfair text-primary mb-6 drop-shadow-md">
+            <h3 className="text-white/60 tracking-widest uppercase text-sm font-medium mb-4">{t('subtitle')}</h3>
+            <h2 className="text-4xl md:text-5xl font-playfair text-accent mb-6 drop-shadow-md">
               {t('title')}
             </h2>
-            <div className="w-24 h-1 bg-primary/30 mx-auto lg:mx-0 rounded-full" />
+            <div className="w-24 h-1 bg-accent/30 mx-auto lg:mx-0 rounded-full" />
           </motion.div>
 
           <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -57,11 +57,11 @@ export default function Expertise() {
                 transition={{ duration: 0.6, delay: 0.2 * idx }}
                 className="glass-elegant p-8 rounded-3xl flex flex-col items-center text-center group cursor-default hover:bg-white/5 transition-colors"
               >
-                <div className="w-16 h-16 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
-                  <comp.icon className="w-8 h-8 text-primary shadow-primary drop-shadow-[0_0_15px_rgba(247,231,206,0.5)]" strokeWidth={1.5} />
+                <div className="w-16 h-16 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-300">
+                  <comp.icon className="w-8 h-8 text-accent shadow-accent drop-shadow-[0_0_15px_rgba(197,160,89,0.5)]" strokeWidth={1.5} />
                 </div>
                 <h4 className="font-playfair text-2xl text-white mb-3">{comp.title}</h4>
-                <p className="text-neutral font-light text-sm leading-relaxed">{comp.desc}</p>
+                <p className="text-white/70 font-light text-sm leading-relaxed">{comp.desc}</p>
               </motion.div>
             ))}
           </div>

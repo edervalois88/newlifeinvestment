@@ -21,7 +21,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-24 bg-base-300 relative">
+    <section id="faq" className="py-24 bg-secondary relative">
       <div className="container mx-auto px-6 max-w-4xl">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -30,10 +30,10 @@ export default function FAQ() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-playfair text-primary mb-4 drop-shadow-md">
+          <h2 className="text-4xl md:text-5xl font-playfair text-accent mb-4 drop-shadow-md">
             {t('title')}
           </h2>
-          <div className="w-24 h-1 bg-primary/30 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-accent/30 mx-auto rounded-full" />
         </motion.div>
 
         <div className="space-y-4">
@@ -52,20 +52,20 @@ export default function FAQ() {
               >
                 <span className="font-playfair text-xl text-white">{faq.q}</span>
                 <ChevronDown 
-                  className={`w-6 h-6 text-primary transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
+                  className={`w-6 h-6 text-accent transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
                   strokeWidth={1.5}
                 />
               </button>
               
               <AnimatePresence>
                 {openIndex === index && (
-                  <motion.div
+                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                   >
-                    <div className="px-8 pb-6 text-neutral font-light leading-relaxed">
+                    <div className="px-8 pb-6 text-white/70 font-light leading-relaxed">
                       {faq.a}
                     </div>
                   </motion.div>

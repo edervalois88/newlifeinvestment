@@ -22,7 +22,7 @@ export default function Process() {
   const t = useTranslations('Process');
 
   return (
-    <section id="process" className="py-32 bg-base-200 overflow-hidden">
+    <section id="process" className="py-32 bg-secondary overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
            initial={{ y: 20, opacity: 0 }}
@@ -31,13 +31,13 @@ export default function Process() {
            transition={{ duration: 0.8 }}
            className="text-center mb-24"
         >
-          <span className="text-primary tracking-[0.4em] uppercase text-xs font-bold mb-4 block italic">5 Pasos Clave</span>
-          <h2 className="text-4xl md:text-5xl font-playfair">{t('processTitle')}</h2>
+          <span className="text-accent tracking-[0.4em] uppercase text-xs font-bold mb-4 block italic">5 Pasos Clave</span>
+          <h2 className="text-4xl md:text-5xl font-playfair text-white">{t('processTitle')}</h2>
         </motion.div>
 
         <div className="relative">
           {/* Central Connector Line */}
-          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent -translate-y-1/2 hidden xl:block" />
+          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent -translate-y-1/2 hidden xl:block" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8 xl:gap-12 relative">
             {steps.map((step, index) => {
@@ -51,15 +51,15 @@ export default function Process() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="group"
                 >
-                  <div className="bg-base-300 p-8 rounded-3xl border border-white/5 hover:border-primary/20 transition-all duration-500 shadow-xl relative z-10 text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-8 transition-all duration-500 group-hover:scale-110 group-hover:bg-primary group-hover:text-black text-primary">
+                  <div className="bg-primary/50 backdrop-blur-sm p-8 rounded-3xl border border-white/5 hover:border-accent/40 transition-all duration-500 shadow-xl relative z-10 text-center">
+                    <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-8 transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-primary text-accent">
                       <Icon className="w-8 h-8" />
                     </div>
-                    <span className="block text-primary/50 text-xs font-bold tracking-widest uppercase mb-4">Paso 0{index + 1}</span>
-                    <h3 className="text-lg font-playfair mb-4 leading-snug">
+                    <span className="block text-accent/50 text-xs font-bold tracking-widest uppercase mb-4">Paso 0{index + 1}</span>
+                    <h3 className="text-lg font-playfair mb-4 leading-snug text-white">
                       {t(`process${step.key}`)}
                     </h3>
-                    <div className="w-8 h-1 bg-primary/20 mx-auto rounded-full group-hover:w-16 group-hover:bg-primary transition-all duration-500" />
+                    <div className="w-8 h-1 bg-accent/20 mx-auto rounded-full group-hover:w-16 group-hover:bg-accent transition-all duration-500" />
                   </div>
                 </motion.div>
               );

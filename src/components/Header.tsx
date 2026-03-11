@@ -55,17 +55,17 @@ export default function Header() {
         <div className="flex items-center gap-2 md:gap-4">
           {/* Language Selector Desktop */}
           <div className="hidden md:block dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle text-primary hover:bg-white/5">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle text-accent hover:bg-white/5">
               <Globe className="w-5 h-5" />
             </div>
-            <ul tabIndex={0} className="dropdown-content z-[60] menu p-2 shadow bg-base-300 rounded-box w-32 border border-white/5 mt-2 font-inter text-neutral">
+            <ul tabIndex={0} className="dropdown-content z-[60] menu p-2 shadow bg-primary rounded-box w-32 border border-accent/20 mt-2 font-inter text-neutral">
               {[
                 { code: 'es', label: 'Español' },
                 { code: 'en', label: 'English' },
                 { code: 'ar', label: 'العربية' }
               ].map((lang) => (
                 <li key={lang.code}>
-                  <button onClick={() => handleLanguageChange(lang.code as 'en' | 'es' | 'ar')} className="hover:text-primary active:bg-primary/20">
+                  <button onClick={() => handleLanguageChange(lang.code as 'en' | 'es' | 'ar')} className="hover:text-accent active:bg-accent/20">
                     {lang.label}
                   </button>
                 </li>
@@ -75,7 +75,7 @@ export default function Header() {
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="xl:hidden btn btn-ghost btn-circle text-primary"
+            className="xl:hidden btn btn-ghost btn-circle text-accent"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -88,7 +88,7 @@ export default function Header() {
         initial={{ x: '100%' }}
         animate={{ x: isMobileMenuOpen ? 0 : '100%' }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className="fixed inset-0 top-20 bg-base-300 z-[45] xl:hidden flex flex-col p-8 gap-8 border-l border-white/5"
+        className="fixed inset-0 top-20 bg-primary z-[45] xl:hidden flex flex-col p-8 gap-8 border-l border-white/5"
       >
         <div className="flex flex-col gap-6">
           {navItems.map((item) => (
@@ -96,7 +96,7 @@ export default function Header() {
               key={item} 
               href={`#${item}`}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-2xl font-playfair text-neutral hover:text-primary transition-colors"
+              className="text-2xl font-playfair text-neutral hover:text-accent transition-colors"
             >
               {t(item)}
             </Link>
@@ -110,7 +110,7 @@ export default function Header() {
               <button
                 key={lang}
                 onClick={() => handleLanguageChange(lang as any)}
-                className="px-4 py-2 rounded-lg border border-white/10 text-sm font-medium uppercase text-neutral hover:border-primary hover:text-primary transition-all"
+                className="px-4 py-2 rounded-lg border border-white/10 text-sm font-medium uppercase text-neutral hover:border-accent hover:text-accent transition-all"
               >
                 {lang}
               </button>

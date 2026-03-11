@@ -4,23 +4,23 @@
 }
 
 @theme {
-  --color-primary: #f7e7ce; /* Champagne Gold */
-  --color-secondary: #0b0c10; /* Obsidian / Glass effect will use this as base */
-  --color-accent: #1f2833;
-  --color-neutral: #c5c6c7;
-  --color-base-100: #0a0a0a;
-  --color-base-200: #111111;
-  --color-base-300: #1a1a1a; /* Deep Charcoal / Midnight */
+  --color-primary: #001A33; /* Azul Marino Profundo (Authority) */
+  --color-secondary: #001224; /* Even deeper blue for depths */
+  --color-accent: #C5A059; /* Dorado Champagne (Exclusivity) */
+  --color-neutral: #D1D1D1; /* Gris Pálido (Support) */
+  --color-base-100: #000F1F;
+  --color-base-200: #001224;
+  --color-base-300: #001A33; /* Main Brand Blue */
   --animate-spin-slow: spin 20s linear infinite;
 }
 
 /* Glass effect utilities based on DaisyUI */
 .glass-elegant {
-  background: rgba(11, 12, 16, 0.45);
+  background: rgba(0, 26, 51, 0.65); /* Azul Marino con transparencia */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(247, 231, 206, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(197, 160, 89, 0.2); /* Borde dorado tenue */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* Base resets */
@@ -42,7 +42,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-playfair), serif;
-  color: var(--color-primary);
+  color: var(--color-accent); /* Ahora el Dorado es el resalte en títulos */
 }
 
 /* RTL global Support for Arabic */

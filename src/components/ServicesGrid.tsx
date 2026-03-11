@@ -22,7 +22,7 @@ export default function ServicesGrid() {
   ];
 
   return (
-    <section id="services" className="py-24 bg-base-300 relative">
+    <section id="services" className="py-24 bg-primary relative">
       <div className="container mx-auto px-6 max-w-7xl">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
@@ -31,10 +31,10 @@ export default function ServicesGrid() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-playfair text-primary mb-4 drop-shadow-md">
+          <h2 className="text-4xl md:text-5xl font-playfair text-accent mb-4 drop-shadow-md">
             {t('title')}
           </h2>
-          <div className="w-24 h-1 bg-primary/30 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-accent/30 mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -50,13 +50,13 @@ export default function ServicesGrid() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className="relative group block p-8 rounded-2xl glass-elegant transition-colors hover:bg-white/5 cursor-pointer h-full"
+                className="relative group block p-8 rounded-2xl glass-elegant transition-all duration-500 hover:border-secondary hover:shadow-[0_0_40px_rgba(0,18,36,0.5)] border-white/5 cursor-pointer h-full"
               >
                 <AnimatePresence>
                   {hoveredIndex === index && (
                     <motion.div
                       layoutId="halo"
-                      className="absolute inset-0 z-0 bg-primary/10 rounded-2xl border border-primary/30 shadow-[0_0_30px_rgba(247,231,206,0.15)]"
+                      className="absolute inset-0 z-0 bg-secondary/20 rounded-2xl border border-secondary shadow-[0_0_30px_rgba(0,18,36,0.3)]"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
@@ -66,7 +66,7 @@ export default function ServicesGrid() {
                 </AnimatePresence>
                 
                 <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-full bg-base-300/80 border border-white/10 flex items-center justify-center mb-6 text-primary group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+                  <div className="w-14 h-14 rounded-full bg-secondary/80 border border-white/10 flex items-center justify-center mb-6 text-accent group-hover:scale-110 group-hover:bg-accent/10 transition-all duration-300">
                     <Icon strokeWidth={1.5} className="w-7 h-7" />
                   </div>
                   
@@ -74,7 +74,7 @@ export default function ServicesGrid() {
                     {t(`${service.key}.title`)}
                   </h3>
                   
-                  <p className="text-neutral font-light leading-relaxed">
+                  <p className="text-white/60 font-light leading-relaxed">
                     {t(`${service.key}.desc`)}
                   </p>
                 </div>

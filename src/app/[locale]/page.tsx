@@ -18,7 +18,7 @@ export default async function Index({params}: {params: Promise<{locale: string}>
   setRequestLocale(locale);
   
   return (
-    <main className="min-h-screen bg-base-300">
+    <main className="min-h-screen bg-primary">
       <Preloader />
       <Header />
       <Hero />
@@ -32,9 +32,9 @@ export default async function Index({params}: {params: Promise<{locale: string}>
       <FAQ />
       <Contact />
       
-      <footer className="py-8 bg-base-300 border-t border-white/5 text-center">
-        <p className="text-neutral text-sm tracking-wide">
-          © 2026 New Life Investments — México. All Rights Reserved.
+      <footer className="py-8 bg-primary border-t border-white/5 text-center">
+        <p className="text-white/40 text-sm tracking-wide">
+          © {new Date().getFullYear()} New Life Investments — México. All Rights Reserved.
         </p>
       </footer>
     </main>

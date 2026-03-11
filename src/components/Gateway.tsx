@@ -20,7 +20,7 @@ export default function Gateway() {
     : `M 200 300 Q 230 280, 260 220 C 400 220, 600 240, 740 240`; // flatter curve before hover
 
   return (
-    <section id="gateway" className="py-24 bg-base-200 border-t border-white/5 relative overflow-hidden">
+    <section id="gateway" className="py-24 bg-secondary border-t border-white/5 relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-7xl flex flex-col lg:flex-row items-center gap-16 object-cover">
         
         <motion.div 
@@ -30,10 +30,10 @@ export default function Gateway() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-playfair text-primary mb-6">
+          <h2 className="text-4xl md:text-5xl font-playfair text-accent mb-6">
             {t('title')}
           </h2>
-          <p className="text-xl text-neutral font-light leading-relaxed">
+          <p className="text-xl text-white/70 font-light leading-relaxed">
             {t('desc')}
           </p>
         </motion.div>
@@ -55,9 +55,9 @@ export default function Gateway() {
             >
               <defs>
                 <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="#f7e7ce" stopOpacity="0.2" />
-                  <stop offset="50%" stopColor="#f7e7ce" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#f7e7ce" stopOpacity="0.8" />
+                  <stop offset="0%" stopColor="#C5A059" stopOpacity="0.2" />
+                  <stop offset="50%" stopColor="#C5A059" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#C5A059" stopOpacity="0.8" />
                 </linearGradient>
                 <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
                   <feGaussianBlur stdDeviation="4" result="blur" />
@@ -95,7 +95,7 @@ export default function Gateway() {
                     cx={city.x}
                     cy={city.y}
                     r="6"
-                    fill="#f7e7ce"
+                    fill="#C5A059"
                     filter="url(#glow)"
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
@@ -121,7 +121,6 @@ export default function Gateway() {
           </div>
         </motion.div>
       </div>
-
     </section>
   );
 }
