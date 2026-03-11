@@ -51,7 +51,7 @@ export default async function LocaleLayout({
   const isRtl = locale === 'ar';
 
   return (
-    <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'}>
+    <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'} suppressHydrationWarning>
       <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
