@@ -44,7 +44,7 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
         >
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-playfair text-accent mb-6 leading-tight max-w-4xl mx-auto drop-shadow-2xl p-2 uppercase tracking-tighter">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-playfair text-white mb-6 leading-tight max-w-5xl mx-auto drop-shadow-2xl p-2 tracking-tighter">
             {t('title')}
           </h1>
         </motion.div>
@@ -54,7 +54,7 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
         >
-          <p className="text-base sm:text-lg md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto font-light tracking-widest px-4">
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto font-light tracking-wide px-4">
             {t('subtitle')}
           </p>
         </motion.div>

@@ -1,87 +1,19 @@
 {
-  "Navigation": {
-    "home": "Inicio",
-    "about": "Nosotros",
-    "services": "Servicios",
-    "franchises": "Franquicias",
-    "process": "Proceso",
-    "concierge": "Concierge",
-    "gateway": "Puerta a Riad",
-    "contact": "Contacto"
-  },
-  "Hero": {
-    "title": "Expansión Estratégica desde México",
-    "subtitle": "Conectando capital y visión en todo el continente americano y Medio Oriente.",
-    "cta": "Descubra el Servicio Concierge"
-  },
-  "Services": {
-    "title": "Servicios Premium de Concierge",
-    "immigration": {
-      "title": "Inmigración (USA)",
-      "desc": "Rutas de visa y residencia personalizadas para personas de alto patrimonio que se expanden a los EE. UU."
-    },
-    "franchise": {
-      "title": "Selección de Franquicias",
-      "desc": "Oportunidades de inversión curadas en franquicias globales de primer nivel."
-    },
-    "brand": {
-      "title": "Arquitectura de Marca",
-      "desc": "Creación de identidades de marca sólidas para empresas nuevas y existentes."
-    }
-  },
-  "Gateway": {
-    "title": "La Puerta México - Arabia Saudita",
-    "desc": "Desbloquee canales de inversión recíprocos. Acceda a la red de expansión de Riad directamente desde nuestra división en México."
-  },
-  "Contact": {
-    "title": "Conéctese con Nosotros",
-    "name": "Nombre completo",
-    "email": "Correo electrónico",
-    "message": "Detalles de la consulta",
-    "send": "Enviar solicitud"
-  },
-  "About": {
-    "aboutTitle": "Visión Global, Corazón Mexicano",
-    "aboutDesc": "Somos el puente estratégico para familias y empresarios mexicanos que buscan expandir su horizonte hacia Estados Unidos y Arabia Saudita. Nuestra integridad es su mayor activo."
-  },
-  "Process": {
-    "processTitle": "Su Reubicación en 5 Pasos",
-    "processStep1": "Apertura Financiera & Crédito",
-    "processStep2": "Selección de Residencia Premium",
-    "processStep3": "Inscripción Académica de Élite",
-    "processStep4": "Logística Personal y Licencias",
-    "processStep5": "Gestión de Estilo de Vida (Concierge)"
-  },
-  "Concierge": {
-    "conciergeTitle": "Servicios de Concierge",
-    "conciergeDesc": "Delegue cada detalle logístico a nosotros. Desde la mudanza total hasta la gestión de su nuevo hogar antes de su llegada."
-  },
-  "Metadata": {
-    "title": "Inversión Estratégica en USA y Arabia Saudita | New Life México",
-    "keywords": "Visa E-2, Franquicias USA, Expansión Riad"
-  },
-  "SuccessStories": {
-    "title": "Casos de Éxito",
-    "storyAtitle": "De Ciudad de México a Houston: El Camino de la Visa E-2",
-    "storyAdesc": "Navegación legal rápida, clara y segura para su expansión en los EE. UU.",
-    "storyBtitle": "Arquitectura de Marca en el Reino: Escalando Negocios Mexicanos en Arabia Saudita",
-    "storyBdesc": "Asegurando el cumplimiento de marca y la alineación cultural de forma fluida."
-  },
-  "Expertise": {
-    "title": "Nuestra Ventaja Competitiva",
-    "subtitle": "Por qué elegir New Life Investments USA",
-    "integrityTitle": "Integridad",
-    "integrityDesc": "Operamos con total transparencia y una base ética en cada transacción internacional.",
-    "experienceTitle": "Experiencia",
-    "experienceDesc": "Más de una década navegando complejas regulaciones transfronterizas e inversiones de alto riesgo.",
-    "teamTitle": "Equipo Experto",
-    "teamDesc": "Una fuerza laboral multicultural conformada por abogados, corredores y asesores a su disposición."
-  },
-  "FAQ": {
-    "title": "Preguntas Frecuentes",
-    "q1": "¿Cuánto dura el trámite para la Visa E-2?",
-    "a1": "Normalmente de 3 a 6 meses, dependiendo del consulado y la calidad de la solicitud.",
-    "q2": "¿Puedo proceder con el cierre inmobiliario de forma totalmente remota?",
-    "a2": "Sí. Nuestro servicio \"Concierge\" le brinda delegación notarial y procesos legales 100% digitales."
-  }
+  "Navigation": {"home": "Inicio", "about": "Nosotros", "immigration": "Inmigración", "realEstate": "Bienes Raíces", "academic": "Servicios Académicos", "franchises": "Franquicias", "process": "Proceso", "gateway": "Corredor Arabia-USA", "contact": "Contacto"},
+  "Hero": {"title": "Tu Puente Entre Arabia Saudita y Estados Unidos", "subtitle": "Servicios premium de inversión y reubicación conectando dos mercados estratégicos", "cta": "Explora Oportunidades"},
+  "About": {"aboutTitle": "Liderazgo Estratégico en Inversión Transfronteriza", "aboutDesc1": "Con sede en Houston, Texas, New Life Investments se especializa en facilitar oportunidades transformacionales entre Arabia Saudita y Estados Unidos.", "aboutDesc2": "Nuestro modelo de doble centro—radicado en Houston y Riad—nos posiciona para navegar paisajes regulatorios de ambos mercados.", "aboutDesc3": "A través de nuestra División LATAM, servimos como puerta de entrada para emprendedores mexicanos buscando expansión internacional.", "stat1": "2 Mercados Estratégicos", "stat2": "15+ Años de Experiencia", "stat3": "100% Confidencialidad"},
+  "Expertise": {"title": "Por Qué Elegirnos", "subtitle": "Ventajas competitivas en gestión transfronteriza", "integrityTitle": "Integridad y Confidencialidad", "integrityDesc": "Operamos con transparencia absoluta en cada transacción.", "experienceTitle": "Profunda Experiencia Transfronteriza", "experienceDesc": "15+ años facilitando relocalizaciones e inversiones transformacionales.", "teamTitle": "Equipo Experto Multicultural", "teamDesc": "Abogados de inmigración, asesores de bienes raíces, especialistas académicos. Fluidos en árabe, inglés, español."},
+  "Services": {"title": "Servicios Principales", "immigration": {"title": "Inmigración", "desc": "Vías de visas estadounidenses"}, "realEstate": {"title": "Bienes Raíces", "desc": "Propiedades premium en Texas"}, "academic": {"title": "Académicos", "desc": "Colocación universitaria"}, "franchise": {"title": "Franquicias", "desc": "Expansión de negocios"}, "brand": {"title": "Consultoría de Marca", "desc": "Estrategia comercial"}},
+  "Immigration": {"title": "Vías de Inmigración a EE.UU.", "subtitle": "Soluciones de visas premium", "desc": "Navega la inmigración estadounidense con confianza.", "eb5": {"title": "Visa EB-5", "desc": "Vía de inversión directa para residencia permanente."}, "greenCard": {"title": "Tarjeta Verde", "desc": "Múltiples vías hacia residencia permanente."}, "e2": {"title": "Visa E-2", "desc": "Visa rápida para inversionistas de tratado."}, "l1": {"title": "Transferencia L-1", "desc": "Transferencia intracompañía a operaciones estadounidenses."}, "tn": {"title": "Visa TN", "desc": "Visa profesional bajo USMCA."}, "student": {"title": "Visa de Estudiante (F-1)", "desc": "Puerta a educación estadounidense con autorización laboral."}},
+  "RealEstate": {"title": "Bienes Raíces de Lujo", "subtitle": "Propiedades premium en América", "desc": "Servicios integrales a través de Texas.", "desc1": "Con sede en Houston—la ciudad mayor más diversa de EE.UU.", "desc2": "Servicios integrales: análisis de mercado, identificación de propiedades, documentación.", "buy": {"title": "Compra Premium", "desc": "Propiedades de lujo en Houston, Dallas, Austin."}, "invest": {"title": "Grado Inversión", "desc": "Portafolios diversificados con ingresos de alquiler."}, "sell": {"title": "Estrategia Salida", "desc": "Maximiza ingresos mediante negociación experta."}},
+  "Academic": {"title": "Servicios Académicos Internacionales", "subtitle": "Educación de clase mundial para tu familia", "desc": "Coordinamos inscripción en universidades estadounidenses de primer nivel.", "selection": {"label": "EFICIENTE", "title": "Selección Universitaria", "desc": "Guía en selección y admisiones."}, "visa": {"label": "PRECISO", "title": "Visa de Estudiante", "desc": "Experto en requisitos F-1."}, "support": {"label": "CONFIABLE", "title": "Apoyo de Vivienda", "desc": "Alojamiento y orientación de estilo de vida."}},
+  "Process": {"processTitle": "Tu Viaje de Reubicación", "processStep1": "Fundación Financiera", "processStep2": "Visa e Inmigración", "processStep3": "Selección de Bienes Raíces", "processStep4": "Colocación Educativa", "processStep5": "Reubicación y Apoyo"},
+  "Gateway": {"title": "Corredor de Inversión Arabia-USA", "desc1": "Nuestro modelo de doble centro crea corredor directo entre Arabia Saudita y EE.UU.", "desc2": "Extendemos red a través de América Latina mediante División México.", "opportunities": "Acceso a oportunidades en tecnología, bienes raíces, franquicias, energía, entretenimiento."},
+  "SuccessStories": {"title": "Historias de Éxito", "storyAtitle": "Emprendedor Saudí a Houston", "storyAdesc": "Facilitación de visa E-2 e inversión inmobiliaria.", "storyBtitle": "Reubicación Multigeneracional", "storyBdesc": "Vía EB-5 para familia saudí.", "storyCtitle": "Expansión de Emprendedor Mexicano", "storyCdesc": "Red de franquicias en Texas.", "storyDtitle": "Estudiante a Tarjeta Verde", "storyDdesc": "Vía de estudiante a empleo.", "storyEtitle": "Reubicación Corporativa", "storyEdesc": "Transferencias L-1 para corporación saudí.", "storyFtitle": "Excelencia Académica", "storyFdesc": "Coordinación de inscripción Ivy League."},
+  "CTABanner": {"title": "¿Listo para Transformar?", "subtitle": "Agenda consulta confidencial.", "cta": "Inicia Tu Viaje"},
+  "Concierge": {"conciergeTitle": "Servicios de Apoyo", "conciergeDesc": "Apoyo logístico integral para transiciones sin inconvenientes."},
+  "FAQ": {"title": "Preguntas Frecuentes", "q1": "¿Cuánto toma el proceso E-2?", "a1": "3-6 meses de aplicación a aprobación.", "q2": "¿Puedo cerrar bienes raíces remotamente?", "a2": "Sí, apoyo remoto completo proporcionado.", "q3": "¿Diferencia EB-5 vs E-2?", "a3": "EB-5: $1.05M para residencia permanente. E-2: más rápido, capital menor.", "q4": "¿Cómo funciona el corredor?", "a4": "Identificamos oportunidades, navegamos regulaciones, proporcionamos introducciones.", "q5": "¿Pueden los saudíes establecer franquicias?", "a5": "Sí, bajo visas E-2 o L-1. 200+ sistemas de franquicias."},
+  "Footer": {"copyright": "New Life Investments USA", "privacy": "Política de Privacidad", "terms": "Términos de Servicio", "tagline": "Conectando Arabia Saudita y USA a través de servicios de clase mundial."},
+  "Contact": {"title": "Empieza Ahora", "email": "hello@newlifeinvestmentsusa.com", "phone": "+1-713-555-0100", "address": "Houston, Texas, EE.UU.", "form": "Agendación de Consulta", "name": "Tu Nombre", "message": "Tu Mensaje", "send": "Enviar"},
+  "Metadata": {"title": "Inversión Premium y Reubicación | New Life Investments USA", "description": "Conecta mercados Arabia Saudita y USA. Servicios de inmigración, bienes raíces, académicos.", "keywords": "Inmigración de Inversión, Bienes Raíces, E-2, EB-5, Arabia Saudita, USA"}
 }

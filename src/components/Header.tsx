@@ -19,7 +19,7 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   };
 
-  const navItems = ['about', 'services', 'franchises', 'process', 'concierge', 'gateway', 'contact'];
+  const navItems = ['about', 'immigration', 'realEstate', 'academic', 'franchises', 'process', 'gateway', 'contact'];
 
   return (
     <motion.header 

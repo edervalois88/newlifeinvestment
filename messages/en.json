@@ -1,87 +1,19 @@
 {
-  "Navigation": {
-    "home": "Home",
-    "about": "About Us",
-    "services": "Services",
-    "franchises": "Franchises",
-    "process": "Process",
-    "concierge": "Concierge",
-    "gateway": "Gateway to Riyadh",
-    "contact": "Contact"
-  },
-  "Hero": {
-    "title": "Strategic Expansion from Mexico",
-    "subtitle": "Bridging capital and vision across the Americas and the Middle East.",
-    "cta": "Discover the Concierge Service"
-  },
-  "Services": {
-    "title": "Premium Concierge Services",
-    "immigration": {
-      "title": "Immigration (USA)",
-      "desc": "Bespoke visa and residency pathways for high-net-worth individuals expanding into the US."
-    },
-    "franchise": {
-      "title": "Franchise Selection",
-      "desc": "Curated investment opportunities in top-tier global franchises."
-    },
-    "brand": {
-      "title": "Brand Architecture",
-      "desc": "Crafting resilient brand identities for new and expanding enterprises."
-    }
-  },
-  "Gateway": {
-    "title": "The Mexico - Saudi Arabia Gateway",
-    "desc": "Unlock reciprocal investment channels. Access the Riyadh expansion network directly from our Mexico Division."
-  },
-  "Contact": {
-    "title": "Connect With Us",
-    "name": "Full Name",
-    "email": "Email Address",
-    "message": "Inquiry Details",
-    "send": "Send Message Request"
-  },
-  "About": {
-    "aboutTitle": "Global Vision, Mexican Heart",
-    "aboutDesc": "We are the strategic bridge for Mexican families and entrepreneurs looking to expand their horizons to the USA and Saudi Arabia. Our integrity is your greatest asset."
-  },
-  "Process": {
-    "processTitle": "Your Relocation in 5 Steps",
-    "processStep1": "Financial Opening & Credit",
-    "processStep2": "Premium Residence Selection",
-    "processStep3": "Elite Academic Enrollment",
-    "processStep4": "Personal Logistics & Licensing",
-    "processStep5": "Lifestyle Management (Concierge)"
-  },
-  "Concierge": {
-    "conciergeTitle": "Concierge Services",
-    "conciergeDesc": "Delegate every logistical detail to us. From full moving services to managing your new home before your arrival."
-  },
-  "Metadata": {
-    "title": "Strategic Global Expansion | New Life Investments MX",
-    "keywords": "Investment Migration, Luxury Relocation, Brand Architecture"
-  },
-  "SuccessStories": {
-    "title": "Success Stories",
-    "storyAtitle": "From Mexico City to Houston: The E-2 Visa Pathway",
-    "storyAdesc": "Fast, clear, and secure legal navigation for your US expansion.",
-    "storyBtitle": "Brand Architecture in the Kingdom: Scaling Mexican Businesses in Saudi Arabia",
-    "storyBdesc": "Ensuring brand compliance and cultural alignment seamlessly."
-  },
-  "Expertise": {
-    "title": "Our Competitive Edge",
-    "subtitle": "Why choose New Life Investments USA",
-    "integrityTitle": "Integrity",
-    "integrityDesc": "We operate with complete transparency and an ethical foundation in every international transaction.",
-    "experienceTitle": "Experience",
-    "experienceDesc": "Over a decade navigating complex cross-border regulations and high-stakes investments.",
-    "teamTitle": "Expert Team",
-    "teamDesc": "A multicultural taskforce of lawyers, brokers, and consultants at your disposal."
-  },
-  "FAQ": {
-    "title": "Frequent Q&A",
-    "q1": "How long does the E-2 Visa process take?",
-    "a1": "Typically ranging from 3 to 6 months depending on the consulate and application quality.",
-    "q2": "Do you handle real estate closing completely remotely?",
-    "a2": "Yes, our Concierge service provides full representation, legal clearance, and digital closing solutions."
-  }
+  "Navigation": {"home": "Home", "about": "About Us", "immigration": "Immigration", "realEstate": "Real Estate", "academic": "Academic Services", "franchises": "Franchises", "process": "Process", "gateway": "Arabia-USA Corridor", "contact": "Contact"},
+  "Hero": {"title": "Your Bridge Between Saudi Arabia & The United States", "subtitle": "Premium investment and relocation services connecting two strategic markets", "cta": "Explore Opportunities"},
+  "About": {"aboutTitle": "Strategic Leadership in Cross-Border Investment", "aboutDesc1": "Based in Houston, Texas, New Life Investments specializes in facilitating transformational opportunities between Saudi Arabia and the United States.", "aboutDesc2": "Our dual-hub model—spanning Houston and Riyadh—uniquely positions us to navigate both markets' regulatory environments, cultural nuances, and strategic opportunities.", "aboutDesc3": "Through our LATAM Division, we also serve as a gateway for Mexican entrepreneurs seeking international expansion into US and Saudi markets.", "stat1": "2 Strategic Markets", "stat2": "15+ Years Experience", "stat3": "100% Confidentiality"},
+  "Expertise": {"title": "Why Choose Us", "subtitle": "Competitive advantages in cross-border wealth", "integrityTitle": "Integrity & Confidentiality", "integrityDesc": "Complete transparency and confidentiality in every transaction.", "experienceTitle": "Deep Cross-Border Experience", "experienceDesc": "15+ years facilitating transformational relocations and investments.", "teamTitle": "Multicultural Expert Team", "teamDesc": "Licensed attorneys, real estate advisors, academic specialists. Fluent in Arabic, English, Spanish."},
+  "Services": {"title": "Core Services", "immigration": {"title": "Immigration", "desc": "US visa pathways"}, "realEstate": {"title": "Real Estate", "desc": "Premium properties in Texas"}, "academic": {"title": "Academic", "desc": "University placement"}, "franchise": {"title": "Franchises", "desc": "Business expansion"}, "brand": {"title": "Brand Consulting", "desc": "Business strategy"}},
+  "Immigration": {"title": "US Immigration Pathways", "subtitle": "Premium visa solutions", "desc": "Navigate US immigration with confidence.", "eb5": {"title": "EB-5 Visa", "desc": "Direct investment pathway for permanent residency."}, "greenCard": {"title": "Green Card", "desc": "Multiple pathways to permanent residency."}, "e2": {"title": "E-2 Visa", "desc": "Fast-track visa for treaty investors."}, "l1": {"title": "L-1 Transfer", "desc": "Intra-company transfer to US operations."}, "tn": {"title": "TN Visa", "desc": "Professional visa under USMCA."}, "student": {"title": "Student Visa (F-1)", "desc": "Gateway to US education with work authorization."}},
+  "RealEstate": {"title": "Luxury Real Estate", "subtitle": "Premium properties in America", "desc": "Comprehensive services throughout Texas.", "desc1": "Based in Houston—America's most diversified major city.", "desc2": "Comprehensive services: market analysis, property identification, legal docs.", "buy": {"title": "Buy Premium", "desc": "Luxury properties in Houston, Dallas, Austin."}, "invest": {"title": "Investment Grade", "desc": "Diversified portfolios with rental income."}, "sell": {"title": "Exit Strategy", "desc": "Maximize sale proceeds through expert negotiation."}},
+  "Academic": {"title": "International Academic Services", "subtitle": "World-class education for family", "desc": "Coordinate enrollment in top-tier US universities.", "selection": {"label": "EFFICIENT", "title": "University Selection", "desc": "Guidance through selection and admissions."}, "visa": {"label": "PRECISE", "title": "Student Visa", "desc": "Expert navigation of F-1 requirements."}, "support": {"label": "RELIABLE", "title": "Housing Support", "desc": "Accommodation and lifestyle orientation."}},
+  "Process": {"processTitle": "Your Relocation Journey", "processStep1": "Financial Foundation", "processStep2": "Visa & Immigration", "processStep3": "Real Estate Selection", "processStep4": "Educational Placement", "processStep5": "Relocation & Support"},
+  "Gateway": {"title": "Arabia-USA Investment Corridor", "desc1": "Our dual-hub model creates direct corridor between Saudi Arabia and US.", "desc2": "We extend network across Latin America through Mexico Division.", "opportunities": "Access to tech, real estate, franchise, energy, entertainment sectors."},
+  "SuccessStories": {"title": "Client Success Stories", "storyAtitle": "Saudi Entrepreneur to Houston", "storyAdesc": "E-2 visa and real estate investment facilitation.", "storyBtitle": "Multi-Generational Move", "storyBdesc": "EB-5 pathway for Saudi family.", "storyCtitle": "Mexican Entrepreneur Expansion", "storyCdesc": "US franchise network in Texas.", "storyDtitle": "Student to Green Card", "storyDdesc": "F-1 to employment-based pathway.", "storyEtitle": "Corporate Relocation", "storyEdesc": "L-1 transfers for Saudi corporation.", "storyFtitle": "Academic Excellence", "storyFdesc": "Ivy League enrollment coordination."},
+  "CTABanner": {"title": "Ready to Transform?", "subtitle": "Schedule confidential consultation.", "cta": "Start Your Journey"},
+  "Concierge": {"conciergeTitle": "Support Services", "conciergeDesc": "Comprehensive logistical support for seamless transitions."},
+  "FAQ": {"title": "FAQs", "q1": "How long does E-2 process take?", "a1": "3-6 months from application to approval.", "q2": "Can I close real estate remotely?", "a2": "Yes, full remote support provided.", "q3": "EB-5 vs E-2 difference?", "a3": "EB-5: $1.05M for permanent residency. E-2: faster, lower capital.", "q4": "How does corridor work?", "a4": "We identify opportunities, navigate regulations, provide introductions.", "q5": "Can Saudis establish US franchises?", "a5": "Yes, under E-2 or L-1 visas. 200+ franchise systems."},
+  "Footer": {"copyright": "New Life Investments USA", "privacy": "Privacy Policy", "terms": "Terms of Service", "tagline": "Connecting Saudi Arabia & USA through world-class services."},
+  "Contact": {"title": "Get Started", "email": "hello@newlifeinvestmentsusa.com", "phone": "+1-713-555-0100", "address": "Houston, Texas, USA", "form": "Schedule Consultation", "name": "Your Name", "message": "Your message", "send": "Send"},
+  "Metadata": {"title": "Premium Investment & Relocation | New Life Investments USA", "description": "Connect Saudi Arabia & USA markets. Immigration, real estate, academic services.", "keywords": "Investment Immigration, Real Estate, E-2, EB-5, Saudi Arabia, USA"}
 }

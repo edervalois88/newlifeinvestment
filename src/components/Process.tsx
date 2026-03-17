@@ -31,7 +31,6 @@ export default function Process() {
            transition={{ duration: 0.8 }}
            className="text-center mb-24"
         >
-          <span className="text-accent tracking-[0.4em] uppercase text-xs font-bold mb-4 block italic">5 Pasos Clave</span>
           <h2 className="text-4xl md:text-5xl font-playfair text-white">{t('processTitle')}</h2>
         </motion.div>
 

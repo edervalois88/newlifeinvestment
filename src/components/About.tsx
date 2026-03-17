@@ -19,25 +19,27 @@ export default function About() {
             className="order-2 lg:order-1"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair mb-8">
-              <span className="text-white">{t('aboutTitle').split(',')[0]}</span>
+              <span className="text-white">{t('aboutTitle').split(' ')[0]}</span>
               <br />
-              <span className="text-accent italic">{t('aboutTitle').split(',')[1]}</span>
+              <span className="text-accent italic">{t('aboutTitle').split(' ').slice(1).join(' ')}</span>
             </h2>
-            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-10 max-w-xl">
-              {t('aboutDesc')}
-            </p>
+            <div className="space-y-6 mb-10 text-white/70 text-base md:text-lg leading-relaxed max-w-xl font-light">
+              <p>{t('aboutDesc1')}</p>
+              <p>{t('aboutDesc2')}</p>
+              <p>{t('aboutDesc3')}</p>
+            </div>
             <div className="grid grid-cols-2 sm:flex gap-4 sm:gap-8 border-t border-white/5 pt-10">
               <div>
                 <span className="block text-2xl md:text-3xl font-playfair text-accent italic mb-2">15+</span>
-                <span className="text-[10px] uppercase tracking-widest text-white/50 font-medium whitespace-nowrap">Años de Exp.</span>
+                <span className="text-[10px] uppercase tracking-widest text-white/50 font-medium whitespace-nowrap">Years Experience</span>
               </div>
               <div>
-                <span className="block text-2xl md:text-3xl font-playfair text-accent italic mb-2">3</span>
-                <span className="text-[10px] uppercase tracking-widest text-white/50 font-medium whitespace-nowrap">Sedes Globales</span>
+                <span className="block text-2xl md:text-3xl font-playfair text-accent italic mb-2">2</span>
+                <span className="text-[10px] uppercase tracking-widest text-white/50 font-medium whitespace-nowrap">Strategic Markets</span>
               </div>
               <div className="col-span-2 sm:col-span-1">
                 <span className="block text-2xl md:text-3xl font-playfair text-accent italic mb-2">100%</span>
-                <span className="text-[10px] uppercase tracking-widest text-white/50 font-medium whitespace-nowrap">Integridad</span>
+                <span className="text-[10px] uppercase tracking-widest text-white/50 font-medium whitespace-nowrap">Confidentiality</span>
               </div>
             </div>
           </motion.div>

@@ -5,12 +5,17 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Expertise from '@/components/Expertise';
 import ServicesGrid from '@/components/ServicesGrid';
+import Immigration from '@/components/Immigration';
+import RealEstate from '@/components/RealEstate';
+import Academic from '@/components/Academic';
 import Process from '@/components/Process';
-import Concierge from '@/components/Concierge';
 import Gateway from '@/components/Gateway';
 import SuccessStories from '@/components/SuccessStories';
+import CTABanner from '@/components/CTABanner';
 import FAQ from '@/components/FAQ';
+import Concierge from '@/components/Concierge';
 import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
 export default async function Index({params}: {params: Promise<{locale: string}>}) {
   const resolvedParams = await params;
@@ -25,18 +30,17 @@ export default async function Index({params}: {params: Promise<{locale: string}>
       <About />
       <Expertise />
       <ServicesGrid />
+      <Immigration />
+      <RealEstate />
+      <Academic />
       <Process />
-      <Concierge />
       <Gateway />
       <SuccessStories />
+      <CTABanner />
       <FAQ />
+      <Concierge />
       <Contact />
-      
-      <footer className="py-8 bg-primary border-t border-white/5 text-center">
-        <p className="text-white/40 text-sm tracking-wide">
-          © {new Date().getFullYear()} New Life Investments — México. All Rights Reserved.
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 }
