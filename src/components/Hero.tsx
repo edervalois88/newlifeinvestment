@@ -44,7 +44,9 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-playfair text-white mb-6 leading-tight max-w-5xl mx-auto drop-shadow-2xl p-2 tracking-tighter">
+          <h1
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight max-w-5xl mx-auto drop-shadow-2xl p-2 tracking-tight font-medium [font-family:var(--font-lora),var(--font-playfair),serif]"
+          >
             {t('title')}
           </h1>
         </motion.div>

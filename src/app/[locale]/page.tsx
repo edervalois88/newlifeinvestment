@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Expertise from '@/components/Expertise';
 import ServicesGrid from '@/components/ServicesGrid';
+import StrategicBlocks from '@/components/StrategicBlocks';
 import Immigration from '@/components/Immigration';
 import RealEstate from '@/components/RealEstate';
 import Academic from '@/components/Academic';
@@ -30,6 +31,7 @@ export default async function Index({params}: {params: Promise<{locale: string}>
       <About />
       <Expertise />
       <ServicesGrid />
+      <StrategicBlocks />
       <Immigration />
       <RealEstate />
       <Academic />

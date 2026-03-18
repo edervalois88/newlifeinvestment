@@ -4,20 +4,34 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import React, { useState } from 'react';
 
-const cities = [
-  { id: 'mx', name: 'Mexico City', x: 200, y: 300 },
-  { id: 'hou', name: 'Houston', x: 260, y: 220 },
-  { id: 'riyadh', name: 'Riyadh', x: 740, y: 240 }
+const countries = [
+  { id: 'mx', key: 'countryMexico', x: 220, y: 275, glow: 120 },
+  { id: 'us', key: 'countryUSA', x: 430, y: 215, glow: 120 },
+  { id: 'sa', key: 'countrySaudiArabia', x: 760, y: 240, glow: 120 }
+];
+
+const countryShapes = [
+  {
+    id: 'mx-shape',
+    d: 'M142 278 L150 254 L168 240 L186 234 L203 238 L214 248 L228 249 L244 258 L257 273 L252 288 L238 295 L227 304 L214 309 L203 319 L190 323 L180 313 L172 301 L160 293 L149 289 Z'
+  },
+  {
+    id: 'us-shape',
+    d: 'M352 198 L362 183 L385 172 L411 166 L439 168 L466 173 L489 179 L507 189 L518 201 L514 214 L500 223 L475 228 L450 232 L422 233 L397 230 L374 224 L360 214 Z'
+  },
+  {
+    id: 'sa-shape',
+    d: 'M700 236 L708 217 L724 203 L744 194 L768 192 L792 197 L812 207 L826 221 L832 238 L828 253 L816 267 L796 275 L771 279 L747 278 L726 269 L710 255 Z'
+  }
 ];
 
 export default function Gateway() {
   const t = useTranslations('Gateway');
   const [active, setActive] = useState(false);
 
-  // SVG dimensions: 1000x500
-  const dPath = active 
-    ? `M 200 300 Q 230 260, 260 220 C 400 150, 600 150, 740 240` // connect mx to houston, then arch to riyadh
-    : `M 200 300 Q 230 280, 260 220 C 400 220, 600 240, 740 240`; // flatter curve before hover
+  const dPath = active
+    ? `M 220 275 C 285 205, 370 185, 430 215 S 640 255, 760 240`
+    : `M 220 275 C 295 240, 365 225, 430 215 S 640 230, 760 240`;
 
   return (
     <section id="gateway" className="py-24 bg-secondary border-t border-white/5 relative overflow-hidden">
@@ -73,9 +87,30 @@ export default function Gateway() {
                 </filter>
               </defs>
 
-              {/* Base Map Abstract Shapes */}
-              <circle cx="200" cy="300" r="100" fill="url(#lineGradient)" opacity="0.05" />
-              <circle cx="740" cy="240" r="120" fill="url(#lineGradient)" opacity="0.05" />
+              {countries.map((country) => (
+                <circle
+                  key={`${country.id}-glow`}
+                  cx={country.x}
+                  cy={country.y}
+                  r={country.glow}
+                  fill="url(#lineGradient)"
+                  opacity="0.05"
+                />
+              ))}
+
+              {countryShapes.map((shape) => (
+                <motion.path
+                  key={shape.id}
+                  d={shape.d}
+                  fill="url(#lineGradient)"
+                  stroke="#C5A059"
+                  strokeOpacity="0.8"
+                  strokeWidth="2"
+                  opacity={active ? 0.42 : 0.3}
+                  animate={{ opacity: active ? 0.46 : 0.3 }}
+                  transition={{ duration: 0.4, ease: 'easeInOut' }}
+                />
+              ))}
 
               {/* Animated Path */}
               <motion.path
@@ -96,12 +131,11 @@ export default function Gateway() {
                 filter="url(#glow)"
               />
 
-              {/* City Dots & Labels */}
-              {cities.map((city, idx) => (
-                <g key={city.id}>
+              {countries.map((country, idx) => (
+                <g key={country.id}>
                   <motion.circle
-                    cx={city.x}
-                    cy={city.y}
+                    cx={country.x}
+                    cy={country.y}
                     r="6"
                     fill="#C5A059"
                     filter="url(#glow)"
@@ -110,8 +144,8 @@ export default function Gateway() {
                     transition={{ delay: 0.5 + idx * 0.2, type: 'spring' }}
                   />
                   <motion.text
-                    x={city.x}
-                    y={city.y - 15}
+                    x={country.x}
+                    y={country.y - 18}
                     fill="#ededed"
                     fontSize="16"
                     fontFamily="Inter, sans-serif"
@@ -121,7 +155,7 @@ export default function Gateway() {
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.7 + idx * 0.2 }}
                   >
-                    {city.name.toUpperCase()}
+                    {t(country.key).toUpperCase()}
                   </motion.text>
                 </g>
               ))}

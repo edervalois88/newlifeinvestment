@@ -1,6 +1,5 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import { LinkedinIcon, InstagramIcon, FacebookIcon, Mail } from 'lucide-react';
@@ -99,14 +98,14 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="/privacy" className="text-white/50 hover:text-accent text-sm transition-colors">
+                  <Link href="/privacy" className="text-white/50 hover:text-accent text-sm transition-colors">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/terms" className="text-white/50 hover:text-accent text-sm transition-colors">
+                  <Link href="/terms" className="text-white/50 hover:text-accent text-sm transition-colors">
                     Terms of Service
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </motion.div>

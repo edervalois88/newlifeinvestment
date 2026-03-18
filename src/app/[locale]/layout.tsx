@@ -2,12 +2,13 @@ import {NextIntlClientProvider} from 'next-intl';
 import { getTranslations, getMessages, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import {routing} from '@/i18n/routing';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Inter, Playfair_Display, Lora } from 'next/font/google';
 import '../globals.css';
 import { notFound } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
+const lora = Lora({ subsets: ['latin'], variable: '--font-lora' });
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
@@ -52,7 +53,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'} suppressHydrationWarning>
-      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
+      <body className={`${inter.variable} ${playfair.variable} ${lora.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

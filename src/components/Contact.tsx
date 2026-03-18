@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { sendLeadEmail } from '@/app/actions';
 import MagneticButton from './MagneticButton';
 import { Toaster, toast } from 'react-hot-toast';
@@ -10,6 +10,21 @@ import { Toaster, toast } from 'react-hot-toast';
 export default function Contact() {
   const t = useTranslations('Contact');
   const formRef = useRef<HTMLFormElement>(null);
+  const [subject, setSubject] = useState('');
+
+  useEffect(() => {
+    const onFranchiseRequest = (event: Event) => {
+      const customEvent = event as CustomEvent<{ subject?: string }>;
+      if (customEvent.detail?.subject) {
+        setSubject(customEvent.detail.subject);
+      }
+    };
+
+    window.addEventListener('franchise-request-info', onFranchiseRequest);
+    return () => {
+      window.removeEventListener('franchise-request-info', onFranchiseRequest);
+    };
+  }, []);
 
   const handleSubmit = async (formData: FormData) => {
     const result = await sendLeadEmail(formData);
@@ -26,6 +41,7 @@ export default function Contact() {
         },
       });
       formRef.current?.reset();
+      setSubject('');
     }
   };
 
@@ -75,6 +91,19 @@ export default function Contact() {
                   className="input input-bordered w-full bg-secondary/50 border-white/10 focus:border-accent/50 focus:ring-1 focus:ring-accent/50 text-white rounded-xl" 
                 />
               </div>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label htmlFor="subject" className="text-sm text-white/70 font-medium">{t('subject')}</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={subject}
+                onChange={(event) => setSubject(event.target.value)}
+                required
+                className="input input-bordered w-full bg-secondary/50 border-white/10 focus:border-accent/50 focus:ring-1 focus:ring-accent/50 text-white rounded-xl"
+              />
             </div>
 
             <div className="flex flex-col gap-2">
