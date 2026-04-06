@@ -28,7 +28,7 @@ export default function ThemeToggle() {
     <button
       onClick={toggleTheme}
       disabled={isPending}
-      className="btn btn-ghost btn-circle text-white/75 hover:text-[#8f6a2f] hover:bg-white/5 transition-colors"
+      className="btn btn-ghost btn-circle header-icon-btn hover:text-[#8f6a2f] hover:bg-white/5 transition-colors"
       title={theme === 'light' ? t('switchToDark') : t('switchToLight')}
     >
       {theme === 'light' ? (

@@ -38,8 +38,14 @@ export default function Header() {
 
   const isNavItemActive = (item: string) => {
     const href = getNavHref(item);
-    return pathname === href;
+    if (href === '/') {
+      return pathname === '/';
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
   };
+
+  const activeNavItem = navItems.find((item) => isNavItemActive(item)) ?? 'home';
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
@@ -100,7 +106,7 @@ export default function Header() {
 
             {/* Language Selector Desktop */}
             <div className="hidden md:block dropdown dropdown-end">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle text-white/75 hover:text-[#8f6a2f] hover:bg-white/5 transition-colors" aria-label="Select language">
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle header-icon-btn hover:text-[#8f6a2f] hover:bg-white/5 transition-colors" aria-label="Select language">
                 <Globe className="w-5 h-5" />
               </div>
               <ul tabIndex={0} className="dropdown-content z-60 menu p-2 shadow bg-primary rounded-box w-40 border border-accent/20 mt-2 text-neutral">
@@ -121,14 +127,24 @@ export default function Header() {
 
             {/* Mobile Menu Toggle */}
             <button
-              className="xl:hidden btn btn-ghost btn-circle btn-sm sm:btn-md text-white/75 hover:text-[#8f6a2f] transition-colors"
+              className="xl:hidden btn btn-ghost btn-circle btn-sm sm:btn-md header-icon-btn hover:text-[#8f6a2f] transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Open navigation menu"
             >
               {isMobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
         </div>
       </motion.header>
+
+      <div className="fixed top-16 sm:top-20 left-0 right-0 z-40 xl:hidden pointer-events-none">
+        <div className="container mx-auto px-4 sm:px-6 pt-2">
+          <div className="inline-flex items-center gap-2 rounded-full border border-accent/35 bg-accent/12 px-3 py-1.5 shadow-[0_6px_18px_rgba(143,106,47,0.12)]">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#8f6a2f]" />
+            <span className="text-xs tracking-wide font-medium text-accent">{t(activeNavItem)}</span>
+          </div>
+        </div>
+      </div>
 
       {/* Mobile Menu Overlay - Outside header stacking context */}
       <motion.div
@@ -137,6 +153,11 @@ export default function Header() {
         transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed inset-0 top-16 sm:top-20 bg-primary z-90 xl:hidden flex flex-col p-6 sm:p-8 gap-6 sm:gap-8 border-l border-white/5 ${isMobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
       >
+        <div className="rounded-2xl border border-accent/30 bg-accent/10 px-4 py-3">
+          <div className="text-[10px] uppercase tracking-[0.22em] text-accent/80">Navigation</div>
+          <div className="mt-1 text-lg font-playfair text-accent">{t(activeNavItem)}</div>
+        </div>
+
         <div className="flex flex-col gap-4 sm:gap-6 overflow-y-auto pb-4">
           {navItems.map((item) => (
             <Link
@@ -144,11 +165,11 @@ export default function Header() {
               href={getNavHref(item)}
               onClick={() => setIsMobileMenuOpen(false)}
               aria-current={isNavItemActive(item) ? 'page' : undefined}
-              className={`text-xl sm:text-2xl font-playfair transition-colors ${isNavItemActive(item) ? 'text-[#8f6a2f]' : 'text-neutral hover:text-accent'}`}
+              className={`rounded-xl px-4 py-3 border transition-all ${isNavItemActive(item) ? 'border-accent/55 bg-accent/12 text-[#8f6a2f] shadow-[0_8px_24px_rgba(143,106,47,0.16)]' : 'border-white/10 text-neutral hover:text-accent hover:border-accent/35'}`}
             >
-              <span className="inline-flex items-center gap-2">
+              <span className="inline-flex items-center gap-2 text-xl sm:text-2xl font-playfair">
                 <span
-                  className={`inline-block w-1.5 h-1.5 rounded-full bg-[#8f6a2f] transition-opacity duration-300 ${isNavItemActive(item) ? 'opacity-100' : 'opacity-0'}`}
+                  className={`inline-block w-2 h-2 rounded-full bg-[#8f6a2f] transition-opacity duration-300 ${isNavItemActive(item) ? 'opacity-100' : 'opacity-35'}`}
                 />
                 {t(item)}
               </span>
