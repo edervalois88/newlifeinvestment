@@ -122,8 +122,8 @@ export default function Gateway() {
               {cities.map((city, idx) => (
                 <g key={city.id}>
                   <motion.circle
-                    cx={country.x}
-                    cy={country.y}
+                    cx={city.x}
+                    cy={city.y}
                     r="6"
                     fill="#C5A059"
                     filter="url(#glow)"

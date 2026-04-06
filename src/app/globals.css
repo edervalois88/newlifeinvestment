@@ -184,6 +184,10 @@ h6 {
   color: #d5b06b !important;
 }
 
+[data-theme="dark"] .text-secondary {
+  color: rgba(244, 247, 251, 0.8) !important;
+}
+
 [data-theme="dark"] .border-white\/10 {
   border-color: rgba(244, 247, 251, 0.16) !important;
 }

@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import Preloader from '@/components/Preloader';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -22,8 +22,7 @@ export default async function Index({params}: {params: Promise<{locale: string}>
   const resolvedParams = await params;
   const locale = resolvedParams.locale;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: 'Common' });
-  
+
   return (
     <main className="min-h-screen bg-primary">
       <Preloader />
@@ -43,12 +42,7 @@ export default async function Index({params}: {params: Promise<{locale: string}>
       <FAQ />
       <Concierge />
       <Contact />
-      
-      <footer className="py-8 bg-primary border-t border-white/5 text-center">
-        <p className="text-white/40 text-sm tracking-wide">
-          {t('footerRights', { year: new Date().getFullYear() })}
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 }

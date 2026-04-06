@@ -2,13 +2,12 @@ import {getRequestConfig} from 'next-intl/server';
 import {routing} from './routing';
 
 export default getRequestConfig(async ({requestLocale}) => {
-  const isValidLocale = (value: string): value is (typeof routing.locales)[number] => {
-    return routing.locales.includes(value as (typeof routing.locales)[number]);
-  };
+  const isValidLocale = (value: string): value is (typeof routing.locales)[number] =>
+    routing.locales.includes(value as (typeof routing.locales)[number]);
 
   let locale = await requestLocale;
 
-  if (!locale || !routing.locales.includes(locale as 'es' | 'en' | 'ar')) {
+  if (!locale || !isValidLocale(locale)) {
     locale = routing.defaultLocale;
   }
 

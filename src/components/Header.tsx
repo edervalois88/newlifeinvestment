@@ -10,12 +10,6 @@ import ThemeToggle from './ThemeToggle';
 
 type Locale = 'en' | 'es' | 'ar';
 
-const locales: ReadonlyArray<{ code: Locale; label: string }> = [
-  { code: 'es', label: 'Español' },
-  { code: 'en', label: 'English' },
-  { code: 'ar', label: 'العربية' }
-];
-
 export default function Header() {
   const t = useTranslations('Navigation');
   const pathname = usePathname();
@@ -106,17 +100,18 @@ export default function Header() {
 
             {/* Language Selector Desktop */}
             <div className="hidden md:block dropdown dropdown-end">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle text-secondary hover:text-[#8f6a2f] hover:bg-white/5 transition-colors">
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle text-white/75 hover:text-[#8f6a2f] hover:bg-white/5 transition-colors" aria-label="Select language">
                 <Globe className="w-5 h-5" />
               </div>
-              <ul tabIndex={0} className="dropdown-content z-60 menu p-2 shadow bg-primary rounded-box w-32 border border-accent/20 mt-2 text-neutral">
+              <ul tabIndex={0} className="dropdown-content z-60 menu p-2 shadow bg-primary rounded-box w-40 border border-accent/20 mt-2 text-neutral">
                 {[
-                  { code: 'es', label: t('languageEs') },
-                  { code: 'en', label: t('languageEn') },
-                  { code: 'ar', label: t('languageAr') }
+                  { code: 'es', flag: '🇪🇸', label: t('languageEs') },
+                  { code: 'en', flag: '🇺🇸', label: t('languageEn') },
+                  { code: 'ar', flag: '🇦🇪', label: t('languageAr') }
                 ].map((lang) => (
                   <li key={lang.code}>
-                    <button onClick={() => handleLanguageChange(lang.code as 'en' | 'es' | 'ar')} className="hover:text-accent active:bg-accent/20">
+                    <button onClick={() => handleLanguageChange(lang.code as 'en' | 'es' | 'ar')} className="flex items-center gap-2 hover:text-accent active:bg-accent/20">
+                      <span className="text-base">{lang.flag}</span>
                       {lang.label}
                     </button>
                   </li>
@@ -126,7 +121,7 @@ export default function Header() {
 
             {/* Mobile Menu Toggle */}
             <button
-              className="xl:hidden btn btn-ghost btn-circle btn-sm sm:btn-md text-secondary hover:text-[#8f6a2f] transition-colors"
+              className="xl:hidden btn btn-ghost btn-circle btn-sm sm:btn-md text-white/75 hover:text-[#8f6a2f] transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
@@ -163,17 +158,18 @@ export default function Header() {
 
         <div className="mt-auto border-t border-white/5 pt-8">
           <p className="text-xs uppercase tracking-widest text-neutral/40 mb-4 font-bold">{t('languageLabel')}</p>
-          <div className="flex gap-4">
+          <div className="flex gap-3">
             {[
-              { code: 'es', label: t('languageEs') },
-              { code: 'en', label: t('languageEn') },
-              { code: 'ar', label: t('languageAr') }
+              { code: 'es', flag: '🇪🇸', label: t('languageEs') },
+              { code: 'en', flag: '🇺🇸', label: t('languageEn') },
+              { code: 'ar', flag: '🇦🇪', label: t('languageAr') }
             ].map((lang) => (
               <button
                 key={lang.code}
                 onClick={() => handleLanguageChange(lang.code as 'en' | 'es' | 'ar')}
-                className="px-4 py-2 rounded-lg border border-white/10 text-sm font-medium uppercase text-neutral hover:border-accent hover:text-accent transition-all"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 text-sm font-medium uppercase text-neutral hover:border-accent hover:text-accent transition-all"
               >
+                <span className="text-lg">{lang.flag}</span>
                 {lang.label}
               </button>
             ))}
