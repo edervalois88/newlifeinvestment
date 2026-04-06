@@ -31,7 +31,7 @@ export default function Process() {
            transition={{ duration: 0.8 }}
            className="text-center mb-24"
         >
-          <span className="text-accent tracking-[0.4em] uppercase text-xs font-bold mb-4 block italic">5 Pasos Clave</span>
+          <span className="text-accent tracking-[0.4em] uppercase text-xs font-bold mb-4 block italic">{t('eyebrow')}</span>
           <h2 className="text-4xl md:text-5xl font-playfair text-white">{t('processTitle')}</h2>
         </motion.div>
 
@@ -51,12 +51,12 @@ export default function Process() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="group"
                 >
-                  <div className="bg-primary/50 backdrop-blur-sm p-8 rounded-3xl border border-white/5 hover:border-accent/40 transition-all duration-500 shadow-xl relative z-10 text-center">
-                    <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-8 transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-primary text-accent">
-                      <Icon className="w-8 h-8" />
+                    <div className="premium-card premium-card--strong bg-primary/50 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-white/5 transition-all duration-500 shadow-xl relative z-10 text-center">
+                      <div className="icon-shell w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 sm:mb-8 group-hover:scale-110">
+                        <Icon className="icon-glyph w-8 h-8" />
                     </div>
-                    <span className="block text-accent/50 text-xs font-bold tracking-widest uppercase mb-4">Paso 0{index + 1}</span>
-                    <h3 className="text-lg font-playfair mb-4 leading-snug text-white">
+                    <span className="block text-accent/50 text-xs font-bold tracking-widest uppercase mb-4">{t('stepLabel')} 0{index + 1}</span>
+                      <h3 className="text-base sm:text-lg font-playfair mb-4 leading-snug text-white/90 sm:text-white">
                       {t(`process${step.key}`)}
                     </h3>
                     <div className="w-8 h-1 bg-accent/20 mx-auto rounded-full group-hover:w-16 group-hover:bg-accent transition-all duration-500" />

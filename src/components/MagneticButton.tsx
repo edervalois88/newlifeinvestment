@@ -47,10 +47,10 @@ export default function MagneticButton({
       onClick={onClick}
       style={{ x: springX, y: springY }}
       whileTap={{ scale: 0.95 }}
-      className={`relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1.5px] ${className}`}
+      className={`group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1.5px] ${className}`}
     >
-      <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,rgba(197,160,89,0)_0%,#C5A059_50%,rgba(197,160,89,0)_100%)]" />
-      <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-medium text-white backdrop-blur-3xl transition-all duration-300 hover:text-accent hover:bg-secondary">
+      <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,rgba(143,106,47,0)_0%,#8f6a2f_50%,rgba(143,106,47,0)_100%)]" />
+      <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-medium text-white backdrop-blur-3xl transition-all duration-300 group-hover:text-[#8f6a2f] group-hover:bg-secondary">
         {children}
       </span>
     </motion.button>

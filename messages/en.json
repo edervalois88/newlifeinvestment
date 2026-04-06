@@ -6,45 +6,120 @@
     "franchises": "Franchises",
     "process": "Process",
     "concierge": "Concierge",
-    "gateway": "Gateway to Riyadh",
-    "contact": "Contact"
+    "gateway": "UAE - USA Corridor",
+    "contact": "Contact",
+    "languageLabel": "Language",
+    "languageEs": "Spanish",
+    "languageEn": "English",
+    "languageAr": "Arabic",
+    "logoAlt": "New Life Investments logo"
   },
   "Hero": {
-    "title": "Strategic Expansion from Mexico",
-    "subtitle": "Bridging capital and vision across the Americas and the Middle East.",
-    "cta": "Discover the Concierge Service"
+    "title": "UAE-USA Expansion Strategy",
+    "subtitle": "End-to-end advisory to structure investment, compliance, and operations between the United Arab Emirates and the United States.",
+    "cta": "Request a strategic assessment",
+    "imageAlt": "Global business corridor between UAE and USA"
   },
   "Services": {
-    "title": "Premium Concierge Services",
+    "title": "Strategic Solutions",
+    "detailsCta": "View service scope",
+    "contactCta": "Schedule a meeting",
+    "franchisePageCta": "Explore franchises page",
+    "close": "Close",
     "immigration": {
       "title": "Immigration (USA)",
-      "desc": "Bespoke visa and residency pathways for high-net-worth individuals expanding into the US."
+      "desc": "Bespoke visa and residency pathways for high-net-worth individuals expanding into the US.",
+      "longDesc": "We design a complete immigration strategy aligned with your wealth profile, family goals, and US expansion timeline.",
+      "step1": "Legal intake and migration profile review.",
+      "step2": "Documentation framework and investment strategy.",
+      "step3": "Guided filing, approval, and soft landing support."
     },
     "franchise": {
       "title": "Franchise Selection",
-      "desc": "Curated investment opportunities in top-tier global franchises."
+      "desc": "Curated investment opportunities in top-tier global franchises.",
+      "longDesc": "We combine financial analysis, operational feasibility, and management-fit criteria to identify franchises with strong scaling potential.",
+      "step1": "Sector mapping, budget range, and priorities.",
+      "step2": "Due diligence, side-by-side comparison, and scenarios.",
+      "step3": "Negotiation, closing, and launch roadmap."
     },
     "brand": {
       "title": "Brand Architecture",
-      "desc": "Crafting resilient brand identities for new and expanding enterprises."
+      "desc": "Crafting resilient brand identities for new and expanding enterprises.",
+      "longDesc": "We turn your value proposition into a clear, international, and credible brand system for high-trust markets.",
+      "step1": "Positioning and narrative audit.",
+      "step2": "Visual identity system and brand guidelines.",
+      "step3": "Omnichannel rollout with quality governance."
+    }
+  },
+  "FranchisesPage": {
+    "eyebrow": "International Franchises",
+    "title": "A Dedicated Division to Scale Your Investment Through Franchises",
+    "subtitle": "We connect international investors with high-performing brands through an analysis, selection, and execution model focused on returns, risk control, and launch speed.",
+    "primaryCta": "Request a tailored strategy",
+    "secondaryCta": "Back to services",
+    "advantageTitle": "What Makes Our Model Different",
+    "flowTitle": "A Friendlier, Guided Investment Flow",
+    "faqTitle": "Key Questions Before You Invest",
+    "pillars": {
+      "legalTitle": "Legal and Contractual Protection",
+      "legalDesc": "We review agreements, exit clauses, operating obligations, and regulatory requirements to reduce uncertainty from day one.",
+      "growthTitle": "Growth with Real Metrics",
+      "growthDesc": "We assess expected returns, break-even points, hidden costs, and market sensitivity so decisions are data-backed.",
+      "executionTitle": "End-to-End Launch Execution",
+      "executionDesc": "We coordinate site selection, franchisor onboarding, and go-to-market planning so operations start with a strong structure."
+    },
+    "flow": {
+      "step1Title": "Investor Profile and Goals",
+      "step1Desc": "We define ideal ticket size, return horizon, operating involvement, and risk tolerance.",
+      "step2Title": "Strategic Shortlist",
+      "step2Desc": "We present filtered options by sector, brand strength, franchisor support quality, and historical performance.",
+      "step3Title": "Due Diligence and Negotiation",
+      "step3Desc": "Financial auditing, legal review, and term negotiation to protect your investment.",
+      "step4Title": "Launch and Expansion Plan",
+      "step4Desc": "We create a 90-day opening roadmap plus a scale strategy for future units."
+    },
+    "faq": {
+      "q1": "What is the recommended minimum capital to start?",
+      "a1": "It depends on sector and brand, but we usually structure scenarios from USD 150,000 for franchises with strong support systems.",
+      "q2": "Can I invest without personally operating the business?",
+      "a2": "Yes. We design structures with local operators and reporting dashboards so you keep visibility without daily operations.",
+      "q3": "How do you validate true franchise profitability?",
+      "a3": "We combine franchisor disclosures, market benchmarks, and conservative financial modeling assumptions.",
+      "q4": "Do you stay involved after opening?",
+      "a4": "Yes, we provide quarterly follow-up for performance optimization, cost control, and readiness to scale into additional units."
     }
   },
   "Gateway": {
-    "title": "The Mexico - Saudi Arabia Gateway",
-    "desc": "Unlock reciprocal investment channels. Access the Riyadh expansion network directly from our Mexico Division."
+    "title": "UAE-USA Operating Platform",
+    "desc": "We structure two-way investment channels and operational expansion between the United Arab Emirates and the United States with a governance, compliance, and execution focus.",
+    "cities": {
+      "dubai": "Dubai",
+      "usa": "USA",
+      "abudhabi": "Abu Dhabi"
+    }
   },
   "Contact": {
     "title": "Connect With Us",
     "name": "Full Name",
     "email": "Email Address",
     "message": "Inquiry Details",
-    "send": "Send Message Request"
+    "send": "Send Message Request",
+    "successToast": "Request submitted successfully"
   },
   "About": {
-    "aboutTitle": "Global Vision, Mexican Heart",
-    "aboutDesc": "We are the strategic bridge for Mexican families and entrepreneurs looking to expand their horizons to the USA and Saudi Arabia. Our integrity is your greatest asset."
+    "aboutTitleLine1": "Cross-Border Execution",
+    "aboutTitleLine2": "with Institutional Standards",
+    "aboutDesc": "We act as a strategic partner for entrepreneurs and investors expanding operations between the United Arab Emirates and the USA, aligning legal structure, operations, and outcomes.",
+    "statsYears": "Years of experience",
+    "statsOffices": "Global offices",
+    "statsIntegrity": "Integrity",
+    "imageAlt": "Corporate architecture and operational excellence",
+    "badgeTitle": "NLI",
+    "badgeSubtitle": "Global Advisory"
   },
   "Process": {
+    "eyebrow": "5 key steps",
+    "stepLabel": "Step",
     "processTitle": "Your Relocation in 5 Steps",
     "processStep1": "Financial Opening & Credit",
     "processStep2": "Premium Residence Selection",
@@ -54,22 +129,29 @@
   },
   "Concierge": {
     "conciergeTitle": "Concierge Services",
-    "conciergeDesc": "Delegate every logistical detail to us. From full moving services to managing your new home before your arrival."
+    "conciergeDesc": "Delegate the operational execution of your landing. From executive relocation logistics to residence readiness and legal coordination before arrival.",
+    "tagline": "Operational Excellence",
+    "item1": "End-to-end executive relocation logistics",
+    "item2": "Residence handover ready for occupancy",
+    "item3": "Legal and insurance coordination",
+    "item4": "Local integration and strategic networking",
+    "item5": "24/7 ongoing executive support",
+    "imageAlt": "Executive relocation and setup support"
   },
   "Metadata": {
-    "title": "Strategic Global Expansion | New Life Investments MX",
-    "keywords": "Investment Migration, Luxury Relocation, Brand Architecture"
+    "title": "Strategic UAE-USA Expansion | New Life Investments",
+    "keywords": "UAE USA expansion, E-2 Visa, cross-border investment"
   },
   "SuccessStories": {
-    "title": "Success Stories",
-    "storyAtitle": "From Mexico City to Houston: The E-2 Visa Pathway",
+    "title": "Implementation Cases",
+    "storyAtitle": "From Dubai to Houston: The E-2 Visa Pathway",
     "storyAdesc": "Fast, clear, and secure legal navigation for your US expansion.",
-    "storyBtitle": "Brand Architecture in the Kingdom: Scaling Mexican Businesses in Saudi Arabia",
+    "storyBtitle": "Brand Architecture Across the Gulf: Scaling Businesses Between UAE and USA",
     "storyBdesc": "Ensuring brand compliance and cultural alignment seamlessly."
   },
   "Expertise": {
     "title": "Our Competitive Edge",
-    "subtitle": "Why choose New Life Investments USA",
+    "subtitle": "New Life Investments Capabilities",
     "integrityTitle": "Integrity",
     "integrityDesc": "We operate with complete transparency and an ethical foundation in every international transaction.",
     "experienceTitle": "Experience",
@@ -79,9 +161,16 @@
   },
   "FAQ": {
     "title": "Frequent Q&A",
-    "q1": "How long does the E-2 Visa process take?",
-    "a1": "Typically ranging from 3 to 6 months depending on the consulate and application quality.",
-    "q2": "Do you handle real estate closing completely remotely?",
-    "a2": "Yes, our Concierge service provides full representation, legal clearance, and digital closing solutions."
+    "q1": "Which legal structure do you recommend for UAE-USA operations?",
+    "a1": "It depends on sector and tax objectives. We design structures combining a UAE entity (free zone or mainland) and a US entity, aligned with regulatory, banking, and mobility requirements.",
+    "q2": "What timeline should we expect to establish UAE-USA operations?",
+    "a2": "Typically 8 to 16 weeks for incorporation, initial operational setup, and executive mobility roadmap, subject to jurisdiction and licensing requirements."
+  },
+  "ThemeToggle": {
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode"
+  },
+  "Common": {
+    "footerRights": "© {year} New Life Investments. All rights reserved."
   }
 }

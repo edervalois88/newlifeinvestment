@@ -55,10 +55,10 @@ export default function Expertise() {
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: 0.2 * idx }}
-                className="glass-elegant p-8 rounded-3xl flex flex-col items-center text-center group cursor-default hover:bg-white/5 transition-colors"
+                className="glass-elegant premium-card premium-card--strong p-6 sm:p-8 rounded-3xl flex flex-col items-center text-center group cursor-default hover:bg-white/5 transition-colors"
               >
-                <div className="w-16 h-16 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-300">
-                  <comp.icon className="w-8 h-8 text-accent shadow-accent drop-shadow-[0_0_15px_rgba(197,160,89,0.5)]" strokeWidth={1.5} />
+                <div className="icon-shell w-16 h-16 rounded-full border flex items-center justify-center mb-6 group-hover:scale-110">
+                  <comp.icon className="icon-glyph w-8 h-8" strokeWidth={1.5} />
                 </div>
                 <h4 className="font-playfair text-2xl text-white mb-3">{comp.title}</h4>
                 <p className="text-white/70 font-light text-sm leading-relaxed">{comp.desc}</p>

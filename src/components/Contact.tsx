@@ -14,7 +14,7 @@ export default function Contact() {
   const handleSubmit = async (formData: FormData) => {
     const result = await sendLeadEmail(formData);
     if (result.success) {
-      toast.success(t('send') + ' (Success!)', {
+      toast.success(t('successToast'), {
         style: {
           background: '#1a1a1a',
           color: '#f7e7ce',
@@ -30,7 +30,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-32 bg-primary relative">
+    <section id="contact" className="py-24 sm:py-32 bg-primary relative">
       <Toaster position="bottom-right" />
       <div className="container mx-auto px-6 max-w-4xl">
         <motion.div
@@ -40,7 +40,7 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-playfair text-accent mb-4 drop-shadow-md">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair text-accent mb-4 drop-shadow-md">
             {t('title')}
           </h2>
           <div className="w-24 h-1 bg-accent/30 mx-auto rounded-full" />
@@ -51,7 +51,7 @@ export default function Contact() {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="glass-elegant p-8 md:p-12 rounded-3xl"
+          className="glass-elegant premium-card premium-card--soft p-6 sm:p-8 md:p-12 rounded-3xl"
         >
           <form ref={formRef} action={handleSubmit} className="flex flex-col gap-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -7,109 +7,83 @@ export default function Preloader() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 2-3 second minimum loader or until window is completely loaded
-    const timer = setTimeout(() => setLoading(false), 2500);
-    return () => clearTimeout(timer);
+    let cancelled = false;
+
+    const minDelay = new Promise<void>((resolve) => {
+      setTimeout(resolve, 1800);
+    });
+
+    const pageReady =
+      document.readyState === 'complete'
+        ? Promise.resolve()
+        : new Promise<void>((resolve) => {
+            window.addEventListener('load', () => resolve(), { once: true });
+          });
+
+    Promise.all([minDelay, pageReady]).then(() => {
+      if (!cancelled) {
+        setLoading(false);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   return (
     <motion.div
       initial={{ y: 0 }}
-      animate={{ y: loading ? 0 : '-100%' }}
-      transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+      animate={{ y: loading ? 0 : '-100%', opacity: loading ? 1 : 0 }}
+      transition={{ duration: 0.75, ease: [0.76, 0, 0.24, 1] }}
       className="fixed inset-0 z-[100] bg-base-300 flex items-center justify-center overflow-hidden"
+      aria-hidden={!loading}
     >
-      <div className="flex flex-col items-center px-6">
-        <div className="relative flex flex-col md:flex-row items-center gap-6 md:gap-12 scale-75 sm:scale-90 md:scale-100 mb-12">
-          
-          {/* Símbolo a la izquierda (o arriba en mobile) */}
-          <div className="relative w-[100px] md:w-[120px] h-[140px] md:h-[160px]">
+      <div className="flex flex-col items-center px-6 w-full">
+        <div className="relative flex items-center justify-center scale-75 sm:scale-90 md:scale-100 mb-12 w-full">
+
+          {/* NLI Logo SVG */}
+          <div className="relative w-[320px] sm:w-[380px] md:w-[460px] h-[130px] md:h-[160px] max-w-[92vw]">
             <svg
-              viewBox="0 0 100 130"
+              viewBox="470 950 1380 430"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="w-full h-full"
+              preserveAspectRatio="xMidYMid meet"
+              style={{ overflow: 'visible' }}
             >
-              <motion.path
-                d="M35 110 C20 105 15 90 25 75 C35 60 45 50 35 30 C25 10 35 5 40 5 C45 5 48 15 42 30 C35 50 25 65 30 80 C35 95 50 100 35 110 Z"
-                stroke="#C5A059"
-                strokeWidth="0.8"
-                fill="#C5A059"
-                initial={{ pathLength: 0, fillOpacity: 0 }}
-                animate={{ pathLength: loading ? 1 : 0, fillOpacity: loading ? 1 : 0 }}
-                transition={{ pathLength: { duration: 2 }, fillOpacity: { duration: 1, delay: 1.2 } }}
-              />
-              <motion.path
-                d="M50 95 C45 80 45 60 55 40 C65 20 60 10 55 10 C50 10 48 20 52 40 C56 60 56 80 50 95 Z"
-                stroke="#C5A059"
-                strokeWidth="0.8"
-                fill="#C5A059"
-                initial={{ pathLength: 0, fillOpacity: 0 }}
-                animate={{ pathLength: loading ? 1 : 0, fillOpacity: loading ? 1 : 0 }}
-                transition={{ pathLength: { duration: 1.8, delay: 0.3 }, fillOpacity: { duration: 1, delay: 1.5 } }}
-              />
-              <motion.path
-                d="M65 80 C60 70 65 55 70 40 C75 25 72 20 68 20 C64 20 62 30 65 45 C68 60 68 70 65 80 Z"
-                stroke="#C5A059"
-                strokeWidth="0.8"
-                fill="#C5A059"
-                initial={{ pathLength: 0, fillOpacity: 0 }}
-                animate={{ pathLength: loading ? 1 : 0, fillOpacity: loading ? 1 : 0 }}
-                transition={{ pathLength: { duration: 1.5, delay: 0.6 }, fillOpacity: { duration: 1, delay: 1.8 } }}
-              />
-              <motion.path
-                d="M28 120 L33 115 L38 120 L33 125 Z"
-                fill="#C5A059"
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: loading ? 1 : 0, opacity: loading ? 1 : 0 }}
-                transition={{ duration: 0.5, delay: 2, ease: "backOut" }}
-                style={{ transformOrigin: "33px 120px" }}
-              />
+              <motion.g
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: loading ? 1 : 0, scale: loading ? 1 : 0.9 }}
+                transition={{ duration: 1.2, delay: 0.3 }}
+              >
+                <g transform="translate(0,2048) scale(0.1,-0.1)" fill="#C5A059" stroke="none">
+                  <path d="M6688 9992 l-138 -3 0 -53 0 -54 43 -5 c73 -10 111 -18 144 -33 35 -16 83 -68 83 -90 0 -8 4 -14 8 -14 25 0 32 -177 32 -740 l-1 -585 -22 27 c-12 15 -44 57 -72 93 -27 37 -57 75 -65 85 -8 10 -42 53 -75 96 -33 43 -67 85 -75 94 -9 9 -25 31 -37 50 -12 19 -30 44 -40 55 -10 11 -44 54 -75 95 -32 41 -63 81 -70 89 -6 8 -47 62 -91 120 -43 58 -84 113 -91 121 -7 9 -32 42 -56 75 -25 33 -57 74 -72 90 -16 17 -28 33 -28 37 0 4 -6 13 -13 20 -10 11 -29 35 -90 113 -6 9 -25 33 -80 107 -6 9 -46 59 -87 112 l-75 96 -288 0 -288 0 3 -57 3 -58 55 -3 c70 -4 144 -40 202 -99 l43 -44 0 -792 c0 -871 0 -869 -59 -931 -37 -39 -117 -66 -199 -66 l-54 0 1 -50 0 -50 401 0 400 0 0 52 -1 53 -80 6 c-116 9 -151 29 -191 107 l-32 64 0 711 0 712 35 -40 c19 -22 52 -65 74 -95 21 -30 46 -64 57 -75 10 -11 32 -38 48 -60 17 -22 36 -46 43 -53 6 -8 26 -34 44 -60 33 -47 48 -66 105 -131 18 -20 33 -39 33 -42 0 -4 12 -21 28 -37 15 -17 52 -63 82 -103 48 -63 127 -165 163 -209 7 -9 25 -33 42 -55 16 -22 39 -49 50 -61 11 -12 45 -56 75 -98 30 -43 70 -94 87 -114 18 -21 33 -40 33 -44 0 -4 6 -13 13 -20 7 -7 33 -40 58 -72 24 -33 58 -76 74 -97 66 -83 184 -240 187 -249 3 -9 134 -17 143 -8 2 2 5 422 7 933 l3 930 23 47 c43 87 115 135 216 145 28 3 54 8 57 11 3 4 3 30 0 57 l-6 50 -255 0 c-140 0 -317 -1 -392 -3z"/>
+                  <path d="M12290 9991 c-23 -4 -35 -11 -34 -21 1 -8 2 -32 3 -52 l1 -37 58 -6 c110 -13 179 -43 204 -88 24 -45 28 -186 28 -902 0 -751 -3 -842 -33 -885 -36 -51 -76 -68 -182 -76 -38 -3 -74 -7 -80 -8 -6 -2 -9 -28 -7 -59 l4 -56 813 0 c769 -1 815 0 823 16 11 23 30 118 42 220 17 134 20 156 30 213 10 55 30 194 30 204 0 3 -26 6 -58 6 -65 0 -66 -1 -99 -100 -8 -25 -22 -63 -32 -85 -10 -22 -26 -61 -36 -88 -16 -43 -100 -147 -118 -147 -5 0 -15 -7 -23 -15 -8 -8 -45 -24 -82 -35 -58 -19 -99 -22 -307 -27 -236 -4 -241 -4 -285 19 -86 44 -81 -16 -77 903 2 446 6 823 10 839 10 38 26 68 46 84 27 22 96 51 136 58 54 8 88 13 108 13 14 1 17 11 17 56 l0 55 -92 1 c-51 1 -104 1 -118 0 -51 -3 -616 -1 -635 2 -11 2 -36 1 -55 -2z"/>
+                  <path d="M14435 9978 c-72 -27 -104 -72 -112 -159 -6 -56 9 -123 31 -144 40 -38 93 -56 171 -60 50 -2 132 37 147 70 6 14 14 25 17 25 9 0 15 47 14 109 -2 106 -59 161 -171 167 -37 2 -80 -1 -97 -8z"/>
+                  <path d="M15700 9984 c-14 -3 -32 -8 -40 -11 -8 -4 -17 -7 -20 -8 -76 -20 -215 -137 -240 -200 -7 -19 -17 -35 -22 -35 -4 0 -8 -7 -8 -16 0 -9 -6 -30 -14 -47 -35 -76 -49 -147 -55 -282 l-6 -140 -122 -3 -123 -3 0 -69 0 -70 126 0 125 0 -4 -522 c-2 -288 -6 -530 -8 -538 -26 -89 -56 -111 -168 -125 -83 -10 -84 -11 -88 -40 -2 -16 -2 -39 2 -52 l5 -23 440 0 440 1 0 53 0 53 -101 7 c-148 9 -181 28 -215 121 -17 46 -19 93 -22 558 l-3 507 201 0 200 0 0 70 0 70 -112 1 c-62 1 -151 2 -198 3 l-85 2 1 195 c0 299 12 360 76 399 40 24 110 26 146 4 15 -9 53 -47 85 -85 73 -87 113 -117 169 -128 144 -26 216 152 107 265 -33 34 -96 69 -144 79 -37 9 -291 15 -325 9z"/>
+                  <path d="M8198 9416 c-1 -2 -43 -6 -93 -10 -163 -11 -275 -60 -398 -175 -71 -66 -114 -130 -153 -227 -54 -133 -67 -221 -61 -409 3 -88 8 -171 11 -185 3 -14 8 -43 11 -64 6 -44 66 -192 101 -246 47 -74 208 -220 242 -220 6 0 12 -4 14 -10 2 -5 48 -21 103 -36 85 -23 119 -26 225 -25 175 1 274 35 395 136 43 36 155 174 155 192 0 3 6 14 13 22 27 32 48 101 37 121 -21 39 -56 24 -138 -57 -113 -114 -227 -163 -375 -163 -120 0 -224 38 -320 114 -52 41 -145 180 -152 226 0 3 -3 10 -6 15 -6 10 -18 52 -25 93 -3 13 -8 59 -12 103 l-8 79 321 0 c177 0 411 3 519 7 l198 6 -7 91 c-9 108 -25 174 -68 281 -27 68 -44 91 -109 157 -116 116 -199 155 -380 181 -20 3 -38 4 -40 3z m86 -190 c59 -34 99 -76 121 -124 9 -20 21 -45 26 -56 18 -32 39 -125 39 -171 l0 -45 -350 0 -351 0 7 53 c4 28 13 69 20 90 7 20 11 37 8 37 -2 0 12 30 31 68 42 78 90 126 160 158 43 21 63 24 145 21 84 -2 102 -6 144 -31z"/>
+                  <path d="M16615 9410 c-109 -21 -184 -53 -258 -111 -159 -126 -243 -295 -268 -538 -23 -219 2 -416 72 -569 16 -36 27 -67 25 -69 -11 -11 178 -203 200 -203 3 0 25 -13 48 -28 23 -16 51 -31 61 -34 200 -61 308 -70 438 -39 48 11 112 33 142 47 61 30 172 134 224 209 19 28 38 52 41 55 16 12 54 107 54 134 1 28 -3 32 -34 36 -33 5 -39 0 -107 -71 -117 -122 -218 -165 -388 -163 -103 1 -127 7 -220 56 -95 49 -192 156 -210 231 -4 15 -11 27 -15 27 -7 0 -30 74 -46 145 -3 17 -8 63 -11 103 l-5 72 517 0 517 0 -5 98 c-5 99 -28 198 -68 288 -12 27 -22 52 -21 56 1 4 -40 49 -91 101 -102 103 -161 138 -275 163 -70 14 -249 17 -317 4z m244 -154 c25 -9 60 -33 78 -54 68 -75 123 -224 123 -334 l0 -38 -350 0 -350 0 6 48 c4 26 20 88 35 139 24 73 38 101 75 142 106 117 235 150 383 97z"/>
+                  <path d="M8840 9335 c0 -51 2 -55 23 -55 42 0 112 -30 149 -63 40 -35 77 -104 132 -247 20 -52 43 -106 50 -120 8 -14 14 -28 14 -33 1 -12 39 -110 56 -142 9 -16 16 -35 16 -41 0 -6 12 -38 26 -70 15 -33 48 -115 74 -184 63 -161 219 -556 225 -567 4 -7 138 -11 155 -5 16 6 43 62 114 237 51 127 99 244 108 260 8 17 28 68 43 115 15 47 34 96 43 109 20 33 82 213 76 223 -3 4 -1 8 5 8 9 0 31 -52 64 -155 39 -122 47 -144 72 -210 60 -157 168 -454 186 -512 11 -35 27 -66 37 -71 9 -5 51 -10 93 -11 l75 -2 14 43 c7 24 17 47 22 53 4 5 8 16 8 24 0 8 11 37 24 65 13 28 50 121 81 206 32 85 62 164 68 175 6 11 12 28 14 37 1 9 13 41 27 70 13 29 29 71 36 93 7 22 17 46 23 53 6 8 12 23 14 34 2 11 27 79 57 151 29 73 66 168 81 212 16 44 31 82 34 85 3 3 15 23 26 45 40 79 111 135 172 135 23 0 24 3 21 53 l-3 52 -284 0 -285 0 -1 -40 c-2 -55 3 -65 32 -65 35 0 103 -21 103 -32 0 -5 4 -7 10 -3 12 8 38 -45 34 -70 -2 -11 -5 -34 -8 -51 -7 -39 -64 -194 -78 -211 -6 -7 -7 -13 -3 -13 4 0 2 -7 -5 -15 -7 -8 -10 -15 -6 -15 3 0 -8 -37 -25 -82 -16 -46 -31 -90 -34 -98 -6 -25 -33 -96 -43 -116 -11 -23 -28 -70 -49 -139 -9 -27 -26 -77 -39 -110 -13 -33 -27 -75 -30 -92 -4 -18 -12 -37 -19 -43 -10 -9 -16 0 -24 40 -6 28 -18 64 -26 80 -9 17 -15 31 -14 32 3 5 -20 74 -47 143 -14 39 -32 85 -38 103 -6 17 -14 32 -18 32 -5 0 -8 9 -8 21 0 11 -4 28 -10 38 -5 10 -12 33 -15 52 -3 18 -9 36 -13 39 -5 3 -14 25 -21 50 -8 25 -22 63 -32 85 -24 54 -89 240 -95 271 -10 57 50 99 149 103 14 1 17 11 17 56 l0 55 -350 0 -350 0 0 -54 0 -53 51 -6 c45 -6 106 -33 134 -62 23 -22 55 -84 80 -155 39 -109 39 -107 22 -143 -9 -18 -19 -47 -22 -65 -3 -17 -16 -52 -30 -76 -14 -25 -27 -53 -28 -63 -2 -10 -7 -27 -12 -38 -4 -11 -27 -72 -52 -135 -108 -282 -137 -350 -147 -347 -6 3 -10 9 -9 15 2 6 -6 30 -17 54 -10 24 -21 54 -24 68 -3 14 -39 108 -80 210 -42 101 -76 189 -76 195 0 5 -7 24 -16 40 -9 17 -18 39 -20 49 -2 11 -12 39 -23 62 -11 23 -30 70 -41 105 -12 35 -26 69 -30 74 -5 6 -8 12 -8 15 0 3 -8 25 -18 50 -10 25 -18 52 -18 60 1 8 2 23 2 33 2 23 81 57 133 57 l39 0 0 55 0 55 -360 0 -360 0 0 -55z"/>
+                  <path d="M14518 9369 c-31 -4 -85 -16 -120 -25 -35 -9 -70 -18 -78 -20 -8 -2 -49 -12 -90 -22 l-75 -19 0 -47 0 -48 60 -2 c85 -4 101 -12 124 -59 19 -40 20 -62 22 -542 3 -542 -1 -593 -48 -637 -19 -18 -40 -24 -96 -28 l-72 -5 -3 -57 -3 -58 371 0 370 0 1 28 c1 15 2 42 4 60 l2 32 -71 0 c-96 0 -129 20 -151 92 -13 45 -15 141 -15 708 l1 655 -38 2 c-21 0 -64 -3 -95 -8z"/>
+                </g>
+              </motion.g>
             </svg>
           </div>
 
-          {/* Textos a la derecha (o abajo en mobile) */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <motion.h1
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: loading ? 1 : 0, x: 0 }}
-              transition={{ duration: 1, delay: 1.5 }}
-              className="text-white font-playfair text-4xl sm:text-5xl md:text-6xl tracking-tight mb-2 flex items-baseline gap-1"
-            >
-              New Life
-            </motion.h1>
-            
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: loading ? 1 : 0 }}
-              transition={{ duration: 1.5, delay: 1.8 }}
-              className="w-full h-[1px] bg-accent/40 origin-left mb-3"
-            />
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: loading ? 0.7 : 0 }}
-              transition={{ duration: 1, delay: 2.2 }}
-              className="flex items-center gap-2 md:gap-3 text-accent tracking-[0.2em] md:tracking-[0.4em] uppercase text-[9px] sm:text-[10px] md:text-xs font-medium"
-            >
-              <span>INVESTMENTS</span>
-              <span className="w-1 h-1 bg-accent rounded-full hidden sm:block" />
-              <span>AE</span>
-            </motion.div>
-          </div>
         </div>
 
         {/* Minimal Progress Bar */}
-        <div className="w-32 md:w-48 h-[1px] bg-white/5 relative overflow-hidden">
+        <div className="w-32 md:w-48 h-[1px] bg-white/10 relative overflow-hidden rounded-full">
           <motion.div
             initial={{ x: "-100%" }}
             animate={{ x: loading ? "100%" : "0%" }}
             transition={{ 
-              duration: 3, 
+              duration: 2.2,
               repeat: loading ? Infinity : 0, 
               ease: "easeInOut" 
             }}
-            className="absolute inset-0 bg-accent/40"
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/70 to-transparent"
           />
         </div>
       </div>

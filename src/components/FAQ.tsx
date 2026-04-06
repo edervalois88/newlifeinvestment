@@ -44,13 +44,13 @@ export default function FAQ() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               key={index}
-              className="glass-elegant rounded-2xl overflow-hidden hover:bg-white/5 transition-colors border border-white/5"
+              className="glass-elegant premium-card premium-card--soft rounded-2xl overflow-hidden hover:bg-white/5 transition-colors border border-white/5"
             >
               <button
                 className="w-full px-8 py-6 flex justify-between items-center text-left focus:outline-none"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="font-playfair text-xl text-white">{faq.q}</span>
+                <span className="font-playfair text-lg sm:text-xl text-white/90 sm:text-white">{faq.q}</span>
                 <ChevronDown 
                   className={`w-6 h-6 text-accent transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
                   strokeWidth={1.5}

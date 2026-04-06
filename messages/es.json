@@ -6,45 +6,120 @@
     "franchises": "Franquicias",
     "process": "Proceso",
     "concierge": "Concierge",
-    "gateway": "Puerta a Riad",
-    "contact": "Contacto"
+    "gateway": "Corredor EAU - USA",
+    "contact": "Contacto",
+    "languageLabel": "Idioma",
+    "languageEs": "Español",
+    "languageEn": "Inglés",
+    "languageAr": "Árabe",
+    "logoAlt": "Logotipo de New Life Investments"
   },
   "Hero": {
-    "title": "Expansión Estratégica desde México",
-    "subtitle": "Conectando capital y visión en todo el continente americano y Medio Oriente.",
-    "cta": "Descubra el Servicio Concierge"
+    "title": "Estrategia de Expansión UAE-USA",
+    "subtitle": "Asesoría integral para estructurar inversión, cumplimiento y operación entre Emiratos Árabes Unidos y Estados Unidos.",
+    "cta": "Solicitar diagnóstico estratégico",
+    "imageAlt": "Corredor global de negocios entre EAU y USA"
   },
   "Services": {
-    "title": "Servicios Premium de Concierge",
+    "title": "Soluciones Estratégicas",
+    "detailsCta": "Ver alcance del servicio",
+    "contactCta": "Agendar reunión",
+    "franchisePageCta": "Explorar página de franquicias",
+    "close": "Cerrar",
     "immigration": {
       "title": "Inmigración (USA)",
-      "desc": "Rutas de visa y residencia personalizadas para personas de alto patrimonio que se expanden a los EE. UU."
+      "desc": "Rutas de visa y residencia personalizadas para personas de alto patrimonio que se expanden a los EE. UU.",
+      "longDesc": "Diseñamos una estrategia migratoria integral alineada con su perfil patrimonial, sus objetivos familiares y su plan de expansión en Estados Unidos.",
+      "step1": "Diagnóstico legal y perfil migratorio.",
+      "step2": "Estructuración documental y plan de inversión.",
+      "step3": "Acompañamiento hasta aprobación y aterrizaje."
     },
     "franchise": {
       "title": "Selección de Franquicias",
-      "desc": "Oportunidades de inversión curadas en franquicias globales de primer nivel."
+      "desc": "Oportunidades de inversión curadas en franquicias globales de primer nivel.",
+      "longDesc": "Integramos análisis financiero, viabilidad operativa y compatibilidad con su estilo de gestión para seleccionar franquicias con alta probabilidad de escalamiento.",
+      "step1": "Mapeo de sectores, ticket e intereses.",
+      "step2": "Due diligence, comparativos y escenarios.",
+      "step3": "Negociación, firma y plan de apertura."
     },
     "brand": {
       "title": "Arquitectura de Marca",
-      "desc": "Creación de identidades de marca sólidas para empresas nuevas y existentes."
+      "desc": "Creación de identidades de marca sólidas para empresas nuevas y existentes.",
+      "longDesc": "Traducimos su propuesta de valor en una identidad clara, internacional y coherente para comunicar confianza en mercados exigentes.",
+      "step1": "Auditoría de posicionamiento y narrativa.",
+      "step2": "Sistema visual y lineamientos de marca.",
+      "step3": "Implementación omnicanal y control de calidad."
+    }
+  },
+  "FranchisesPage": {
+    "eyebrow": "Franquicias Internacionales",
+    "title": "Una Subdivisión Especializada para Escalar su Inversión con Franquicias",
+    "subtitle": "Conectamos inversionistas internacionales con marcas de alto rendimiento mediante una metodología de análisis, selección y ejecución que prioriza rentabilidad, control de riesgo y velocidad de apertura.",
+    "primaryCta": "Solicitar estrategia personalizada",
+    "secondaryCta": "Volver a servicios",
+    "advantageTitle": "Qué Hace Diferente Nuestro Modelo",
+    "flowTitle": "Flujo de Trabajo Más Amigable y Guiado",
+    "faqTitle": "Preguntas Clave Antes de Invertir",
+    "pillars": {
+      "legalTitle": "Blindaje Legal y Contractual",
+      "legalDesc": "Revisamos contratos, cláusulas de salida, obligaciones operativas y requisitos regulatorios para reducir incertidumbre desde el inicio.",
+      "growthTitle": "Crecimiento con Métricas Reales",
+      "growthDesc": "Evaluamos retorno esperado, punto de equilibrio, costos ocultos y sensibilidad por mercado para tomar decisiones con datos.",
+      "executionTitle": "Ejecución de Apertura End-to-End",
+      "executionDesc": "Coordinamos selección de ubicación, onboarding con la marca y plan de lanzamiento para que la operación arranque con estructura sólida."
+    },
+    "flow": {
+      "step1Title": "Perfil de Inversionista y Objetivos",
+      "step1Desc": "Definimos el ticket ideal, horizonte de retorno, nivel de participación operativa y tolerancia al riesgo.",
+      "step2Title": "Shortlist Estratégica",
+      "step2Desc": "Presentamos opciones filtradas por sector, reputación de marca, soporte del franquiciante y desempeño histórico.",
+      "step3Title": "Due Diligence y Negociación",
+      "step3Desc": "Auditoría de números, revisión legal y negociación de condiciones para proteger su inversión.",
+      "step4Title": "Plan de Apertura y Escalamiento",
+      "step4Desc": "Diseñamos una hoja de ruta de 90 días para apertura y una estrategia de expansión para siguientes unidades."
+    },
+    "faq": {
+      "q1": "¿Cuál es el capital mínimo recomendado para iniciar?",
+      "a1": "Depende del sector y la marca, pero normalmente estructuramos escenarios desde USD 150,000 para franquicias con soporte robusto.",
+      "q2": "¿Puedo invertir sin operar personalmente el negocio?",
+      "a2": "Sí. Diseñamos modelos con operadores locales y cuadros de control para mantener visibilidad sin gestionar el día a día.",
+      "q3": "¿Cómo validan que una franquicia es realmente rentable?",
+      "a3": "Combinamos información del franquiciante, benchmark del mercado y modelación financiera con supuestos conservadores.",
+      "q4": "¿Acompañan también después de la apertura?",
+      "a4": "Sí, ofrecemos seguimiento trimestral para desempeño, optimización de costos y preparación para escalar a nuevas unidades."
     }
   },
   "Gateway": {
-    "title": "La Puerta México - Arabia Saudita",
-    "desc": "Desbloquee canales de inversión recíprocos. Acceda a la red de expansión de Riad directamente desde nuestra división en México."
+    "title": "Plataforma Operativa UAE-USA",
+    "desc": "Estructuramos canales de inversión bidireccionales y expansión operativa entre Emiratos Árabes Unidos y Estados Unidos con enfoque en gobierno, cumplimiento y ejecución.",
+    "cities": {
+      "dubai": "Dubái",
+      "usa": "USA",
+      "abudhabi": "Abu Dhabi"
+    }
   },
   "Contact": {
     "title": "Conéctese con Nosotros",
     "name": "Nombre completo",
     "email": "Correo electrónico",
     "message": "Detalles de la consulta",
-    "send": "Enviar solicitud"
+    "send": "Enviar solicitud",
+    "successToast": "Solicitud enviada con éxito"
   },
   "About": {
-    "aboutTitle": "Visión Global, Corazón Mexicano",
-    "aboutDesc": "Somos el puente estratégico para familias y empresarios mexicanos que buscan expandir su horizonte hacia Estados Unidos y Arabia Saudita. Nuestra integridad es su mayor activo."
+    "aboutTitleLine1": "Ejecución Transfronteriza",
+    "aboutTitleLine2": "con Estándar Institucional",
+    "aboutDesc": "Actuamos como socio estratégico para empresarios e inversionistas que expanden operaciones entre Emiratos Árabes Unidos y Estados Unidos, alineando estructura legal, operación y resultados.",
+    "statsYears": "Años de experiencia",
+    "statsOffices": "Oficinas globales",
+    "statsIntegrity": "Integridad",
+    "imageAlt": "Arquitectura corporativa y excelencia operativa",
+    "badgeTitle": "NLI",
+    "badgeSubtitle": "Advisory Global"
   },
   "Process": {
+    "eyebrow": "5 pasos clave",
+    "stepLabel": "Paso",
     "processTitle": "Su Reubicación en 5 Pasos",
     "processStep1": "Apertura Financiera & Crédito",
     "processStep2": "Selección de Residencia Premium",
@@ -54,22 +129,29 @@
   },
   "Concierge": {
     "conciergeTitle": "Servicios de Concierge",
-    "conciergeDesc": "Delegue cada detalle logístico a nosotros. Desde la mudanza total hasta la gestión de su nuevo hogar antes de su llegada."
+    "conciergeDesc": "Delegue la implementación operativa de su aterrizaje. Desde logística ejecutiva hasta habilitación de vivienda y soporte legal previo a su llegada.",
+    "tagline": "Excelencia Operativa",
+    "item1": "Logística integral de reubicación ejecutiva",
+    "item2": "Entrega de vivienda lista para operación",
+    "item3": "Coordinación legal y de seguros",
+    "item4": "Integración local y relacionamiento estratégico",
+    "item5": "Soporte continuo 24/7 para ejecutivos",
+    "imageAlt": "Soporte ejecutivo de reubicación y habilitación"
   },
   "Metadata": {
-    "title": "Inversión Estratégica en USA y Arabia Saudita | New Life México",
-    "keywords": "Visa E-2, Franquicias USA, Expansión Riad"
+    "title": "Inversión Estratégica entre EAU y USA | New Life Investments",
+    "keywords": "Visa E-2, Expansión USA, Inversión Emiratos Árabes Unidos"
   },
   "SuccessStories": {
-    "title": "Casos de Éxito",
-    "storyAtitle": "De Ciudad de México a Houston: El Camino de la Visa E-2",
+    "title": "Casos de Implementación",
+    "storyAtitle": "De Dubái a Houston: El Camino de la Visa E-2",
     "storyAdesc": "Navegación legal rápida, clara y segura para su expansión en los EE. UU.",
-    "storyBtitle": "Arquitectura de Marca en el Reino: Escalando Negocios Mexicanos en Arabia Saudita",
+    "storyBtitle": "Arquitectura de Marca en el Golfo: Escalando Negocios entre EAU y USA",
     "storyBdesc": "Asegurando el cumplimiento de marca y la alineación cultural de forma fluida."
   },
   "Expertise": {
     "title": "Nuestra Ventaja Competitiva",
-    "subtitle": "Por qué elegir New Life Investments USA",
+    "subtitle": "Capacidades de New Life Investments",
     "integrityTitle": "Integridad",
     "integrityDesc": "Operamos con total transparencia y una base ética en cada transacción internacional.",
     "experienceTitle": "Experiencia",
@@ -79,9 +161,16 @@
   },
   "FAQ": {
     "title": "Preguntas Frecuentes",
-    "q1": "¿Cuánto dura el trámite para la Visa E-2?",
-    "a1": "Normalmente de 3 a 6 meses, dependiendo del consulado y la calidad de la solicitud.",
-    "q2": "¿Puedo proceder con el cierre inmobiliario de forma totalmente remota?",
-    "a2": "Sí. Nuestro servicio \"Concierge\" le brinda delegación notarial y procesos legales 100% digitales."
+    "q1": "¿Qué estructura legal recomiendan para operar entre EAU y USA?",
+    "a1": "Depende de su industria y objetivo fiscal. Diseñamos esquemas con entidad en EAU (free zone o mainland) y entidad en USA, integrando cumplimiento regulatorio, bancario y migratorio.",
+    "q2": "¿Qué tiempos consideran para establecer operaciones entre EAU y USA?",
+    "a2": "En promedio entre 8 y 16 semanas para constitución, apertura operativa inicial y hoja de ruta de movilidad ejecutiva, sujeto a jurisdicción y licencias aplicables."
+  },
+  "ThemeToggle": {
+    "switchToDark": "Cambiar a modo oscuro",
+    "switchToLight": "Cambiar a modo claro"
+  },
+  "Common": {
+    "footerRights": "© {year} New Life Investments. Todos los derechos reservados."
   }
 }

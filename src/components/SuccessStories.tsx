@@ -13,13 +13,13 @@ export default function SuccessStories() {
       id: 'storyA',
       title: t('storyAtitle'),
       desc: t('storyAdesc'),
-      image: '/houston.png',
+      image: '/houston.jpg',
     },
     {
       id: 'storyB',
       title: t('storyBtitle'),
       desc: t('storyBdesc'),
-      image: '/riyadh.png',
+      image: '/riyadh.jpg',
     }
   ];
 
@@ -50,7 +50,7 @@ export default function SuccessStories() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               key={story.id} 
-              className="snap-center shrink-0 w-[85vw] md:w-[60vw] lg:w-[45vw] h-[500px] relative rounded-3xl overflow-hidden glass-elegant group transition-shadow duration-500 hover:shadow-[0_0_40px_rgba(197,160,89,0.3)]"
+              className="premium-card premium-card--strong snap-center shrink-0 w-[85vw] md:w-[60vw] lg:w-[45vw] h-[420px] sm:h-[500px] relative rounded-3xl overflow-hidden glass-elegant group transition-shadow duration-500 hover:shadow-[0_0_40px_rgba(197,160,89,0.3)]"
             >
               {/* Background Image with Dark Overlay */}
               <div className="absolute inset-0 z-0">
@@ -59,9 +59,9 @@ export default function SuccessStories() {
                   alt={story.title} 
                   fill
                   sizes="(max-width: 768px) 85vw, (max-width: 1024px) 60vw, 45vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  className="object-cover contrast-125 saturate-110 transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-primary/20 z-10" />
               </div>
 
               {/* Content */}

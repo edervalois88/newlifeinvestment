@@ -5,9 +5,9 @@ import { motion } from 'motion/react';
 import React, { useState } from 'react';
 
 const cities = [
-  { id: 'mx', name: 'Mexico City', x: 200, y: 300 },
-  { id: 'hou', name: 'Houston', x: 260, y: 220 },
-  { id: 'riyadh', name: 'Riyadh', x: 740, y: 240 }
+  { id: 'dubai', key: 'dubai', x: 200, y: 305 },
+  { id: 'usa', key: 'usa', x: 500, y: 230 },
+  { id: 'abudhabi', key: 'abudhabi', x: 780, y: 205 }
 ];
 
 export default function Gateway() {
@@ -16,8 +16,8 @@ export default function Gateway() {
 
   // SVG dimensions: 1000x500
   const dPath = active 
-    ? `M 200 300 Q 230 260, 260 220 C 400 150, 600 150, 740 240` // connect mx to houston, then arch to riyadh
-    : `M 200 300 Q 230 280, 260 220 C 400 220, 600 240, 740 240`; // flatter curve before hover
+    ? `M 200 305 Q 300 210, 500 230 T 780 205`
+    : `M 200 305 Q 310 245, 500 230 T 780 205`;
 
   return (
     <section id="gateway" className="py-24 bg-secondary border-t border-white/5 relative overflow-hidden">
@@ -39,7 +39,7 @@ export default function Gateway() {
         </motion.div>
 
         <motion.div 
-          className="lg:w-2/3 w-full relative z-10 glass-elegant rounded-3xl p-8"
+          className="lg:w-2/3 w-full relative z-10 glass-elegant premium-card premium-card--soft rounded-3xl p-6 sm:p-8"
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -47,7 +47,7 @@ export default function Gateway() {
           onMouseEnter={() => setActive(true)}
           onMouseLeave={() => setActive(false)}
         >
-          <div className="relative w-full aspect-[2/1] overflow-visible">
+          <div className="relative w-full aspect-2/1 overflow-visible">
             <svg 
               viewBox="0 0 1000 500" 
               className="absolute inset-0 w-full h-full drop-shadow-2xl" 
@@ -55,28 +55,33 @@ export default function Gateway() {
             >
               <defs>
                 <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="#C5A059" stopOpacity="0.2" />
-                  <stop offset="50%" stopColor="#C5A059" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#C5A059" stopOpacity="0.8" />
+                  <stop offset="0%" stopColor="#C5A059" stopOpacity="0.22" />
+                  <stop offset="45%" stopColor="#C5A059" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#E2C588" stopOpacity="0.9" />
                 </linearGradient>
                 <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
                   <feGaussianBlur stdDeviation="4" result="blur" />
                   <feComposite in="SourceGraphic" in2="blur" operator="over" />
                 </filter>
+                <marker id="arrowHead" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+                  <path d="M 0 1 L 10 6 L 0 11 z" fill="#D5B06B" />
+                </marker>
               </defs>
 
               {/* Base Map Abstract Shapes */}
               <circle cx="200" cy="300" r="100" fill="url(#lineGradient)" opacity="0.05" />
-              <circle cx="740" cy="240" r="120" fill="url(#lineGradient)" opacity="0.05" />
+              <circle cx="500" cy="230" r="95" fill="url(#lineGradient)" opacity="0.04" />
+              <circle cx="780" cy="205" r="110" fill="url(#lineGradient)" opacity="0.05" />
 
               {/* Animated Path */}
               <motion.path
                 d={dPath}
                 fill="none"
                 stroke="url(#lineGradient)"
-                strokeWidth="2"
+                strokeWidth="2.6"
                 strokeDasharray="10, 10"
                 strokeLinecap="round"
+                markerEnd="url(#arrowHead)"
                 animate={{
                   strokeDashoffset: active ? [0, -40] : 0,
                   d: dPath
@@ -86,6 +91,23 @@ export default function Gateway() {
                   d: { duration: 0.8, ease: "easeInOut" }
                 }}
                 filter="url(#glow)"
+              />
+
+              <motion.circle
+                r="4.6"
+                fill="#E2C588"
+                filter="url(#glow)"
+                animate={{
+                  offsetDistance: active ? ['0%', '100%'] : ['0%', '100%']
+                }}
+                transition={{
+                  duration: active ? 2.4 : 3.8,
+                  repeat: Infinity,
+                  ease: 'linear'
+                }}
+                style={{
+                  offsetPath: `path('${dPath}')`
+                }}
               />
 
               {/* City Dots & Labels */}
@@ -104,16 +126,17 @@ export default function Gateway() {
                   <motion.text
                     x={city.x}
                     y={city.y - 15}
-                    fill="#ededed"
+                    fill="var(--gateway-city-label)"
                     fontSize="16"
                     fontFamily="Inter, sans-serif"
+                    fontWeight="600"
                     textAnchor="middle"
-                    className="font-light tracking-widest drop-shadow-md"
+                    className="tracking-widest"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.7 + idx * 0.2 }}
                   >
-                    {city.name.toUpperCase()}
+                    {t(`cities.${city.key}`).toUpperCase()}
                   </motion.text>
                 </g>
               ))}

@@ -11,16 +11,16 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 
-const conciergeServices = [
-  { icon: Truck, text: "Mudanza & Logistica Total", delay: 0.1 },
-  { icon: Key, text: "Entrega de Llaves & Home Ready", delay: 0.2 },
-  { icon: ShieldCheck, text: "Gestión de Seguros & Legal", delay: 0.3 },
-  { icon: MapPin, text: "Inmersión Cultural Local", delay: 0.4 },
-  { icon: PhoneCall, text: "Soporte 24/7 de Reubicación", delay: 0.5 },
-];
-
 export default function Concierge() {
   const t = useTranslations('Concierge');
+
+  const conciergeServices = [
+    { icon: Truck, text: t('item1'), delay: 0.1 },
+    { icon: Key, text: t('item2'), delay: 0.2 },
+    { icon: ShieldCheck, text: t('item3'), delay: 0.3 },
+    { icon: MapPin, text: t('item4'), delay: 0.4 },
+    { icon: PhoneCall, text: t('item5'), delay: 0.5 },
+  ];
 
   return (
     <section id="concierge" className="py-48 bg-primary relative overflow-hidden">
@@ -34,7 +34,7 @@ export default function Concierge() {
             transition={{ duration: 1 }}
             className="order-2 lg:order-1"
           >
-            <span className="text-accent tracking-widest uppercase text-xs font-bold mb-4 block italic">Exclusividad</span>
+            <span className="text-accent tracking-widest uppercase text-xs font-bold mb-4 block italic">{t('tagline')}</span>
             <h2 className="text-4xl md:text-6xl font-playfair mb-8 text-white italic">
               {t('conciergeTitle')}
             </h2>
@@ -54,10 +54,10 @@ export default function Concierge() {
                     transition={{ duration: 0.6, delay: service.delay }}
                     className="flex items-center gap-6 group hover:translate-x-2 transition-transform cursor-default"
                   >
-                    <div className="p-3 rounded-xl bg-accent/10 text-accent border border-accent/5 group-hover:bg-accent group-hover:text-primary group-hover:scale-110 transition-all duration-300">
-                      <Icon className="w-6 h-6" />
+                    <div className="icon-shell p-3 rounded-xl border group-hover:scale-110">
+                      <Icon className="icon-glyph w-6 h-6" />
                     </div>
-                    <span className="text-white/80 font-medium tracking-wide group-hover:text-accent transition-colors text-lg">
+                    <span className="text-white/80 font-medium tracking-wide group-hover:text-[#8f6a2f] transition-colors text-lg">
                       {service.text}
                     </span>
                   </motion.li>
@@ -76,10 +76,10 @@ export default function Concierge() {
               className="aspect-square relative rounded-full overflow-hidden border border-accent/10 group shadow-[0_0_80px_rgba(197,160,89,0.1)] max-w-md mx-auto"
             >
               <Image 
-                src="/riyadh.png"
-                alt="Luxury Concierge Service"
+                src="/riyadh.jpg"
+                alt={t('imageAlt')}
                 fill
-                className="object-cover transition-all duration-2000 group-hover:scale-110"
+                className="object-cover contrast-125 saturate-105 transition-all duration-2000 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-primary/40 mix-blend-overlay group-hover:bg-transparent transition-all duration-1000" />
             </motion.div>

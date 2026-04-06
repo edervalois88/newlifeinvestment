@@ -2,12 +2,12 @@ import {NextIntlClientProvider} from 'next-intl';
 import { getTranslations, getMessages, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import {routing} from '@/i18n/routing';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Manrope, Cormorant_Garamond } from 'next/font/google';
 import '../globals.css';
 import { notFound } from 'next/navigation';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' });
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' });
+const cormorant = Cormorant_Garamond({ subsets: ['latin'], variable: '--font-cormorant', weight: ['400', '500', '600', '700'] });
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
@@ -20,15 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
 
   return {
     title: t('title'),
-    keywords: t('keywords'),
-    alternates: {
-      canonical: `/${locale}`,
-      languages: {
-        'es-MX': '/es',
-        'en-US': '/en',
-        'ar-SA': '/ar'
-      }
-    }
+    keywords: t('keywords')
   };
 }
 
@@ -51,8 +43,8 @@ export default async function LocaleLayout({
   const isRtl = locale === 'ar';
 
   return (
-    <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'} suppressHydrationWarning>
-      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
+    <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'} data-theme="light" suppressHydrationWarning>
+      <body className={`${manrope.variable} ${cormorant.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

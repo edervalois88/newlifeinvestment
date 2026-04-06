@@ -2,47 +2,23 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://newlifeinvestments.mx';
+  const lastModified = new Date();
+  const locales = ['es', 'en', 'ar'] as const;
+  const staticRoutes = ['', '/about', '/services', '/process', '/gateway', '/contact', '/franchises'] as const;
 
-  // Prioritizing the Mexican division's subpaths
-  return [
-    {
-      url: `${baseUrl}/es`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1.0,
+  return staticRoutes.flatMap((route) => {
+    const alternates = Object.fromEntries(
+      locales.map((locale) => [locale, `${baseUrl}/${locale}${route}`])
+    );
+
+    return locales.map((locale) => ({
+      url: `${baseUrl}/${locale}${route}`,
+      lastModified,
+      changeFrequency: route === '' ? 'weekly' : 'monthly',
+      priority: route === '' ? (locale === 'es' ? 1.0 : 0.8) : route === '/franchises' ? 0.9 : 0.75,
       alternates: {
-        languages: {
-          'es': `${baseUrl}/es`,
-          'en': `${baseUrl}/en`,
-          'ar': `${baseUrl}/ar`
-        }
+        languages: alternates
       }
-    },
-    {
-      url: `${baseUrl}/en`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-      alternates: {
-        languages: {
-          'es': `${baseUrl}/es`,
-          'en': `${baseUrl}/en`,
-          'ar': `${baseUrl}/ar`
-        }
-      }
-    },
-    {
-      url: `${baseUrl}/ar`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-      alternates: {
-        languages: {
-          'es': `${baseUrl}/es`,
-          'en': `${baseUrl}/en`,
-          'ar': `${baseUrl}/ar`
-        }
-      }
-    },
-  ];
+    }));
+  });
 }
