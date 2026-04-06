@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'motion/react';
-import { Building2, Store, Plane, ArrowRight, X, CheckCircle2 } from 'lucide-react';
+import { Building2, Store, Plane, Home, GraduationCap, ArrowRight, X, CheckCircle2 } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from '@/i18n/routing';
 
