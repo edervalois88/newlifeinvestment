@@ -99,9 +99,11 @@ export default function About() {
               <br />
               <span className="text-accent italic">{t('aboutTitleLine2')}</span>
             </h2>
-            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-10 max-w-xl">
-              {t('aboutDesc')}
-            </p>
+            <div className="space-y-6 mb-10 text-white/70 text-base md:text-lg leading-relaxed max-w-xl font-light">
+              <p>{t('aboutDesc1')}</p>
+              <p>{t('aboutDesc2')}</p>
+              <p>{t('aboutDesc3')}</p>
+            </div>
             <div className="grid grid-cols-2 sm:flex gap-4 sm:gap-8 border-t border-white/5 pt-10">
               <StatCounter value={15} suffix="+" label={t('statsYears')} />
               <StatCounter value={3} label={t('statsOffices')} duration={1200} />

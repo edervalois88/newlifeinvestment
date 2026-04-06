@@ -23,9 +23,9 @@ export default function Concierge() {
   ];
 
   return (
-    <section id="concierge" className="py-48 bg-primary relative overflow-hidden">
+    <section id="concierge" className="py-20 bg-primary relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-30">
-        <div className="grid lg:grid-cols-2 gap-24 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -38,11 +38,11 @@ export default function Concierge() {
             <h2 className="text-4xl md:text-6xl font-playfair mb-8 text-white italic">
               {t('conciergeTitle')}
             </h2>
-            <p className="text-white/60 text-lg md:text-xl leading-relaxed mb-12 max-w-lg">
+            <p className="text-white/60 text-base md:text-lg leading-relaxed mb-8 max-w-lg">
               {t('conciergeDesc')}
             </p>
 
-            <ul className="space-y-8">
+            <ul className="space-y-6">
               {conciergeServices.map((service, index) => {
                 const Icon = service.icon;
                 return (
@@ -52,7 +52,7 @@ export default function Concierge() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: service.delay }}
-                    className="flex items-center gap-6 group hover:translate-x-2 transition-transform cursor-default"
+                    className="flex items-center gap-4 group hover:translate-x-2 transition-transform cursor-default"
                   >
                     <div className="icon-shell p-3 rounded-xl border group-hover:scale-110">
                       <Icon className="icon-glyph w-6 h-6" />
@@ -66,14 +66,14 @@ export default function Concierge() {
             </ul>
           </motion.div>
 
-          {/* Visual Showcase */}
+          {/* Visual Showcase - Reduced */}
           <div className="relative order-1 lg:order-2">
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="aspect-square relative rounded-full overflow-hidden border border-accent/10 group shadow-[0_0_80px_rgba(197,160,89,0.1)] max-w-md mx-auto"
+              className="aspect-square relative rounded-full overflow-hidden border border-accent/10 group shadow-[0_0_60px_rgba(197,160,89,0.08)] max-w-xs mx-auto"
             >
               <Image 
                 src="/riyadh.jpg"
@@ -85,15 +85,15 @@ export default function Concierge() {
             </motion.div>
 
             {/* Premium Gold Ring */}
-            <div className="absolute inset-0 -m-8 rounded-full border border-accent/10 border-dashed animate-spin-slow pointer-events-none" />
+            <div className="absolute inset-0 -m-6 rounded-full border border-accent/10 border-dashed animate-spin-slow pointer-events-none" />
           </div>
 
         </div>
       </div>
 
-      {/* Luxury Blur Background Elements */}
-      <div className="absolute top-1/4 left-0 w-[40vw] h-[40vw] bg-accent/5 rounded-full blur-[120px] -translate-x-1/2 -z-0" />
-      <div className="absolute bottom-1/4 right-0 w-[30vw] h-[30vw] bg-secondary/10 rounded-full blur-[100px] translate-x-1/2 -z-0" />
+      {/* Luxury Blur Background Elements - Reduced */}
+      <div className="absolute top-1/4 left-0 w-[30vw] h-[30vw] bg-accent/3 rounded-full blur-[100px] -translate-x-1/2 -z-0" />
+      <div className="absolute bottom-1/4 right-0 w-[25vw] h-[25vw] bg-secondary/5 rounded-full blur-[80px] translate-x-1/2 -z-0" />
     </section>
   );
 }

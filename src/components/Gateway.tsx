@@ -33,9 +33,17 @@ export default function Gateway() {
           <h2 className="text-4xl md:text-5xl font-playfair text-accent mb-6">
             {t('title')}
           </h2>
-          <p className="text-xl text-white/70 font-light leading-relaxed">
-            {t('desc')}
+          <p className="text-base md:text-lg text-white/70 font-light leading-relaxed mb-6">
+            {t('desc1')}
           </p>
+          <p className="text-base md:text-lg text-white/70 font-light leading-relaxed mb-8">
+            {t('desc2')}
+          </p>
+          <div className="space-y-3">
+            <div className="text-sm text-accent font-medium tracking-wider">
+              {t('opportunities')}
+            </div>
+          </div>
         </motion.div>
 
         <motion.div 
@@ -114,8 +122,8 @@ export default function Gateway() {
               {cities.map((city, idx) => (
                 <g key={city.id}>
                   <motion.circle
-                    cx={city.x}
-                    cy={city.y}
+                    cx={country.x}
+                    cy={country.y}
                     r="6"
                     fill="#C5A059"
                     filter="url(#glow)"

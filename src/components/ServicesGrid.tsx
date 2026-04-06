@@ -8,6 +8,8 @@ import { Link } from '@/i18n/routing';
 
 const icons = {
   immigration: Plane,
+  realEstate: Home,
+  academic: GraduationCap,
   franchise: Store,
   brand: Building2
 };
@@ -19,6 +21,8 @@ export default function ServicesGrid() {
 
   const services = [
     { key: 'immigration', icon: 'immigration' },
+    { key: 'realEstate', icon: 'realEstate' },
+    { key: 'academic', icon: 'academic' },
     { key: 'franchise', icon: 'franchise' },
     { key: 'brand', icon: 'brand' }
   ] as const;
@@ -50,7 +54,7 @@ export default function ServicesGrid() {
           <div className="w-24 h-1 bg-accent/30 mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {services.map((service, index) => {
             const Icon = icons[service.icon as keyof typeof icons];
             

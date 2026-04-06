@@ -8,6 +8,14 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 
+type Locale = 'en' | 'es' | 'ar';
+
+const locales: ReadonlyArray<{ code: Locale; label: string }> = [
+  { code: 'es', label: 'Español' },
+  { code: 'en', label: 'English' },
+  { code: 'ar', label: 'العربية' }
+];
+
 export default function Header() {
   const t = useTranslations('Navigation');
   const pathname = usePathname();
@@ -16,7 +24,7 @@ export default function Header() {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleLanguageChange = (locale: 'en' | 'es' | 'ar') => {
+  const handleLanguageChange = (locale: Locale) => {
     router.replace(pathname, { locale });
     setIsMobileMenuOpen(false);
   };
