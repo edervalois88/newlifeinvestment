@@ -34,6 +34,22 @@
       "step2": "Documentation framework and investment strategy.",
       "step3": "Guided filing, approval, and soft landing support."
     },
+    "realEstate": {
+      "title": "Real Estate",
+      "desc": "Acquisition and investment strategy for clients structuring property decisions in the US.",
+      "longDesc": "We connect property acquisition with residency, yield, and operational priorities to support both lifestyle and portfolio objectives.",
+      "step1": "Market targeting, budget definition, and property brief.",
+      "step2": "Asset screening, underwriting, and negotiation support.",
+      "step3": "Closing coordination and post-acquisition execution."
+    },
+    "academic": {
+      "title": "Academic Placement",
+      "desc": "Education advisory for families aligning relocation with school and university choices.",
+      "longDesc": "We coordinate school selection, admission timing, visa implications, and relocation logistics to protect academic continuity.",
+      "step1": "Academic profile review and shortlist design.",
+      "step2": "Admissions guidance and documentation sequencing.",
+      "step3": "Relocation support for a smooth family transition."
+    },
     "franchise": {
       "title": "Franchise Selection",
       "desc": "Curated investment opportunities in top-tier global franchises.",
@@ -91,7 +107,10 @@
   },
   "Gateway": {
     "title": "UAE-USA Operating Platform",
+    "desc1": "We structure two-way investment and operating channels between the UAE and the United States with institutional rigor.",
+    "desc2": "The model is designed to align capital, compliance, mobility, and execution under one corridor strategy.",
     "desc": "We structure two-way investment channels and operational expansion between the United Arab Emirates and the United States with a governance, compliance, and execution focus.",
+    "opportunities": "Investment, mobility, and market-entry opportunities",
     "cities": {
       "dubai": "Dubai",
       "usa": "USA",
@@ -102,6 +121,7 @@
     "title": "Connect With Us",
     "name": "Full Name",
     "email": "Email Address",
+    "subject": "Subject",
     "message": "Inquiry Details",
     "send": "Send Message Request",
     "successToast": "Request submitted successfully"
@@ -109,6 +129,9 @@
   "About": {
     "aboutTitleLine1": "Cross-Border Execution",
     "aboutTitleLine2": "with Institutional Standards",
+    "aboutDesc1": "We design expansion structures for investors and operators moving between the UAE and the United States.",
+    "aboutDesc2": "Our approach aligns legal architecture, operational readiness, and capital deployment in a single execution model.",
+    "aboutDesc3": "The result is a clearer path to launch, scale, and govern cross-border growth with confidence.",
     "aboutDesc": "We act as a strategic partner for entrepreneurs and investors expanding operations between the United Arab Emirates and the USA, aligning legal structure, operations, and outcomes.",
     "statsYears": "Years of experience",
     "statsOffices": "Global offices",
@@ -149,6 +172,168 @@
     "storyBtitle": "Brand Architecture Across the Gulf: Scaling Businesses Between UAE and USA",
     "storyBdesc": "Ensuring brand compliance and cultural alignment seamlessly."
   },
+  "StrategicBlocks": {
+    "title": "Strategic Execution Layers",
+    "subtitle": "An integrated platform to coordinate immigration, relocation, real estate, education, and franchising with a single strategic vision.",
+    "services": {
+      "title": "Cross-Border Service Stack",
+      "items": {
+        "immigration": {
+          "title": "Immigration Planning",
+          "desc": "Visa strategy, compliance sequencing, and mobility planning for founders, investors, and families."
+        },
+        "relocation": {
+          "title": "Executive Relocation",
+          "desc": "Operational support for banking, licensing, landing logistics, and local integration."
+        },
+        "realEstate": {
+          "title": "Real Estate Structuring",
+          "desc": "Property acquisition and portfolio decisions aligned with residency, yield, and lifestyle goals."
+        },
+        "franchise": {
+          "title": "Franchise Expansion",
+          "desc": "Screening, negotiation, and launch planning for scalable franchise opportunities."
+        },
+        "education": {
+          "title": "Academic Placement",
+          "desc": "School and university placement guidance for families relocating with long-term plans."
+        }
+      }
+    },
+    "competitiveEdge": {
+      "title": "Why Clients Choose NLI",
+      "integrityTitle": "Integrity",
+      "integrityDesc": "Every recommendation is aligned with governance, risk visibility, and investor protection.",
+      "experienceTitle": "Experience",
+      "experienceDesc": "We translate complex cross-border decisions into executable, measurable roadmaps.",
+      "teamTitle": "Execution Team",
+      "teamDesc": "Law, operations, education, and investment expertise connected under one advisory model."
+    },
+    "mission": {
+      "title": "Mission",
+      "desc": "To simplify high-stakes expansion between the UAE and the United States through rigorous, investor-grade execution."
+    },
+    "vision": {
+      "title": "Vision",
+      "desc": "To become the benchmark platform for bilateral growth, mobility, and structured international expansion."
+    },
+    "franchise": {
+      "title": "Featured Franchise Pipeline",
+      "requestInfo": "Request information",
+      "categories": {
+        "all": "All",
+        "food": "Food",
+        "health": "Health",
+        "home": "Home",
+        "services": "Services",
+        "tech": "Tech"
+      },
+      "process": {
+        "step1": "Investor profile, capital range, and operating goals.",
+        "step2": "Sector screening and shortlist creation.",
+        "step3": "Financial and legal due diligence.",
+        "step4": "Negotiation, approval, and launch planning.",
+        "step5": "Opening execution and scale readiness."
+      },
+      "featured": {
+        "brand1": {
+          "name": "VitalCare Clinics",
+          "desc": "Health-focused franchise concept with strong recurring demand and operational support."
+        },
+        "brand2": {
+          "name": "UrbanNest Interiors",
+          "desc": "Home and design brand positioned for premium residential projects and repeat clients."
+        },
+        "brand3": {
+          "name": "ProAssist Services",
+          "desc": "Service-led model with lean operations and strong unit economics in growing corridors."
+        },
+        "brand4": {
+          "name": "Harvest Table",
+          "desc": "Modern food concept with attractive franchise systems and scalable operating playbooks."
+        },
+        "brand5": {
+          "name": "CloudCore Tech",
+          "desc": "Technology-enabled business services brand with high-margin recurring revenue opportunities."
+        },
+        "brand6": {
+          "name": "Prime Facility Partners",
+          "desc": "Multi-service B2B concept designed for corporate contracts and geographic expansion."
+        }
+      }
+    }
+  },
+  "Immigration": {
+    "title": "Immigration Pathways",
+    "subtitle": "Structured mobility for investors, founders, and families",
+    "desc": "We align visa strategy with business goals, capital deployment, and relocation timing to reduce friction across every step of your transition.",
+    "eb5": {
+      "title": "EB-5 Investor Program",
+      "desc": "Residence-by-investment strategy for clients seeking a long-term US presence through qualifying capital deployment."
+    },
+    "greenCard": {
+      "title": "Family & Residency Planning",
+      "desc": "Structured pathways for permanent residence aligned with family relocation and wealth continuity goals."
+    },
+    "e2": {
+      "title": "E-2 Treaty Investor Visa",
+      "desc": "A fast and practical route for entrepreneurs and investors launching or acquiring US operations."
+    },
+    "l1": {
+      "title": "L-1 Intracompany Transfer",
+      "desc": "Executive transfer strategy for businesses expanding management teams between jurisdictions."
+    },
+    "tn": {
+      "title": "Professional Mobility Solutions",
+      "desc": "Targeted mobility pathways for specialized talent and cross-border executive roles."
+    },
+    "student": {
+      "title": "Student & Academic Visas",
+      "desc": "Education-aligned visa planning for families prioritizing school access and long-term positioning."
+    }
+  },
+  "RealEstate": {
+    "title": "Real Estate Advisory",
+    "subtitle": "Acquisition, investment, and portfolio strategy",
+    "desc": "We structure property decisions around capital preservation, yield objectives, operational convenience, and relocation priorities.",
+    "buy": {
+      "title": "Acquisition Strategy",
+      "desc": "Targeted sourcing and negotiation for primary residences, investment units, and strategic property holds."
+    },
+    "invest": {
+      "title": "Investment Analysis",
+      "desc": "Cash-flow, appreciation, and market-positioning reviews to prioritize resilient real estate opportunities."
+    },
+    "sell": {
+      "title": "Exit & Repositioning",
+      "desc": "Disposition planning and portfolio rotation aligned with liquidity goals and new market entry."
+    }
+  },
+  "Academic": {
+    "title": "Academic Placement",
+    "subtitle": "Education strategy for internationally mobile families",
+    "desc": "We support school and university selection, visa planning, and transition logistics so academic continuity is never improvised.",
+    "selection": {
+      "label": "Placement",
+      "title": "School & University Selection",
+      "desc": "Shortlists built around academic fit, location, language, and long-term family plans."
+    },
+    "visa": {
+      "label": "Compliance",
+      "title": "Academic Visa Coordination",
+      "desc": "Documentation and process guidance aligned with admission timelines and relocation milestones."
+    },
+    "support": {
+      "label": "Landing",
+      "title": "Family Transition Support",
+      "desc": "Operational help for housing, orientation, and continuity during the first stage of relocation."
+    }
+  },
+  "CTABanner": {
+    "title": "Ready to Structure Your Next Move?",
+    "subtitle": "Speak with our team to align expansion, mobility, and investment decisions under one execution plan.",
+    "cta": "Request a strategic conversation"
+  },
   "Expertise": {
     "title": "Our Competitive Edge",
     "subtitle": "New Life Investments Capabilities",
@@ -164,7 +349,13 @@
     "q1": "Which legal structure do you recommend for UAE-USA operations?",
     "a1": "It depends on sector and tax objectives. We design structures combining a UAE entity (free zone or mainland) and a US entity, aligned with regulatory, banking, and mobility requirements.",
     "q2": "What timeline should we expect to establish UAE-USA operations?",
-    "a2": "Typically 8 to 16 weeks for incorporation, initial operational setup, and executive mobility roadmap, subject to jurisdiction and licensing requirements."
+    "a2": "Typically 8 to 16 weeks for incorporation, initial operational setup, and executive mobility roadmap, subject to jurisdiction and licensing requirements.",
+    "q3": "Do you support families relocating with education and housing needs?",
+    "a3": "Yes. We integrate school placement, housing search, immigration timing, and landing logistics into one coordinated plan.",
+    "q4": "Can you advise both first-time investors and established operators?",
+    "a4": "Yes. Our model works for founders entering a new market and for existing groups expanding through structured bilateral operations.",
+    "q5": "How do you reduce execution risk across both jurisdictions?",
+    "a5": "We sequence compliance, legal, operational, and investment decisions so each step supports the next instead of creating delays or hidden exposure."
   },
   "ThemeToggle": {
     "switchToDark": "Switch to dark mode",

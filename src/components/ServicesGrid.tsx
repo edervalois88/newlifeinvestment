@@ -14,10 +14,12 @@ const icons = {
   brand: Building2
 };
 
+type ServiceKey = keyof typeof icons;
+
 export default function ServicesGrid() {
   const t = useTranslations('Services');
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [activeService, setActiveService] = useState<'immigration' | 'franchise' | 'brand' | null>(null);
+  const [activeService, setActiveService] = useState<ServiceKey | null>(null);
 
   const services = [
     { key: 'immigration', icon: 'immigration' },

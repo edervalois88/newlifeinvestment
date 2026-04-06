@@ -34,6 +34,22 @@
       "step2": "Estructuración documental y plan de inversión.",
       "step3": "Acompañamiento hasta aprobación y aterrizaje."
     },
+    "realEstate": {
+      "title": "Real Estate",
+      "desc": "Estrategia de adquisición e inversión para clientes que estructuran decisiones inmobiliarias en Estados Unidos.",
+      "longDesc": "Conectamos adquisición inmobiliaria con residencia, rendimiento y prioridades operativas para soportar objetivos patrimoniales y de estilo de vida.",
+      "step1": "Definición de mercado objetivo, presupuesto y perfil del activo.",
+      "step2": "Filtrado de activos, underwriting y soporte en negociación.",
+      "step3": "Coordinación de cierre y ejecución posterior a la compra."
+    },
+    "academic": {
+      "title": "Academic Placement",
+      "desc": "Asesoría educativa para familias que alinean reubicación con escuela o universidad.",
+      "longDesc": "Coordinamos selección escolar, tiempos de admisión, implicaciones migratorias y logística de traslado para proteger la continuidad académica.",
+      "step1": "Revisión del perfil académico y diseño de shortlist.",
+      "step2": "Guía de admisiones y secuencia documental.",
+      "step3": "Soporte de traslado para una transición familiar ordenada."
+    },
     "franchise": {
       "title": "Selección de Franquicias",
       "desc": "Oportunidades de inversión curadas en franquicias globales de primer nivel.",
@@ -91,7 +107,10 @@
   },
   "Gateway": {
     "title": "Plataforma Operativa UAE-USA",
+    "desc1": "Estructuramos canales bidireccionales de inversión y operación entre Emiratos Árabes Unidos y Estados Unidos con rigor institucional.",
+    "desc2": "El modelo alinea capital, cumplimiento, movilidad y ejecución bajo una sola estrategia de corredor.",
     "desc": "Estructuramos canales de inversión bidireccionales y expansión operativa entre Emiratos Árabes Unidos y Estados Unidos con enfoque en gobierno, cumplimiento y ejecución.",
+    "opportunities": "Oportunidades de inversión, movilidad y entrada a mercado",
     "cities": {
       "dubai": "Dubái",
       "usa": "USA",
@@ -102,6 +121,7 @@
     "title": "Conéctese con Nosotros",
     "name": "Nombre completo",
     "email": "Correo electrónico",
+    "subject": "Asunto",
     "message": "Detalles de la consulta",
     "send": "Enviar solicitud",
     "successToast": "Solicitud enviada con éxito"
@@ -109,6 +129,9 @@
   "About": {
     "aboutTitleLine1": "Ejecución Transfronteriza",
     "aboutTitleLine2": "con Estándar Institucional",
+    "aboutDesc1": "Diseñamos estructuras de expansión para inversionistas y operadores que se mueven entre Emiratos y Estados Unidos.",
+    "aboutDesc2": "Nuestro enfoque alinea arquitectura legal, preparación operativa y despliegue de capital en un solo modelo de ejecución.",
+    "aboutDesc3": "El resultado es una ruta más clara para lanzar, escalar y gobernar crecimiento transfronterizo con confianza.",
     "aboutDesc": "Actuamos como socio estratégico para empresarios e inversionistas que expanden operaciones entre Emiratos Árabes Unidos y Estados Unidos, alineando estructura legal, operación y resultados.",
     "statsYears": "Años de experiencia",
     "statsOffices": "Oficinas globales",
@@ -149,6 +172,168 @@
     "storyBtitle": "Arquitectura de Marca en el Golfo: Escalando Negocios entre EAU y USA",
     "storyBdesc": "Asegurando el cumplimiento de marca y la alineación cultural de forma fluida."
   },
+  "StrategicBlocks": {
+    "title": "Capas de Ejecución Estratégica",
+    "subtitle": "Una plataforma integrada para coordinar inmigración, reubicación, real estate, educación y franquicias bajo una sola visión estratégica.",
+    "services": {
+      "title": "Stack de Servicios Transfronterizos",
+      "items": {
+        "immigration": {
+          "title": "Planeación Migratoria",
+          "desc": "Estrategia de visa, secuencia de cumplimiento y movilidad para fundadores, inversionistas y familias."
+        },
+        "relocation": {
+          "title": "Reubicación Ejecutiva",
+          "desc": "Soporte operativo para banca, licencias, logística de aterrizaje e integración local."
+        },
+        "realEstate": {
+          "title": "Estructuración Inmobiliaria",
+          "desc": "Decisiones de adquisición y portafolio alineadas con residencia, rendimiento y estilo de vida."
+        },
+        "franchise": {
+          "title": "Expansión por Franquicias",
+          "desc": "Filtrado, negociación y plan de apertura para oportunidades de franquicia escalables."
+        },
+        "education": {
+          "title": "Colocación Académica",
+          "desc": "Orientación para escuelas y universidades de familias que se reubican con visión de largo plazo."
+        }
+      }
+    },
+    "competitiveEdge": {
+      "title": "Por Qué Nuestros Clientes Nos Eligen",
+      "integrityTitle": "Integridad",
+      "integrityDesc": "Cada recomendación se alinea con gobierno corporativo, visibilidad de riesgo y protección del inversionista.",
+      "experienceTitle": "Experiencia",
+      "experienceDesc": "Convertimos decisiones transfronterizas complejas en hojas de ruta ejecutables y medibles.",
+      "teamTitle": "Equipo de Ejecución",
+      "teamDesc": "Expertise legal, operativo, académico y de inversión conectado bajo un solo modelo consultivo."
+    },
+    "mission": {
+      "title": "Misión",
+      "desc": "Simplificar expansiones de alto impacto entre Emiratos y Estados Unidos mediante una ejecución rigurosa y orientada al inversionista."
+    },
+    "vision": {
+      "title": "Visión",
+      "desc": "Convertirnos en la plataforma referente para crecimiento bilateral, movilidad y expansión internacional estructurada."
+    },
+    "franchise": {
+      "title": "Pipeline de Franquicias Destacadas",
+      "requestInfo": "Solicitar información",
+      "categories": {
+        "all": "Todas",
+        "food": "Food",
+        "health": "Health",
+        "home": "Home",
+        "services": "Services",
+        "tech": "Tech"
+      },
+      "process": {
+        "step1": "Perfil del inversionista, rango de capital y objetivos operativos.",
+        "step2": "Filtrado por sector y creación de shortlist.",
+        "step3": "Due diligence financiero y legal.",
+        "step4": "Negociación, aprobación y plan de apertura.",
+        "step5": "Ejecución de apertura y preparación para escalar."
+      },
+      "featured": {
+        "brand1": {
+          "name": "VitalCare Clinics",
+          "desc": "Concepto enfocado en salud con demanda recurrente y sólido soporte operativo."
+        },
+        "brand2": {
+          "name": "UrbanNest Interiors",
+          "desc": "Marca de hogar y diseño posicionada para proyectos residenciales premium y clientes recurrentes."
+        },
+        "brand3": {
+          "name": "ProAssist Services",
+          "desc": "Modelo orientado a servicios con operación ligera y fuertes unit economics en corredores de crecimiento."
+        },
+        "brand4": {
+          "name": "Harvest Table",
+          "desc": "Concepto gastronómico contemporáneo con sistemas atractivos de franquicia y playbooks escalables."
+        },
+        "brand5": {
+          "name": "CloudCore Tech",
+          "desc": "Marca de servicios empresariales habilitada por tecnología con ingresos recurrentes de alto margen."
+        },
+        "brand6": {
+          "name": "Prime Facility Partners",
+          "desc": "Concepto B2B multiservicio diseñado para contratos corporativos y expansión geográfica."
+        }
+      }
+    }
+  },
+  "Immigration": {
+    "title": "Rutas Migratorias",
+    "subtitle": "Movilidad estructurada para inversionistas, fundadores y familias",
+    "desc": "Alineamos la estrategia de visa con objetivos de negocio, despliegue de capital y tiempos de reubicación para reducir fricción en cada etapa.",
+    "eb5": {
+      "title": "Programa EB-5 para Inversionistas",
+      "desc": "Estrategia de residencia por inversión para clientes que buscan presencia de largo plazo en Estados Unidos mediante capital calificado."
+    },
+    "greenCard": {
+      "title": "Residencia y Planeación Familiar",
+      "desc": "Rutas estructuradas de residencia permanente alineadas con reubicación familiar y continuidad patrimonial."
+    },
+    "e2": {
+      "title": "Visa E-2 para Inversionistas",
+      "desc": "Ruta ágil y práctica para empresarios e inversionistas que abren o adquieren operaciones en Estados Unidos."
+    },
+    "l1": {
+      "title": "Transferencia Intracorporativa L-1",
+      "desc": "Estrategia de movilidad ejecutiva para empresas que expanden equipos directivos entre jurisdicciones."
+    },
+    "tn": {
+      "title": "Soluciones de Movilidad Profesional",
+      "desc": "Rutas de movilidad específicas para talento especializado y roles ejecutivos transfronterizos."
+    },
+    "student": {
+      "title": "Visas Académicas y de Estudiante",
+      "desc": "Planeación migratoria ligada a educación para familias que priorizan acceso escolar y posicionamiento de largo plazo."
+    }
+  },
+  "RealEstate": {
+    "title": "Real Estate Advisory",
+    "subtitle": "Adquisición, inversión y estrategia patrimonial",
+    "desc": "Estructuramos decisiones inmobiliarias alrededor de preservación de capital, objetivos de rendimiento, conveniencia operativa y prioridades de reubicación.",
+    "buy": {
+      "title": "Estrategia de Adquisición",
+      "desc": "Búsqueda y negociación focalizada para residencias primarias, activos de inversión y posiciones estratégicas."
+    },
+    "invest": {
+      "title": "Análisis de Inversión",
+      "desc": "Revisión de flujo, apreciación y posicionamiento de mercado para priorizar oportunidades resilientes."
+    },
+    "sell": {
+      "title": "Salida y Reposicionamiento",
+      "desc": "Planeación de desinversión y rotación de portafolio alineada con liquidez y entrada a nuevos mercados."
+    }
+  },
+  "Academic": {
+    "title": "Academic Placement",
+    "subtitle": "Estrategia educativa para familias internacionales",
+    "desc": "Apoyamos la selección escolar y universitaria, la planeación migratoria y la logística de transición para que la continuidad académica no se improvise.",
+    "selection": {
+      "label": "Placement",
+      "title": "Selección de Colegio y Universidad",
+      "desc": "Shortlists construidos según ajuste académico, ubicación, idioma y visión familiar de largo plazo."
+    },
+    "visa": {
+      "label": "Compliance",
+      "title": "Coordinación de Visa Académica",
+      "desc": "Guía documental y de proceso alineada con admisiones y hitos de reubicación."
+    },
+    "support": {
+      "label": "Landing",
+      "title": "Soporte de Transición Familiar",
+      "desc": "Apoyo operativo en vivienda, orientación e integración durante la primera fase del traslado."
+    }
+  },
+  "CTABanner": {
+    "title": "¿Listo para Estructurar su Próximo Movimiento?",
+    "subtitle": "Converse con nuestro equipo para alinear expansión, movilidad e inversión bajo un solo plan de ejecución.",
+    "cta": "Solicitar conversación estratégica"
+  },
   "Expertise": {
     "title": "Nuestra Ventaja Competitiva",
     "subtitle": "Capacidades de New Life Investments",
@@ -164,7 +349,13 @@
     "q1": "¿Qué estructura legal recomiendan para operar entre EAU y USA?",
     "a1": "Depende de su industria y objetivo fiscal. Diseñamos esquemas con entidad en EAU (free zone o mainland) y entidad en USA, integrando cumplimiento regulatorio, bancario y migratorio.",
     "q2": "¿Qué tiempos consideran para establecer operaciones entre EAU y USA?",
-    "a2": "En promedio entre 8 y 16 semanas para constitución, apertura operativa inicial y hoja de ruta de movilidad ejecutiva, sujeto a jurisdicción y licencias aplicables."
+    "a2": "En promedio entre 8 y 16 semanas para constitución, apertura operativa inicial y hoja de ruta de movilidad ejecutiva, sujeto a jurisdicción y licencias aplicables.",
+    "q3": "¿Acompañan a familias que se reubican con necesidades de educación y vivienda?",
+    "a3": "Sí. Integramos selección educativa, búsqueda de vivienda, tiempos migratorios y logística de aterrizaje en un solo plan coordinado.",
+    "q4": "¿Pueden asesorar tanto a inversionistas nuevos como a operadores establecidos?",
+    "a4": "Sí. Nuestro modelo funciona para fundadores que entran a un nuevo mercado y para grupos ya operativos que buscan expandirse con estructura bilateral.",
+    "q5": "¿Cómo reducen el riesgo de ejecución entre ambas jurisdicciones?",
+    "a5": "Secuenciamos cumplimiento, legal, operación e inversión para que cada decisión impulse la siguiente sin generar retrasos ni exposición oculta."
   },
   "ThemeToggle": {
     "switchToDark": "Cambiar a modo oscuro",
