@@ -6,7 +6,13 @@
       "Bash(curl -L -o \"ifpg-logo.png\" \"https://images.g2crowd.com/uploads/attachment/file/1254568/ifpg-logo.png\")",
       "Bash(file ifpg-*.png)",
       "Bash(node -e ':*)",
-      "Read(//c/Users/EderV/**)"
+      "Read(//c/Users/EderV/**)",
+      "Bash(ls -lh \"C:\\\\Users\\\\EderV\\\\nli\\\\public\\\\IFPG_\"*)",
+      "Bash(cp /c/Users/EderV/nli/public/IFPG_Member_Badge_new.png /c/Users/EderV/nli/.claude/worktrees/modest-grothendieck/public/)",
+      "Bash(cp /c/Users/EderV/nli/public/IPFG_logo.png /c/Users/EderV/nli/.claude/worktrees/modest-grothendieck/public/IFPG_logo.png)",
+      "Bash(ls -lh /c/Users/EderV/nli/.claude/worktrees/modest-grothendieck/public/IFPG*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m 'feat: Add real IFPG badge and logo images:*)"
     ]
   }
 }

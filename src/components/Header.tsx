@@ -8,7 +8,7 @@ import React, { useEffect, useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 import LogoSvg from './LogoSvg';
 
-type Locale = 'en' | 'es' | 'ar';
+type Locale = 'en' | 'ar';
 
 export default function Header() {
   const t = useTranslations('Navigation');
@@ -104,12 +104,11 @@ export default function Header() {
               </div>
               <ul tabIndex={0} className="dropdown-content z-60 menu p-2 shadow bg-primary rounded-box w-40 border border-accent/20 mt-2 text-neutral">
                 {[
-                  { code: 'es', flag: '🇪🇸', label: t('languageEs') },
                   { code: 'en', flag: '🇺🇸', label: t('languageEn') },
                   { code: 'ar', flag: '🇦🇪', label: t('languageAr') }
                 ].map((lang) => (
                   <li key={lang.code}>
-                    <button onClick={() => handleLanguageChange(lang.code as 'en' | 'es' | 'ar')} className="flex items-center gap-2 hover:text-accent active:bg-accent/20">
+                    <button onClick={() => handleLanguageChange(lang.code as 'en' | 'ar')} className="flex items-center gap-2 hover:text-accent active:bg-accent/20">
                       <span className="text-base">{lang.flag}</span>
                       {lang.label}
                     </button>
@@ -180,7 +179,7 @@ export default function Header() {
             ].map((lang) => (
               <button
                 key={lang.code}
-                onClick={() => handleLanguageChange(lang.code as 'en' | 'es' | 'ar')}
+                onClick={() => handleLanguageChange(lang.code as 'en' | 'ar')}
                 className="flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 text-sm font-medium uppercase text-neutral hover:border-accent hover:text-accent transition-all"
               >
                 <span className="text-lg">{lang.flag}</span>

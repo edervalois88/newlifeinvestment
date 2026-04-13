@@ -33,10 +33,13 @@ const categoryMeta: Record<string, { icon: React.ElementType; gradientDark: stri
   'automotive':       { icon: Wrench,     gradientDark: 'dark:from-slate-900/60 dark:via-slate-800/30', gradientLight: 'from-slate-100 via-slate-50', colorDark: 'dark:text-slate-400', colorLight: 'text-slate-600' },
 };
 
+const ITEMS_PER_PAGE = 9;
+
 export default function StrategicBlocks() {
   const t = useTranslations('StrategicBlocks');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
 
   const handleRequestInfo = (brandName: string) => {
     window.dispatchEvent(
@@ -53,13 +56,7 @@ export default function StrategicBlocks() {
 
   const filteredBrands = useMemo(() => {
     let result = franchiseData.franchises;
-
-    // Filter by category
-    if (selectedCategory !== 'all') {
-      result = result.filter((item) => item.category === selectedCategory);
-    }
-
-    // Filter by search query
+    if (selectedCategory !== 'all') result = result.filter((item) => item.category === selectedCategory);
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
       result = result.filter((item) =>
@@ -68,9 +65,21 @@ export default function StrategicBlocks() {
         item.description.toLowerCase().includes(query)
       );
     }
-
     return result;
   }, [selectedCategory, searchQuery]);
+
+  const totalPages = Math.ceil(filteredBrands.length / ITEMS_PER_PAGE);
+  const paginatedBrands = filteredBrands.slice((currentPage - 1) * ITEMS_PER_PAGE, currentPage * ITEMS_PER_PAGE);
+
+  const handleCategoryChange = (key: string) => {
+    setSelectedCategory(key);
+    setCurrentPage(1);
+  };
+
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    setCurrentPage(1);
+  };
 
   return (
     <section id="strategic-blocks" className="py-24 bg-primary border-t border-white/5">
@@ -174,7 +183,7 @@ export default function StrategicBlocks() {
                 type="text"
                 placeholder="Search franchises..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => handleSearchChange(e.target.value)}
                 className="w-full bg-secondary/40 dark:bg-secondary/40 border border-white/10 dark:border-white/10 rounded-2xl pl-12 pr-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-white/40 focus:outline-none focus:border-accent/50 transition-colors"
               />
               {searchQuery && (
@@ -197,7 +206,7 @@ export default function StrategicBlocks() {
                   <button
                     key={category.key}
                     type="button"
-                    onClick={() => setSelectedCategory(category.key)}
+                    onClick={() => handleCategoryChange(category.key)}
                     className={`relative inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium tracking-widest uppercase border transition-all duration-300 ${
                       isActive
                         ? 'bg-primary text-accent border-accent shadow-[0_0_24px_rgba(197,160,89,0.45)] font-bold'
@@ -213,76 +222,58 @@ export default function StrategicBlocks() {
           </div>
 
           {/* Results counter */}
-          <div className="mb-6 text-sm text-gray-600 dark:text-white/60">
+          <div className="mb-5 text-sm text-gray-500 dark:text-white/50">
             Showing {filteredBrands.length} of {franchiseData.franchises.length} franchises
           </div>
 
-          {/* Brand cards grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Brand cards grid — minimal design */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <AnimatePresence mode="popLayout">
-              {filteredBrands.length > 0 ? (
-                filteredBrands.map((brand, idx) => {
+              {paginatedBrands.length > 0 ? (
+                paginatedBrands.map((brand, idx) => {
                   const meta = categoryMeta[brand.category];
                   const Icon = meta.icon;
                   return (
                     <motion.div
                       key={brand.id}
                       layout
-                      initial={{ opacity: 0, y: 20, scale: 0.97 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: -12, scale: 0.96 }}
-                      transition={{ duration: 0.32, delay: idx * 0.06 }}
-                      className="group relative flex flex-col rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary/40 hover:border-accent/40 transition-colors duration-300 premium-card premium-card--soft"
+                      initial={{ opacity: 0, y: 16 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{ duration: 0.25, delay: idx * 0.04 }}
+                      className="group flex items-center gap-4 p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary/40 hover:border-accent/40 hover:shadow-sm transition-all duration-200"
                     >
-                      {/* Card header — gradient + logo/avatar */}
-                      <div className={`relative flex items-center justify-center h-36 bg-gradient-to-b ${meta.gradientLight} ${meta.gradientDark} border-b border-gray-200 dark:border-white/5`}>
-                        <div className="absolute inset-0 opacity-5 dark:opacity-10 bg-[radial-gradient(ellipse_at_center,rgba(197,160,89,0.6)_0%,transparent_70%)]" />
+                      {/* Avatar */}
+                      <FranchiseAvatar
+                        name={brand.name}
+                        shortName={brand.shortName}
+                        category={brand.category}
+                        logo={brand.logo ?? undefined}
+                        className="w-12 h-12 rounded-xl shrink-0 text-sm font-bold"
+                      />
 
-                        {/* Logo or Avatar */}
-                        {brand.logo ? (
-                          <FranchiseAvatar
-                            name={brand.name}
-                            shortName={brand.shortName}
-                            category={brand.category}
-                            logo={brand.logo}
-                            className="w-16 h-16 rounded-lg"
-                          />
-                        ) : (
-                          <div className="flex flex-col items-center gap-2">
-                            <FranchiseAvatar
-                              name={brand.name}
-                              shortName={brand.shortName}
-                              category={brand.category}
-                              className="w-16 h-16 rounded-lg text-sm font-bold"
-                            />
-                          </div>
-                        )}
-
-                        {/* Category badge */}
-                        <span className="absolute top-4 left-4 text-[9px] uppercase tracking-[0.28em] text-accent/70 dark:text-accent/70 font-semibold">
+                      {/* Info */}
+                      <div className="flex-1 min-w-0">
+                        <p className="text-[9px] uppercase tracking-[0.22em] text-accent/70 font-semibold mb-0.5">
                           {brand.category.replace('-', ' ')}
-                        </span>
-                      </div>
-
-                      {/* Card body */}
-                      <div className="flex flex-col flex-1 p-6">
-                        <h4 className="text-xl font-playfair text-gray-900 dark:text-white mb-2 leading-snug">
+                        </p>
+                        <h4 className="text-sm font-semibold text-gray-900 dark:text-white/90 leading-snug truncate">
                           {brand.name}
                         </h4>
-                        <p className="text-xs text-accent mb-3 font-medium">{brand.shortName}</p>
-                        <p className="text-gray-600 dark:text-white/60 text-sm font-light leading-relaxed flex-1">
+                        <p className="text-xs text-gray-500 dark:text-white/55 mt-1 line-clamp-2 leading-relaxed font-light">
                           {brand.description}
                         </p>
-
-                        <button
-                          type="button"
-                          onClick={() => handleRequestInfo(brand.name)}
-                          className="mt-6 inline-flex items-center gap-2 self-start text-xs font-semibold tracking-widest uppercase text-accent hover:gap-3 transition-all duration-200"
-                        >
-                          {t('franchise.requestInfo')}
-                          <ArrowRight className="w-3.5 h-3.5" />
-                        </button>
                       </div>
+
+                      {/* CTA */}
+                      <button
+                        type="button"
+                        onClick={() => handleRequestInfo(brand.name)}
+                        className="shrink-0 text-accent/60 group-hover:text-accent transition-colors"
+                        aria-label="Request info"
+                      >
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
                     </motion.div>
                   );
                 })
@@ -291,14 +282,52 @@ export default function StrategicBlocks() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="col-span-full py-12 text-center text-gray-600 dark:text-white/60"
+                  className="col-span-full py-12 text-center text-gray-500 dark:text-white/50"
                 >
                   <p className="text-lg">No franchises match your search.</p>
-                  <p className="text-sm mt-2">Try adjusting your filters or search terms.</p>
+                  <p className="text-sm mt-1">Try adjusting your filters or search terms.</p>
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="mt-8 flex items-center justify-center gap-2">
+              <button
+                type="button"
+                onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                disabled={currentPage === 1}
+                className="px-3 py-2 rounded-xl border border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/60 hover:border-accent/40 hover:text-accent disabled:opacity-30 disabled:cursor-not-allowed transition-all text-sm"
+              >
+                ←
+              </button>
+
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  type="button"
+                  onClick={() => setCurrentPage(page)}
+                  className={`w-9 h-9 rounded-xl border text-xs font-medium transition-all ${
+                    page === currentPage
+                      ? 'bg-primary border-accent text-accent font-bold'
+                      : 'border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/60 hover:border-accent/40 hover:text-accent'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+
+              <button
+                type="button"
+                onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                disabled={currentPage === totalPages}
+                className="px-3 py-2 rounded-xl border border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/60 hover:border-accent/40 hover:text-accent disabled:opacity-30 disabled:cursor-not-allowed transition-all text-sm"
+              >
+                →
+              </button>
+            </div>
+          )}
 
           {/* Process steps — compact row below cards */}
           <div className="mt-10 grid grid-cols-2 md:grid-cols-5 gap-3">
