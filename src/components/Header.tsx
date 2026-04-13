@@ -74,7 +74,7 @@ export default function Header() {
             aria-current={isHomeRoute ? 'page' : undefined}
             className={`relative z-20 flex items-center transition-transform hover:scale-105 ${isHomeRoute ? 'after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-8 after:rounded-full after:bg-[#8f6a2f]' : ''}`}
           >
-            <LogoSvg className="h-9 sm:h-12 w-auto" aria-label={t('logoAlt')} />
+            <LogoSvg className="h-8 sm:h-10 w-auto max-w-[160px] sm:max-w-[200px]" aria-label={t('logoAlt')} />
           </Link>
 
           <nav className="hidden xl:flex items-center gap-6">

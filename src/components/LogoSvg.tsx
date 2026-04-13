@@ -7,7 +7,7 @@ export default function LogoSvg({ className = '', 'aria-label': ariaLabel }: { c
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1500 1500"
+      viewBox="145 330 1155 720"
       className={`logo-svg ${className}`}
       aria-label={ariaLabel}
       role={ariaLabel ? 'img' : undefined}
