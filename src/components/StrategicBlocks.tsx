@@ -209,8 +209,8 @@ export default function StrategicBlocks() {
                     onClick={() => handleCategoryChange(category.key)}
                     className={`relative inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium tracking-widest uppercase border transition-all duration-300 ${
                       isActive
-                        ? 'bg-primary text-accent border-accent shadow-[0_0_24px_rgba(197,160,89,0.45)] font-bold'
-                        : 'border-gray-300 dark:border-white/15 text-gray-600 dark:text-white/60 hover:border-accent/50 hover:text-accent dark:hover:text-accent bg-white dark:bg-secondary/30'
+                        ? 'bg-primary text-accent border-accent shadow-[0_0_20px_rgba(197,160,89,0.35)] font-bold'
+                        : 'border-white/15 text-white/55 bg-secondary/30 hover:border-accent/50 hover:text-accent'
                     }`}
                   >
                     {Icon && <Icon className="w-3 h-3" strokeWidth={2} />}
@@ -298,7 +298,7 @@ export default function StrategicBlocks() {
                 type="button"
                 onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                 disabled={currentPage === 1}
-                className="px-3 py-2 rounded-xl border border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/60 hover:border-accent/40 hover:text-accent disabled:opacity-30 disabled:cursor-not-allowed transition-all text-sm"
+                className="px-3 py-2 rounded-xl border border-white/10 bg-secondary/30 text-white/60 hover:border-accent/50 hover:text-accent disabled:opacity-25 disabled:cursor-not-allowed transition-all text-sm"
               >
                 ←
               </button>
@@ -311,7 +311,7 @@ export default function StrategicBlocks() {
                   className={`w-9 h-9 rounded-xl border text-xs font-medium transition-all ${
                     page === currentPage
                       ? 'bg-primary border-accent text-accent font-bold'
-                      : 'border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/60 hover:border-accent/40 hover:text-accent'
+                      : 'border-white/10 bg-secondary/30 text-white/60 hover:border-accent/50 hover:text-accent'
                   }`}
                 >
                   {page}
@@ -322,7 +322,7 @@ export default function StrategicBlocks() {
                 type="button"
                 onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
                 disabled={currentPage === totalPages}
-                className="px-3 py-2 rounded-xl border border-gray-200 dark:border-white/10 text-gray-600 dark:text-white/60 hover:border-accent/40 hover:text-accent disabled:opacity-30 disabled:cursor-not-allowed transition-all text-sm"
+                className="px-3 py-2 rounded-xl border border-white/10 bg-secondary/30 text-white/60 hover:border-accent/50 hover:text-accent disabled:opacity-25 disabled:cursor-not-allowed transition-all text-sm"
               >
                 →
               </button>
