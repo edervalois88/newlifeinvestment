@@ -9,6 +9,7 @@ import {
   HeartPulse, Sofa, Wrench, Utensils, Cpu, ArrowRight, Search, X
 } from 'lucide-react';
 import franchiseData from '@/data/franchises.json';
+import FranchiseAvatar from './FranchiseAvatar';
 
 const serviceItems = [
   { key: 'immigration', icon: Plane },
@@ -233,10 +234,30 @@ export default function StrategicBlocks() {
                       transition={{ duration: 0.32, delay: idx * 0.06 }}
                       className="group relative flex flex-col rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary/40 hover:border-accent/40 transition-colors duration-300 premium-card premium-card--soft"
                     >
-                      {/* Card header — gradient + icon */}
+                      {/* Card header — gradient + logo/avatar */}
                       <div className={`relative flex items-center justify-center h-36 bg-gradient-to-b ${meta.gradientLight} ${meta.gradientDark} border-b border-gray-200 dark:border-white/5`}>
                         <div className="absolute inset-0 opacity-5 dark:opacity-10 bg-[radial-gradient(ellipse_at_center,rgba(197,160,89,0.6)_0%,transparent_70%)]" />
-                        <Icon className={`w-12 h-12 ${meta.colorLight} ${meta.colorDark} group-hover:text-accent transition-colors duration-300`} strokeWidth={1.2} />
+
+                        {/* Logo or Avatar */}
+                        {brand.logo ? (
+                          <FranchiseAvatar
+                            name={brand.name}
+                            shortName={brand.shortName}
+                            category={brand.category}
+                            logo={brand.logo}
+                            className="w-16 h-16 rounded-lg"
+                          />
+                        ) : (
+                          <div className="flex flex-col items-center gap-2">
+                            <FranchiseAvatar
+                              name={brand.name}
+                              shortName={brand.shortName}
+                              category={brand.category}
+                              className="w-16 h-16 rounded-lg text-sm font-bold"
+                            />
+                          </div>
+                        )}
+
                         {/* Category badge */}
                         <span className="absolute top-4 left-4 text-[9px] uppercase tracking-[0.28em] text-accent/70 dark:text-accent/70 font-semibold">
                           {brand.category.replace('-', ' ')}
