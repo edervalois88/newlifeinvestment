@@ -124,7 +124,9 @@
     "subject": "Asunto",
     "message": "Detalles de la consulta",
     "send": "Enviar solicitud",
-    "successToast": "Solicitud enviada con éxito"
+    "sending": "Enviando...",
+    "successToast": "Solicitud enviada con éxito",
+    "errorToast": "Ocurrió un error. Por favor inténtelo de nuevo."
   },
   "About": {
     "aboutTitleLine1": "Ejecución Transfronteriza",
@@ -163,6 +165,7 @@
   },
   "Metadata": {
     "title": "Inversión Estratégica entre EAU y USA | New Life Investments",
+    "description": "Asesoría integral para estructurar inversión, cumplimiento y operación entre Emiratos Árabes Unidos y Estados Unidos.",
     "keywords": "Visa E-2, Expansión USA, Inversión Emiratos Árabes Unidos"
   },
   "SuccessStories": {
@@ -360,6 +363,17 @@
   "ThemeToggle": {
     "switchToDark": "Cambiar a modo oscuro",
     "switchToLight": "Cambiar a modo claro"
+  },
+  "Footer": {
+    "tagline": "Conectando los Emiratos Árabes Unidos y Estados Unidos a través de oportunidades de inversión estratégica.",
+    "servicesTitle": "Servicios",
+    "companyTitle": "Empresa",
+    "linkImmigration": "Inmigración",
+    "linkRealEstate": "Real Estate",
+    "linkAcademic": "Académico",
+    "linkFranchises": "Franquicias",
+    "linkExpertise": "Expertise",
+    "linkContact": "Contáctenos"
   },
   "Common": {
     "footerRights": "© {year} New Life Investments. Todos los derechos reservados."

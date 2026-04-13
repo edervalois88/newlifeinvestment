@@ -68,7 +68,12 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
         >
-          <MagneticButton className="px-7 sm:px-10 py-3 sm:py-4">
+          <MagneticButton
+            className="px-7 sm:px-10 py-3 sm:py-4"
+            onClick={() => {
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
             <span className="font-playfair text-base sm:text-lg text-white tracking-wide">{t('cta')}</span>
           </MagneticButton>
         </motion.div>

@@ -291,6 +291,11 @@ h6 {
   filter: invert(1) brightness(1.45) contrast(1.2);
 }
 
+/* Inline SVG logo — dark mode makes navy text white */
+[data-theme="dark"] .logo-svg {
+  --logo-main: #f4f7fb;
+}
+
 .premium-card {
   position: relative;
   overflow: hidden;

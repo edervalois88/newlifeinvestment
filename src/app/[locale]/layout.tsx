@@ -20,7 +20,19 @@ export async function generateMetadata({ params }: { params: Promise<{locale: st
 
   return {
     title: t('title'),
-    keywords: t('keywords')
+    description: t('description'),
+    keywords: t('keywords'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      type: 'website',
+      locale,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+    },
   };
 }
 
@@ -43,7 +55,15 @@ export default async function LocaleLayout({
   const isRtl = locale === 'ar';
 
   return (
-    <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'} data-theme="light" suppressHydrationWarning>
+    <html lang={locale} dir={isRtl ? 'rtl' : 'ltr'} suppressHydrationWarning>
+      <head>
+        {/* Inline script to apply saved theme before first paint, preventing FOUC */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}else{document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body className={`${manrope.variable} ${cormorant.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}

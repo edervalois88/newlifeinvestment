@@ -4,9 +4,9 @@ import { useTranslations } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/routing';
 import { motion } from 'motion/react';
 import { Globe, Menu, X } from 'lucide-react';
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import ThemeToggle from './ThemeToggle';
+import LogoSvg from './LogoSvg';
 
 type Locale = 'en' | 'es' | 'ar';
 
@@ -74,14 +74,7 @@ export default function Header() {
             aria-current={isHomeRoute ? 'page' : undefined}
             className={`relative z-20 flex items-center transition-transform hover:scale-105 ${isHomeRoute ? 'after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:w-8 after:rounded-full after:bg-[#8f6a2f]' : ''}`}
           >
-            <Image
-              src="/logo.jpg"
-              alt={t('logoAlt')}
-              width={180}
-              height={50}
-              priority
-              className="object-contain h-8 sm:h-10 w-auto site-logo"
-            />
+            <LogoSvg className="h-9 sm:h-12 w-auto" aria-label={t('logoAlt')} />
           </Link>
 
           <nav className="hidden xl:flex items-center gap-6">

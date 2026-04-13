@@ -7,12 +7,14 @@ export default function MagneticButton({
   children,
   className = '',
   type = 'button',
-  onClick
+  onClick,
+  disabled = false
 }: {
   children: React.ReactNode;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   onClick?: () => void;
+  disabled?: boolean;
 }) {
   const ref = useRef<HTMLButtonElement>(null);
   
@@ -42,12 +44,13 @@ export default function MagneticButton({
     <motion.button
       type={type}
       ref={ref}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={reset}
+      onMouseMove={!disabled ? handleMouseMove : undefined}
+      onMouseLeave={!disabled ? reset : undefined}
       onClick={onClick}
+      disabled={disabled}
       style={{ x: springX, y: springY }}
-      whileTap={{ scale: 0.95 }}
-      className={`group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1.5px] ${className}`}
+      whileTap={disabled ? undefined : { scale: 0.95 }}
+      className={`group relative inline-flex items-center justify-center overflow-hidden rounded-full p-[1.5px] ${disabled ? 'opacity-60 cursor-not-allowed' : ''} ${className}`}
     >
       <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,rgba(143,106,47,0)_0%,#8f6a2f_50%,rgba(143,106,47,0)_100%)]" />
       <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-medium text-white backdrop-blur-3xl transition-all duration-300 group-hover:text-[#8f6a2f] group-hover:bg-secondary">

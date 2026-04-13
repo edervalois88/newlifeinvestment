@@ -124,7 +124,9 @@
     "subject": "الموضوع",
     "message": "تفاصيل الاستفسار",
     "send": "إرسال طلب رسالة",
-    "successToast": "تم إرسال الطلب بنجاح"
+    "sending": "جارٍ الإرسال...",
+    "successToast": "تم إرسال الطلب بنجاح",
+    "errorToast": "حدث خطأ. يرجى المحاولة مرة أخرى."
   },
   "About": {
     "aboutTitleLine1": "تنفيذ عابر للحدود",
@@ -163,6 +165,7 @@
   },
   "Metadata": {
     "title": "توسع استراتيجي بين الإمارات وأمريكا | نيو لايف إنفستمنتس",
+    "description": "استشارات متكاملة لهيكلة الاستثمار والامتثال والتشغيل بين دولة الإمارات العربية المتحدة والولايات المتحدة.",
     "keywords": "توسع الإمارات وأمريكا، تأشيرة E-2، استثمار عابر للحدود"
   },
   "SuccessStories": {
@@ -360,6 +363,17 @@
   "ThemeToggle": {
     "switchToDark": "التبديل إلى الوضع الداكن",
     "switchToLight": "التبديل إلى الوضع الفاتح"
+  },
+  "Footer": {
+    "tagline": "نربط الإمارات العربية المتحدة والولايات المتحدة من خلال فرص الاستثمار الاستراتيجي.",
+    "servicesTitle": "الخدمات",
+    "companyTitle": "الشركة",
+    "linkImmigration": "الهجرة",
+    "linkRealEstate": "العقارات",
+    "linkAcademic": "التعليم",
+    "linkFranchises": "الامتيازات",
+    "linkExpertise": "الخبرة",
+    "linkContact": "اتصل بنا"
   },
   "Common": {
     "footerRights": "© {year} New Life Investments. جميع الحقوق محفوظة."

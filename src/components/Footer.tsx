@@ -1,18 +1,21 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { LinkedinIcon, InstagramIcon, FacebookIcon, Mail } from 'lucide-react';
 
 export default function Footer() {
+  const t = useTranslations('Footer');
+  const common = useTranslations('Common');
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { label: 'Immigration', href: '#immigration' },
-    { label: 'Real Estate', href: '#realEstate' },
-    { label: 'Academic', href: '#academic' },
-    { label: 'Franchises', href: '#franchises' },
-    { label: 'Expertise', href: '#expertise' },
+    { labelKey: 'linkImmigration', href: '/#immigration' },
+    { labelKey: 'linkRealEstate', href: '/#realEstate' },
+    { labelKey: 'linkAcademic', href: '/#academic' },
+    { labelKey: 'linkFranchises', href: '/franchises' },
+    { labelKey: 'linkExpertise', href: '/#expertise' },
   ];
 
   const socialLinks = [
@@ -58,7 +61,7 @@ export default function Footer() {
             >
               <h3 className="text-2xl font-playfair text-accent mb-3">New Life Investments</h3>
               <p className="text-white/50 text-sm leading-relaxed">
-                Connecting Saudi Arabia & The United States through strategic investment opportunities.
+                {t('tagline')}
               </p>
             </motion.div>
 
@@ -70,19 +73,19 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="md:col-span-1"
             >
-              <h4 className="text-white font-semibold mb-4 tracking-wide text-sm">Services</h4>
+              <h4 className="text-white font-semibold mb-4 tracking-wide text-sm">{t('servicesTitle')}</h4>
               <ul className="space-y-2">
-                {services.map((service, idx) => (
-                  <li key={idx}>
-                    <a href={service.href} className="text-white/50 hover:text-accent text-sm transition-colors">
-                      {service.label}
-                    </a>
+                {services.map((service) => (
+                  <li key={service.labelKey}>
+                    <Link href={service.href as '/franchises'} className="text-white/50 hover:text-accent text-sm transition-colors">
+                      {t(service.labelKey)}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </motion.div>
 
-            {/* Contact & Legal */}
+            {/* Contact */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -90,21 +93,11 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="md:col-span-1"
             >
-              <h4 className="text-white font-semibold mb-4 tracking-wide text-sm">Company</h4>
+              <h4 className="text-white font-semibold mb-4 tracking-wide text-sm">{t('companyTitle')}</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#contact" className="text-white/50 hover:text-accent text-sm transition-colors">
-                    Contact Us
-                  </a>
-                </li>
-                <li>
-                  <Link href="/privacy" className="text-white/50 hover:text-accent text-sm transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms" className="text-white/50 hover:text-accent text-sm transition-colors">
-                    Terms of Service
+                  <Link href="/#contact" className="text-white/50 hover:text-accent text-sm transition-colors">
+                    {t('linkContact')}
                   </Link>
                 </li>
               </ul>
@@ -124,7 +117,7 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
               className="text-white/40 text-sm tracking-wide"
             >
-              © {currentYear} New Life Investments — México. All Rights Reserved.
+              {common('footerRights', { year: currentYear })}
             </motion.div>
 
             {/* Social Links */}

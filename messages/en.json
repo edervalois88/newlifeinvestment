@@ -124,7 +124,9 @@
     "subject": "Subject",
     "message": "Inquiry Details",
     "send": "Send Message Request",
-    "successToast": "Request submitted successfully"
+    "sending": "Sending...",
+    "successToast": "Request submitted successfully",
+    "errorToast": "Something went wrong. Please try again."
   },
   "About": {
     "aboutTitleLine1": "Cross-Border Execution",
@@ -163,6 +165,7 @@
   },
   "Metadata": {
     "title": "Strategic UAE-USA Expansion | New Life Investments",
+    "description": "End-to-end advisory to structure investment, compliance, and operations between the UAE and the United States.",
     "keywords": "UAE USA expansion, E-2 Visa, cross-border investment"
   },
   "SuccessStories": {
@@ -360,6 +363,17 @@
   "ThemeToggle": {
     "switchToDark": "Switch to dark mode",
     "switchToLight": "Switch to light mode"
+  },
+  "Footer": {
+    "tagline": "Connecting the United Arab Emirates and the United States through strategic investment opportunities.",
+    "servicesTitle": "Services",
+    "companyTitle": "Company",
+    "linkImmigration": "Immigration",
+    "linkRealEstate": "Real Estate",
+    "linkAcademic": "Academic",
+    "linkFranchises": "Franchises",
+    "linkExpertise": "Expertise",
+    "linkContact": "Contact Us"
   },
   "Common": {
     "footerRights": "© {year} New Life Investments. All rights reserved."

@@ -26,22 +26,45 @@ export default function Contact() {
     };
   }, []);
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = async (formData: FormData) => {
-    const result = await sendLeadEmail(formData);
-    if (result.success) {
-      toast.success(t('successToast'), {
+    setIsSubmitting(true);
+    try {
+      const result = await sendLeadEmail(formData);
+      if (result.success) {
+        toast.success(t('successToast'), {
+          style: {
+            background: '#1a1a1a',
+            color: '#f7e7ce',
+            border: '1px solid rgba(247, 231, 206, 0.2)'
+          },
+          iconTheme: {
+            primary: '#f7e7ce',
+            secondary: '#1a1a1a',
+          },
+        });
+        formRef.current?.reset();
+        setSubject('');
+      } else {
+        toast.error(t('errorToast'), {
+          style: {
+            background: '#1a1a1a',
+            color: '#f7e7ce',
+            border: '1px solid rgba(247, 231, 206, 0.2)'
+          },
+        });
+      }
+    } catch {
+      toast.error(t('errorToast'), {
         style: {
           background: '#1a1a1a',
           color: '#f7e7ce',
           border: '1px solid rgba(247, 231, 206, 0.2)'
         },
-        iconTheme: {
-          primary: '#f7e7ce',
-          secondary: '#1a1a1a',
-        },
       });
-      formRef.current?.reset();
-      setSubject('');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -118,9 +141,9 @@ export default function Contact() {
             </div>
 
             <div className="mt-6 flex justify-center">
-              <MagneticButton type="submit">
+              <MagneticButton type="submit" disabled={isSubmitting}>
                 <span className="w-full h-full font-playfair text-lg text-white group-hover:text-accent tracking-wide cursor-pointer flex items-center justify-center">
-                  {t('send')}
+                  {isSubmitting ? t('sending') : t('send')}
                 </span>
               </MagneticButton>
             </div>
