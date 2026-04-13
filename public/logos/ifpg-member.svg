@@ -1,0 +1,38 @@
+<svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle with serrated edge -->
+  <defs>
+    <style>
+      .ifpg-text { font-family: Arial, sans-serif; }
+      .ifpg-label { font-size: 14px; font-weight: bold; color: #1e3a5f; }
+      .ifpg-subtext { font-size: 10px; color: #5b8ac5; }
+    </style>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="white" stroke="#4a6fa5" stroke-width="2"/>
+
+  <!-- Serrated border effect -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#4a6fa5" stroke-width="3" stroke-dasharray="5,3"/>
+
+  <!-- Inner decorative circle -->
+  <circle cx="100" cy="100" r="75" fill="none" stroke="#a9927e" stroke-width="1" opacity="0.5"/>
+
+  <!-- Globe/Earth icon -->
+  <circle cx="100" cy="75" r="20" fill="none" stroke="#1e3a5f" stroke-width="1.5"/>
+  <ellipse cx="100" cy="75" rx="18" ry="6" fill="none" stroke="#1e3a5f" stroke-width="1"/>
+  <path d="M 82 75 Q 100 85 118 75" fill="none" stroke="#d4a574" stroke-width="2"/>
+
+  <!-- IFPG Text -->
+  <text x="100" y="105" text-anchor="middle" class="ifpg-text ifpg-label">IFPG</text>
+
+  <!-- MEMBER Text -->
+  <text x="100" y="125" text-anchor="middle" class="ifpg-text ifpg-subtext" font-weight="500">MEMBER</text>
+
+  <!-- Circular text around border -->
+  <path id="circlePath" d="M 25, 100 A 75, 75 0 0, 1 175, 100" fill="none"/>
+  <text class="ifpg-text" font-size="9" fill="#4a6fa5" letter-spacing="2">
+    <textPath href="#circlePath" startOffset="50%" text-anchor="middle">
+      INTERNATIONAL FRANCHISE PROFESSIONALS GROUP
+    </textPath>
+  </text>
+</svg>
