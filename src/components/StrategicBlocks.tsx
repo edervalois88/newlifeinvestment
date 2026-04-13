@@ -323,29 +323,35 @@ export default function StrategicBlocks() {
               <p className="text-white/60 text-sm">Trusted by leading franchise professional organizations</p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-16">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-12">
               {/* IFPG Member Badge */}
               <div className="flex flex-col items-center gap-4">
-                <div className="w-48 h-48 bg-white rounded-2xl p-3 flex items-center justify-center border border-white/20 hover:shadow-lg transition-all">
+                <div className="w-56 h-56 bg-white rounded-2xl p-4 flex items-center justify-center border border-white/20 hover:shadow-lg transition-all">
                   <img
                     src="/logos/ifpg-member.png"
                     alt="IFPG Member Badge"
                     className="w-full h-full object-contain"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
                   />
                 </div>
-                <p className="text-xs text-white/60 text-center max-w-[160px]">Proud Member of IFPG</p>
+                <p className="text-xs text-white/60 text-center max-w-40">Proud Member of IFPG</p>
               </div>
 
               {/* IFPG Logo */}
               <div className="flex flex-col items-center gap-4">
-                <div className="w-56 h-32 bg-white rounded-2xl p-4 flex items-center justify-center border border-white/20 hover:shadow-lg transition-all">
+                <div className="w-56 h-56 bg-white rounded-2xl p-4 flex items-center justify-center border border-white/20 hover:shadow-lg transition-all">
                   <img
                     src="/logos/ifpg-logo.png"
                     alt="IFPG Logo"
                     className="w-full h-full object-contain"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
                   />
                 </div>
-                <p className="text-xs text-white/60 text-center max-w-[160px]">International Franchise Professionals Group</p>
+                <p className="text-xs text-white/60 text-center max-w-40">International Franchise Professionals Group</p>
               </div>
             </div>
 
