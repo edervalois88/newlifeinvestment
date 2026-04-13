@@ -222,7 +222,7 @@ export default function StrategicBlocks() {
           </div>
 
           {/* Results counter */}
-          <div className="mb-5 text-sm text-gray-500 dark:text-white/50">
+          <div className="mb-5 text-sm text-white/50">
             Showing {filteredBrands.length} of {franchiseData.franchises.length} franchises
           </div>
 
@@ -241,7 +241,7 @@ export default function StrategicBlocks() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -8 }}
                       transition={{ duration: 0.25, delay: idx * 0.04 }}
-                      className="group flex items-center gap-4 p-5 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary/40 hover:border-accent/40 hover:shadow-sm transition-all duration-200"
+                      className="group flex items-center gap-4 p-5 rounded-2xl border border-white/10 bg-secondary/40 hover:border-accent/50 transition-colors duration-200"
                     >
                       {/* Avatar */}
                       <FranchiseAvatar
@@ -257,10 +257,10 @@ export default function StrategicBlocks() {
                         <p className="text-[9px] uppercase tracking-[0.22em] text-accent/70 font-semibold mb-0.5">
                           {brand.category.replace('-', ' ')}
                         </p>
-                        <h4 className="text-sm font-semibold text-gray-900 dark:text-white/90 leading-snug truncate">
+                        <h4 className="text-sm font-medium text-white leading-snug truncate">
                           {brand.name}
                         </h4>
-                        <p className="text-xs text-gray-500 dark:text-white/55 mt-1 line-clamp-2 leading-relaxed font-light">
+                        <p className="text-xs text-white/60 mt-1 line-clamp-2 leading-relaxed font-light">
                           {brand.description}
                         </p>
                       </div>
@@ -282,7 +282,7 @@ export default function StrategicBlocks() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="col-span-full py-12 text-center text-gray-500 dark:text-white/50"
+                  className="col-span-full py-12 text-center text-white/50"
                 >
                   <p className="text-lg">No franchises match your search.</p>
                   <p className="text-sm mt-1">Try adjusting your filters or search terms.</p>
