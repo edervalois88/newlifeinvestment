@@ -309,6 +309,48 @@ export default function StrategicBlocks() {
               </div>
             ))}
           </div>
+
+          {/* Certifications & Trust Badges */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="mt-16 pt-12 border-t border-white/10"
+          >
+            <div className="text-center mb-8">
+              <h4 className="text-lg font-playfair text-white mb-2">Industry Recognition & Certification</h4>
+              <p className="text-white/60 text-sm">Trusted by leading franchise professional organizations</p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-12">
+              {/* IFPG Member Badge */}
+              <div className="flex flex-col items-center gap-3">
+                <div className="w-32 h-32 rounded-full border-2 border-accent/40 bg-secondary/20 flex items-center justify-center">
+                  <div className="text-center">
+                    <p className="text-accent font-bold text-xs tracking-widest">IFPG</p>
+                    <p className="text-white/70 text-[10px] mt-1">MEMBER</p>
+                  </div>
+                </div>
+                <p className="text-xs text-white/60 text-center max-w-[140px]">International Franchise Professionals Group</p>
+              </div>
+
+              {/* IFPG Certified Badge */}
+              <div className="flex flex-col items-center gap-3">
+                <div className="w-32 h-32 rounded-full border-2 border-accent/40 bg-secondary/20 flex items-center justify-center">
+                  <div className="text-center">
+                    <p className="text-accent font-bold text-xs tracking-widest">IFPG</p>
+                    <p className="text-white/70 text-[10px] mt-1">CERTIFIED</p>
+                  </div>
+                </div>
+                <p className="text-xs text-white/60 text-center max-w-[140px]">Professional Standards & Ethics</p>
+              </div>
+            </div>
+
+            <p className="text-center text-xs text-white/50 mt-6">
+              New Life Investments is a proud member and certified professional of the International Franchise Professionals Group
+            </p>
+          </motion.div>
         </motion.div>
       </div>
     </section>
