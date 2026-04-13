@@ -44,9 +44,9 @@ export default function Academic() {
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="group flex flex-col items-center text-center"
+                className="group flex flex-col items-center text-center h-full"
               >
-                <div className="glass-elegant border border-white/10 hover:border-accent/40 p-10 rounded-3xl w-full transition-all duration-500 hover:bg-white/5 flex flex-col items-center">
+                <div className="glass-elegant border border-white/10 hover:border-accent/40 p-10 rounded-3xl w-full transition-all duration-500 hover:bg-white/5 flex flex-col items-center h-full">
                   <div className="w-20 h-20 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-accent group-hover:text-secondary transition-all duration-300">
                     <Icon className="w-10 h-10 text-accent group-hover:text-secondary" strokeWidth={1.5} />
                   </div>
@@ -61,7 +61,7 @@ export default function Academic() {
                     {t(`${service.key}.title`)}
                   </h3>
 
-                  <p className="text-white/70 font-light text-sm leading-relaxed">
+                  <p className="text-white/70 font-light text-sm leading-relaxed flex-grow flex items-center">
                     {t(`${service.key}.desc`)}
                   </p>
                 </div>

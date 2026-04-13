@@ -49,17 +49,17 @@ export default function Process() {
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="group"
+                  className="group h-full"
                 >
-                    <div className="premium-card premium-card--strong bg-primary/50 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-white/5 transition-all duration-500 shadow-xl relative z-10 text-center">
+                    <div className="premium-card premium-card--strong bg-primary/50 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-white/5 transition-all duration-500 shadow-xl relative z-10 text-center h-full flex flex-col">
                       <div className="icon-shell w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 sm:mb-8 group-hover:scale-110">
                         <Icon className="icon-glyph w-8 h-8" />
                     </div>
                     <span className="block text-accent/50 text-xs font-bold tracking-widest uppercase mb-4">{t('stepLabel')} 0{index + 1}</span>
-                      <h3 className="text-base sm:text-lg font-playfair mb-4 leading-snug text-white/90 sm:text-white">
+                      <h3 className="text-base sm:text-lg font-playfair mb-4 leading-snug text-white/90 sm:text-white flex-grow">
                       {t(`process${step.key}`)}
                     </h3>
-                    <div className="w-8 h-1 bg-accent/20 mx-auto rounded-full group-hover:w-16 group-hover:bg-accent transition-all duration-500" />
+                    <div className="w-8 h-1 bg-accent/20 mx-auto rounded-full group-hover:w-16 group-hover:bg-accent transition-all duration-500 mt-auto" />
                   </div>
                 </motion.div>
               );
