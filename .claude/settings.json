@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -f ifpg-*.png)",
+      "Bash(curl -L -o \"ifpg-member.png\" \"https://images.g2crowd.com/uploads/attachment/file/1254567/ifpg-member-badge.png\")",
+      "Bash(curl -L -o \"ifpg-logo.png\" \"https://images.g2crowd.com/uploads/attachment/file/1254568/ifpg-logo.png\")",
+      "Bash(file ifpg-*.png)",
+      "Bash(node -e ':*)",
+      "Read(//c/Users/EderV/**)"
+    ]
+  }
+}

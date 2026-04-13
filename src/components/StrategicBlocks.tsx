@@ -328,7 +328,7 @@ export default function StrategicBlocks() {
               <div className="flex flex-col items-center gap-4">
                 <div className="w-56 h-56 bg-white rounded-2xl p-4 flex items-center justify-center border border-white/20 hover:shadow-lg transition-all">
                   <img
-                    src="/logos/ifpg-member.png"
+                    src="/IFPG_Member_Badge_new.png"
                     alt="IFPG Member Badge"
                     className="w-full h-full object-contain"
                     onError={(e) => {
@@ -343,7 +343,7 @@ export default function StrategicBlocks() {
               <div className="flex flex-col items-center gap-4">
                 <div className="w-56 h-56 bg-white rounded-2xl p-4 flex items-center justify-center border border-white/20 hover:shadow-lg transition-all">
                   <img
-                    src="/logos/ifpg-logo.png"
+                    src="/IFPG_logo.png"
                     alt="IFPG Logo"
                     className="w-full h-full object-contain"
                     onError={(e) => {
