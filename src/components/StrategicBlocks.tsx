@@ -20,16 +20,16 @@ const serviceItems = [
 
 const franchiseSteps = ['step1', 'step2', 'step3', 'step4', 'step5'];
 
-const categoryMeta: Record<string, { icon: React.ElementType; gradient: string }> = {
-  'health':           { icon: HeartPulse, gradient: 'from-emerald-900/60 via-emerald-800/30 to-transparent' },
-  'home':             { icon: Sofa,       gradient: 'from-amber-900/60 via-amber-800/30 to-transparent' },
-  'home-services':    { icon: Sofa,       gradient: 'from-amber-900/60 via-amber-800/30 to-transparent' },
-  'services':         { icon: Wrench,     gradient: 'from-sky-900/60 via-sky-800/30 to-transparent' },
-  'food':             { icon: Utensils,   gradient: 'from-rose-900/60 via-rose-800/30 to-transparent' },
-  'tech':             { icon: Cpu,        gradient: 'from-violet-900/60 via-violet-800/30 to-transparent' },
-  'beauty':           { icon: Sparkles,   gradient: 'from-pink-900/60 via-pink-800/30 to-transparent' },
-  'recreation':       { icon: Sparkles,   gradient: 'from-indigo-900/60 via-indigo-800/30 to-transparent' },
-  'automotive':       { icon: Wrench,     gradient: 'from-slate-900/60 via-slate-800/30 to-transparent' },
+const categoryMeta: Record<string, { icon: React.ElementType; gradientDark: string; gradientLight: string; colorDark: string; colorLight: string }> = {
+  'health':           { icon: HeartPulse, gradientDark: 'dark:from-emerald-900/60 dark:via-emerald-800/30', gradientLight: 'from-emerald-100 via-emerald-50', colorDark: 'dark:text-emerald-400', colorLight: 'text-emerald-600' },
+  'home':             { icon: Sofa,       gradientDark: 'dark:from-amber-900/60 dark:via-amber-800/30', gradientLight: 'from-amber-100 via-amber-50', colorDark: 'dark:text-amber-400', colorLight: 'text-amber-600' },
+  'home-services':    { icon: Sofa,       gradientDark: 'dark:from-amber-900/60 dark:via-amber-800/30', gradientLight: 'from-amber-100 via-amber-50', colorDark: 'dark:text-amber-400', colorLight: 'text-amber-600' },
+  'services':         { icon: Wrench,     gradientDark: 'dark:from-sky-900/60 dark:via-sky-800/30', gradientLight: 'from-sky-100 via-sky-50', colorDark: 'dark:text-sky-400', colorLight: 'text-sky-600' },
+  'food':             { icon: Utensils,   gradientDark: 'dark:from-rose-900/60 dark:via-rose-800/30', gradientLight: 'from-rose-100 via-rose-50', colorDark: 'dark:text-rose-400', colorLight: 'text-rose-600' },
+  'tech':             { icon: Cpu,        gradientDark: 'dark:from-violet-900/60 dark:via-violet-800/30', gradientLight: 'from-violet-100 via-violet-50', colorDark: 'dark:text-violet-400', colorLight: 'text-violet-600' },
+  'beauty':           { icon: Sparkles,   gradientDark: 'dark:from-pink-900/60 dark:via-pink-800/30', gradientLight: 'from-pink-100 via-pink-50', colorDark: 'dark:text-pink-400', colorLight: 'text-pink-600' },
+  'recreation':       { icon: Sparkles,   gradientDark: 'dark:from-indigo-900/60 dark:via-indigo-800/30', gradientLight: 'from-indigo-100 via-indigo-50', colorDark: 'dark:text-indigo-400', colorLight: 'text-indigo-600' },
+  'automotive':       { icon: Wrench,     gradientDark: 'dark:from-slate-900/60 dark:via-slate-800/30', gradientLight: 'from-slate-100 via-slate-50', colorDark: 'dark:text-slate-400', colorLight: 'text-slate-600' },
 };
 
 export default function StrategicBlocks() {
@@ -168,18 +168,18 @@ export default function StrategicBlocks() {
 
             {/* Search Bar */}
             <div className="relative mb-6">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40 pointer-events-none" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40 dark:text-white/40 pointer-events-none" />
               <input
                 type="text"
                 placeholder="Search franchises..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-secondary/40 border border-white/10 rounded-2xl pl-12 pr-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-accent/50 transition-colors"
+                className="w-full bg-secondary/40 dark:bg-secondary/40 border border-white/10 dark:border-white/10 rounded-2xl pl-12 pr-4 py-3 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-white/40 focus:outline-none focus:border-accent/50 transition-colors"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white/40 hover:text-white transition-colors"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-white/40 hover:text-gray-600 dark:hover:text-white transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -199,8 +199,8 @@ export default function StrategicBlocks() {
                     onClick={() => setSelectedCategory(category.key)}
                     className={`relative inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium tracking-widest uppercase border transition-all duration-300 ${
                       isActive
-                        ? 'bg-accent text-white border-accent shadow-[0_0_24px_rgba(197,160,89,0.45)] font-bold'
-                        : 'border-white/15 text-white/60 hover:border-accent/50 hover:text-accent bg-secondary/30'
+                        ? 'bg-accent text-white dark:text-white border-accent shadow-[0_0_24px_rgba(197,160,89,0.45)] font-bold'
+                        : 'border-gray-300 dark:border-white/15 text-gray-600 dark:text-white/60 hover:border-accent/50 hover:text-accent dark:hover:text-accent bg-white dark:bg-secondary/30'
                     }`}
                   >
                     {Icon && <Icon className="w-3 h-3" strokeWidth={2} />}
@@ -212,7 +212,7 @@ export default function StrategicBlocks() {
           </div>
 
           {/* Results counter */}
-          <div className="mb-6 text-sm text-white/60">
+          <div className="mb-6 text-sm text-gray-600 dark:text-white/60">
             Showing {filteredBrands.length} of {franchiseData.franchises.length} franchises
           </div>
 
@@ -231,25 +231,25 @@ export default function StrategicBlocks() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: -12, scale: 0.96 }}
                       transition={{ duration: 0.32, delay: idx * 0.06 }}
-                      className="group relative flex flex-col rounded-3xl overflow-hidden border border-white/10 bg-secondary/40 hover:border-accent/40 transition-colors duration-300 premium-card premium-card--soft"
+                      className="group relative flex flex-col rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 bg-white dark:bg-secondary/40 hover:border-accent/40 transition-colors duration-300 premium-card premium-card--soft"
                     >
                       {/* Card header — gradient + icon */}
-                      <div className={`relative flex items-center justify-center h-36 bg-gradient-to-b ${meta.gradient} border-b border-white/5`}>
-                        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_rgba(197,160,89,0.6)_0%,_transparent_70%)]" />
-                        <Icon className="w-12 h-12 text-accent/80 group-hover:text-accent transition-colors duration-300" strokeWidth={1.2} />
+                      <div className={`relative flex items-center justify-center h-36 bg-gradient-to-b ${meta.gradientLight} ${meta.gradientDark} border-b border-gray-200 dark:border-white/5`}>
+                        <div className="absolute inset-0 opacity-5 dark:opacity-10 bg-[radial-gradient(ellipse_at_center,rgba(197,160,89,0.6)_0%,transparent_70%)]" />
+                        <Icon className={`w-12 h-12 ${meta.colorLight} ${meta.colorDark} group-hover:text-accent transition-colors duration-300`} strokeWidth={1.2} />
                         {/* Category badge */}
-                        <span className="absolute top-4 left-4 text-[9px] uppercase tracking-[0.28em] text-accent/70 font-semibold">
+                        <span className="absolute top-4 left-4 text-[9px] uppercase tracking-[0.28em] text-accent/70 dark:text-accent/70 font-semibold">
                           {brand.category.replace('-', ' ')}
                         </span>
                       </div>
 
                       {/* Card body */}
                       <div className="flex flex-col flex-1 p-6">
-                        <h4 className="text-xl font-playfair text-white mb-2 leading-snug">
+                        <h4 className="text-xl font-playfair text-gray-900 dark:text-white mb-2 leading-snug">
                           {brand.name}
                         </h4>
-                        <p className="text-xs text-accent/70 mb-3 font-medium">{brand.shortName}</p>
-                        <p className="text-white/60 text-sm font-light leading-relaxed flex-1">
+                        <p className="text-xs text-accent mb-3 font-medium">{brand.shortName}</p>
+                        <p className="text-gray-600 dark:text-white/60 text-sm font-light leading-relaxed flex-1">
                           {brand.description}
                         </p>
 
@@ -270,7 +270,7 @@ export default function StrategicBlocks() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="col-span-full py-12 text-center text-white/60"
+                  className="col-span-full py-12 text-center text-gray-600 dark:text-white/60"
                 >
                   <p className="text-lg">No franchises match your search.</p>
                   <p className="text-sm mt-2">Try adjusting your filters or search terms.</p>
