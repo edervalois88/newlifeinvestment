@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(where gh:*)",
+      "Bash(winpty gh:*)",
+      "Bash(cmd /c \"gh pr create --help\")",
+      "Bash(node -e ':*)",
+      "WebFetch(domain:nlinvestmentsusa.com)"
+    ]
+  }
+}

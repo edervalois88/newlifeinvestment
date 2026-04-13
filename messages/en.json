@@ -15,94 +15,104 @@
     "logoAlt": "New Life Investments logo"
   },
   "Hero": {
-    "title": "UAE-USA Expansion Strategy",
-    "subtitle": "End-to-end advisory to structure investment, compliance, and operations between the United Arab Emirates and the United States.",
+    "title": "Your Gateway to Excellence",
+    "subtitle": "Welcome to your gateway to exclusive relocation experiences. Embark on a journey where seamless transitions meet curated living, ensuring unparalleled comfort and sophistication in every aspect of your move.",
     "cta": "Request a strategic assessment",
-    "imageAlt": "Global business corridor between UAE and USA"
+    "imageAlt": "Premium relocation and expansion services"
   },
   "Services": {
-    "title": "Strategic Solutions",
-    "detailsCta": "View service scope",
-    "contactCta": "Schedule a meeting",
-    "franchisePageCta": "Explore franchises page",
+    "title": "Our Core Services",
+    "detailsCta": "Learn more",
+    "contactCta": "Schedule a consultation",
+    "franchisePageCta": "Explore franchise opportunities",
     "close": "Close",
     "immigration": {
-      "title": "Immigration (USA)",
-      "desc": "Bespoke visa and residency pathways for high-net-worth individuals expanding into the US.",
-      "longDesc": "We design a complete immigration strategy aligned with your wealth profile, family goals, and US expansion timeline.",
-      "step1": "Legal intake and migration profile review.",
-      "step2": "Documentation framework and investment strategy.",
-      "step3": "Guided filing, approval, and soft landing support."
+      "title": "Immigration Services",
+      "desc": "Expert visa processing and immigration pathways for a smooth transition to the United States.",
+      "longDesc": "Our external firm of immigration lawyers guides you through the entire process, ensuring a hassle-free experience. From visa applications to navigating complex legal requirements, we offer personalized assistance for your relocation.",
+      "step1": "Initial immigration profile assessment and visa pathway analysis.",
+      "step2": "Documentation preparation and legal filing guidance.",
+      "step3": "Case management and relocation support through approval."
     },
     "realEstate": {
-      "title": "Real Estate",
-      "desc": "Acquisition and investment strategy for clients structuring property decisions in the US.",
-      "longDesc": "We connect property acquisition with residency, yield, and operational priorities to support both lifestyle and portfolio objectives.",
-      "step1": "Market targeting, budget definition, and property brief.",
-      "step2": "Asset screening, underwriting, and negotiation support.",
-      "step3": "Closing coordination and post-acquisition execution."
+      "title": "Real Estate Advisory",
+      "desc": "Comprehensive real estate services for investment or living needs in premium markets.",
+      "longDesc": "With in-depth market knowledge and access to exclusive property listings, our team guides you through buying, selling, building, or investing in properties.",
+      "step1": "Property search and market analysis in your target location.",
+      "step2": "Negotiation support and transaction coordination.",
+      "step3": "Closing management and post-acquisition support."
     },
     "academic": {
-      "title": "Academic Placement",
-      "desc": "Education advisory for families aligning relocation with school and university choices.",
-      "longDesc": "We coordinate school selection, admission timing, visa implications, and relocation logistics to protect academic continuity.",
-      "step1": "Academic profile review and shortlist design.",
-      "step2": "Admissions guidance and documentation sequencing.",
-      "step3": "Relocation support for a smooth family transition."
+      "title": "Education Services",
+      "desc": "Personalized university and school placement for families relocating with academic continuity.",
+      "longDesc": "University selection guidance, admission applications, visa assistance, accommodation arrangements, and ongoing academic support throughout your tenure.",
+      "step1": "Academic profile review and school/university shortlist design.",
+      "step2": "Admissions support and visa documentation.",
+      "step3": "Student landing support and ongoing guidance."
+    },
+    "relocation": {
+      "title": "Concierge Relocation",
+      "desc": "Complete relocation solutions handling every aspect of your move to ensure seamless transitions.",
+      "longDesc": "From banking and licensing to schools and lifestyle setup, our concierge team takes care of every detail so you can focus on settling in.",
+      "step1": "Pre-arrival planning: banking, housing, school selection.",
+      "step2": "On-arrival support: government documentation and local integration.",
+      "step3": "Post-arrival services: lifestyle management and ongoing support."
     },
     "franchise": {
-      "title": "Franchise Selection",
-      "desc": "Curated investment opportunities in top-tier global franchises.",
-      "longDesc": "We combine financial analysis, operational feasibility, and management-fit criteria to identify franchises with strong scaling potential.",
-      "step1": "Sector mapping, budget range, and priorities.",
-      "step2": "Due diligence, side-by-side comparison, and scenarios.",
-      "step3": "Negotiation, closing, and launch roadmap."
-    },
-    "brand": {
-      "title": "Brand Architecture",
-      "desc": "Crafting resilient brand identities for new and expanding enterprises.",
-      "longDesc": "We turn your value proposition into a clear, international, and credible brand system for high-trust markets.",
-      "step1": "Positioning and narrative audit.",
-      "step2": "Visual identity system and brand guidelines.",
-      "step3": "Omnichannel rollout with quality governance."
+      "title": "Franchise Services",
+      "desc": "Curated franchise investment opportunities with guidance through every stage.",
+      "longDesc": "We provide comprehensive support from finding the right opportunity to navigating legal and financial aspects of franchise ownership.",
+      "step1": "Franchise opportunity identification and sector analysis.",
+      "step2": "Due diligence, legal review, and financial modeling.",
+      "step3": "Negotiation support and launch execution planning."
     }
   },
   "FranchisesPage": {
-    "eyebrow": "International Franchises",
-    "title": "A Dedicated Division to Scale Your Investment Through Franchises",
-    "subtitle": "We connect international investors with high-performing brands through an analysis, selection, and execution model focused on returns, risk control, and launch speed.",
-    "primaryCta": "Request a tailored strategy",
-    "secondaryCta": "Back to services",
-    "advantageTitle": "What Makes Our Model Different",
-    "flowTitle": "A Friendlier, Guided Investment Flow",
-    "faqTitle": "Key Questions Before You Invest",
+    "eyebrow": "Franchise Opportunities",
+    "title": "Unlock Your Potential with Franchise Services",
+    "subtitle": "Our franchise service provides you with the guidance and support you need to successfully start and manage your own franchise business. From finding the right opportunity to navigating legal and financial aspects, we are here to help you every step of the way.",
+    "primaryCta": "Request franchise strategy consultation",
+    "secondaryCta": "Back to home",
+    "advantageTitle": "Three Pillars of Our Franchise Model",
+    "opportunitiesTitle": "Find the Perfect Franchise Opportunity",
+    "opportunitiesDesc": "We offer a wide range of franchise options across various industries, ensuring that you find the perfect fit for your interests and goals.",
+    "guidanceTitle": "Expert Guidance for Franchise Success",
+    "guidanceDesc": "Our team of experienced professionals will provide you with the knowledge and expertise needed to make informed decisions and achieve long-term success in your franchise business.",
+    "legalTitle": "Navigate Legal and Financial Aspects",
+    "legalDesc": "We will assist you in understanding and managing the legal and financial aspects of starting and running a franchise, ensuring compliance and minimizing risks.",
+    "flowTitle": "Your Franchise Investment Journey",
+    "brandsTitle": "Featured Franchise Pipeline",
+    "brandsDesc": "Explore curated franchise opportunities across multiple sectors with proven track records and strong growth potential.",
+    "faqTitle": "Franchise Investment FAQ",
+    "bookCta": "Book Your Free Consultation",
+    "bookDesc": "Contact us for an excellent experience and customer service.",
     "pillars": {
       "legalTitle": "Legal and Contractual Protection",
-      "legalDesc": "We review agreements, exit clauses, operating obligations, and regulatory requirements to reduce uncertainty from day one.",
+      "legalDesc": "We conduct thorough review of franchise agreements, exit clauses, operating obligations, and regulatory requirements to ensure your investment is protected from day one.",
       "growthTitle": "Growth with Real Metrics",
-      "growthDesc": "We assess expected returns, break-even points, hidden costs, and market sensitivity so decisions are data-backed.",
-      "executionTitle": "End-to-End Launch Execution",
-      "executionDesc": "We coordinate site selection, franchisor onboarding, and go-to-market planning so operations start with a strong structure."
+      "growthDesc": "We assess expected returns, break-even points, hidden costs, and market sensitivity using verified franchisor data and conservative financial modeling."
     },
     "flow": {
-      "step1Title": "Investor Profile and Goals",
-      "step1Desc": "We define ideal ticket size, return horizon, operating involvement, and risk tolerance.",
-      "step2Title": "Strategic Shortlist",
-      "step2Desc": "We present filtered options by sector, brand strength, franchisor support quality, and historical performance.",
-      "step3Title": "Due Diligence and Negotiation",
-      "step3Desc": "Financial auditing, legal review, and term negotiation to protect your investment.",
-      "step4Title": "Launch and Expansion Plan",
-      "step4Desc": "We create a 90-day opening roadmap plus a scale strategy for future units."
+      "step1Title": "Initial Consultation & Profile Assessment",
+      "step1Desc": "We understand your investment goals, capital availability, experience level, and operating preferences to identify the right opportunities.",
+      "step2Title": "Sector Research & Strategic Shortlist",
+      "step2Desc": "Filtered franchise options by sector, brand strength, franchisor quality, expansion potential, and historical performance metrics.",
+      "step3Title": "Comprehensive Due Diligence",
+      "step3Desc": "Financial auditing, legal agreement review, franchisor background verification, and comparative analysis with competing opportunities.",
+      "step4Title": "Negotiation & Term Structuring",
+      "step4Desc": "Expert negotiation of franchise fees, territory rights, payment terms, and contingency clauses to maximize your position.",
+      "step5Title": "Launch Execution & Ongoing Support",
+      "step5Desc": "90-day opening roadmap, site selection, staff training coordination, operational setup, and quarterly performance reviews."
     },
     "faq": {
       "q1": "What is the recommended minimum capital to start?",
-      "a1": "It depends on sector and brand, but we usually structure scenarios from USD 150,000 for franchises with strong support systems.",
+      "a1": "Capital requirements vary by franchise and sector. We typically structure opportunities ranging from USD 150,000 to USD 500,000+. We analyze your capital availability and present options that match your investment profile.",
       "q2": "Can I invest without personally operating the business?",
-      "a2": "Yes. We design structures with local operators and reporting dashboards so you keep visibility without daily operations.",
-      "q3": "How do you validate true franchise profitability?",
-      "a3": "We combine franchisor disclosures, market benchmarks, and conservative financial modeling assumptions.",
-      "q4": "Do you stay involved after opening?",
-      "a4": "Yes, we provide quarterly follow-up for performance optimization, cost control, and readiness to scale into additional units."
+      "a2": "Absolutely. Many of our clients operate franchises through local management teams. We design operational structures with reporting dashboards so you maintain visibility and control without daily involvement.",
+      "q3": "How do you validate franchise profitability claims?",
+      "a3": "We independently verify franchisor Item 19 disclosures, consult with existing franchise owners, analyze market benchmarks, and apply conservative financial modeling to ensure realistic projections.",
+      "q4": "What happens after the franchise opens?",
+      "a4": "We remain engaged with quarterly performance reviews, expense optimization analysis, market expansion planning, and readiness assessment for additional unit development."
     }
   },
   "Gateway": {
@@ -129,18 +139,18 @@
     "errorToast": "Something went wrong. Please try again."
   },
   "About": {
-    "aboutTitleLine1": "Cross-Border Execution",
-    "aboutTitleLine2": "with Institutional Standards",
-    "aboutDesc1": "We design expansion structures for investors and operators moving between the UAE and the United States.",
-    "aboutDesc2": "Our approach aligns legal architecture, operational readiness, and capital deployment in a single execution model.",
-    "aboutDesc3": "The result is a clearer path to launch, scale, and govern cross-border growth with confidence.",
-    "aboutDesc": "We act as a strategic partner for entrepreneurs and investors expanding operations between the United Arab Emirates and the USA, aligning legal structure, operations, and outcomes.",
+    "aboutTitleLine1": "Your High-End Concierge",
+    "aboutTitleLine2": "for Global Excellence",
+    "aboutDesc1": "New Life Investments USA, LLC is your dedicated concierge for immigration services, relocation services, real estate advisory, and education placement.",
+    "aboutDesc2": "Our team goes beyond the ordinary, curating personalized services to make your relocation seamless and sophisticated. We prioritize efficiency, reliability, and personalized care.",
+    "aboutDesc3": "We redefine relocation as a high-end boutique service where every offering is thoughtfully designed to exceed the unique needs and expectations of our diverse clientele.",
+    "aboutDesc": "At New Life Investments USA, LLC, we create unforgettable experiences for our clients, leaving a lasting impact as they embark on new beginnings.",
     "statsYears": "Years of experience",
     "statsOffices": "Global offices",
-    "statsIntegrity": "Integrity",
-    "imageAlt": "Corporate architecture and operational excellence",
+    "statsIntegrity": "100% Integrity",
+    "imageAlt": "Premium relocation and lifestyle services",
     "badgeTitle": "NLI",
-    "badgeSubtitle": "Global Advisory"
+    "badgeSubtitle": "Elite Concierge"
   },
   "Process": {
     "eyebrow": "5 key steps",
@@ -153,15 +163,15 @@
     "processStep5": "Lifestyle Management (Concierge)"
   },
   "Concierge": {
-    "conciergeTitle": "Concierge Services",
-    "conciergeDesc": "Delegate the operational execution of your landing. From executive relocation logistics to residence readiness and legal coordination before arrival.",
-    "tagline": "Operational Excellence",
-    "item1": "End-to-end executive relocation logistics",
-    "item2": "Residence handover ready for occupancy",
-    "item3": "Legal and insurance coordination",
-    "item4": "Local integration and strategic networking",
-    "item5": "24/7 ongoing executive support",
-    "imageAlt": "Executive relocation and setup support"
+    "conciergeTitle": "Relocation to Your Destination",
+    "conciergeDesc": "Experience a seamless transition with our comprehensive relocation services. We prioritize efficiency, reliability, and personalized care, ensuring a stress-free relocation tailored to your unique needs.",
+    "tagline": "Complete Solution",
+    "item1": "Car Purchase & Registration",
+    "item2": "Bank Accounts & Financial Setup",
+    "item3": "Real Estate & Home Setup",
+    "item4": "School/University Enrollment",
+    "item5": "Driver's License & Legal Documentation",
+    "imageAlt": "Premium relocation and concierge services"
   },
   "Metadata": {
     "title": "Strategic UAE-USA Expansion | New Life Investments",
@@ -348,17 +358,17 @@
     "teamDesc": "A multicultural taskforce of lawyers, brokers, and consultants at your disposal."
   },
   "FAQ": {
-    "title": "Frequent Q&A",
-    "q1": "Which legal structure do you recommend for UAE-USA operations?",
-    "a1": "It depends on sector and tax objectives. We design structures combining a UAE entity (free zone or mainland) and a US entity, aligned with regulatory, banking, and mobility requirements.",
-    "q2": "What timeline should we expect to establish UAE-USA operations?",
-    "a2": "Typically 8 to 16 weeks for incorporation, initial operational setup, and executive mobility roadmap, subject to jurisdiction and licensing requirements.",
-    "q3": "Do you support families relocating with education and housing needs?",
-    "a3": "Yes. We integrate school placement, housing search, immigration timing, and landing logistics into one coordinated plan.",
-    "q4": "Can you advise both first-time investors and established operators?",
-    "a4": "Yes. Our model works for founders entering a new market and for existing groups expanding through structured bilateral operations.",
-    "q5": "How do you reduce execution risk across both jurisdictions?",
-    "a5": "We sequence compliance, legal, operational, and investment decisions so each step supports the next instead of creating delays or hidden exposure."
+    "title": "Frequently Asked Questions",
+    "q1": "How can I find a suitable property?",
+    "a1": "Building a relationship with our high-end boutique real estate brokers ensures a tailored and exclusive experience. We provide in-depth market knowledge and access to premium property listings suited to your lifestyle and investment goals.",
+    "q2": "What services do you offer for relocation?",
+    "a2": "Our premium relocation services extend beyond physical moving. We assist with school placement, home setup, driving license guidance, cultural integration support, legal coordination, and personalized concierge services.",
+    "q3": "What investment strategies do you recommend?",
+    "a3": "We tailor investment strategies to your individual needs. From real estate investments to franchise opportunities, we customize portfolios aligned with your financial goals and accompany you every step of the way.",
+    "q4": "How can I start the process?",
+    "a4": "Begin with an initial consultation—in-person, by phone, or virtually. Discuss your financial goals, relocation preferences, and any specific needs or concerns. We'll create a customized roadmap for your success.",
+    "q5": "How long does a typical relocation take?",
+    "a5": "Timeline varies based on visa requirements and personal circumstances. Most clients complete immigration, housing, and school placement within 4-12 weeks with our coordinated support structure."
   },
   "ThemeToggle": {
     "switchToDark": "Switch to dark mode",

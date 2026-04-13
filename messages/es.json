@@ -15,10 +15,10 @@
     "logoAlt": "Logotipo de New Life Investments"
   },
   "Hero": {
-    "title": "Estrategia de Expansión UAE-USA",
-    "subtitle": "Asesoría integral para estructurar inversión, cumplimiento y operación entre Emiratos Árabes Unidos y Estados Unidos.",
+    "title": "Tu Puerta a la Excelencia",
+    "subtitle": "Bienvenido a tu puerta hacia experiencias de reubicación exclusivas. Embárcate en un viaje donde transiciones fluidas se encuentran con vida seleccionada, garantizando confort y sofisticación incomparables en cada aspecto de tu mudanza.",
     "cta": "Solicitar diagnóstico estratégico",
-    "imageAlt": "Corredor global de negocios entre EAU y USA"
+    "imageAlt": "Servicios premium de reubicación y expansión"
   },
   "Services": {
     "title": "Soluciones Estratégicas",
@@ -51,31 +51,41 @@
       "step3": "Soporte de traslado para una transición familiar ordenada."
     },
     "franchise": {
-      "title": "Selección de Franquicias",
+      "title": "Servicios de Franquicia",
       "desc": "Oportunidades de inversión curadas en franquicias globales de primer nivel.",
       "longDesc": "Integramos análisis financiero, viabilidad operativa y compatibilidad con su estilo de gestión para seleccionar franquicias con alta probabilidad de escalamiento.",
       "step1": "Mapeo de sectores, ticket e intereses.",
       "step2": "Due diligence, comparativos y escenarios.",
       "step3": "Negociación, firma y plan de apertura."
     },
-    "brand": {
-      "title": "Arquitectura de Marca",
-      "desc": "Creación de identidades de marca sólidas para empresas nuevas y existentes.",
-      "longDesc": "Traducimos su propuesta de valor en una identidad clara, internacional y coherente para comunicar confianza en mercados exigentes.",
-      "step1": "Auditoría de posicionamiento y narrativa.",
-      "step2": "Sistema visual y lineamientos de marca.",
-      "step3": "Implementación omnicanal y control de calidad."
+    "relocation": {
+      "title": "Reubicación y Concierge",
+      "desc": "Soluciones completas de reubicación manejando cada aspecto de su mudanza para transiciones fluidas.",
+      "longDesc": "Desde banca y licencias hasta escuelas y configuración de estilo de vida, nuestro equipo de concierge se encarga de todos los detalles para que se pueda enfocar en acomodarse.",
+      "step1": "Planificación previa: banca, vivienda, selección de escuela.",
+      "step2": "Soporte en la llegada: documentación gubernamental e integración local.",
+      "step3": "Servicios posteriores: gestión de estilo de vida y soporte continuo."
     }
   },
   "FranchisesPage": {
-    "eyebrow": "Franquicias Internacionales",
-    "title": "Una Subdivisión Especializada para Escalar su Inversión con Franquicias",
-    "subtitle": "Conectamos inversionistas internacionales con marcas de alto rendimiento mediante una metodología de análisis, selección y ejecución que prioriza rentabilidad, control de riesgo y velocidad de apertura.",
-    "primaryCta": "Solicitar estrategia personalizada",
-    "secondaryCta": "Volver a servicios",
-    "advantageTitle": "Qué Hace Diferente Nuestro Modelo",
-    "flowTitle": "Flujo de Trabajo Más Amigable y Guiado",
-    "faqTitle": "Preguntas Clave Antes de Invertir",
+    "eyebrow": "Oportunidades de Franquicia",
+    "title": "Desbloquea Tu Potencial con Servicios de Franquicia",
+    "subtitle": "Nuestro servicio de franquicia proporciona la orientación y el apoyo que necesitas para iniciar y gestionar exitosamente tu propio negocio de franquicia. Desde encontrar la oportunidad correcta hasta navegar aspectos legales y financieros, estamos aquí para ayudarte.",
+    "primaryCta": "Solicitar consulta de estrategia de franquicia",
+    "secondaryCta": "Volver a inicio",
+    "opportunitiesTitle": "Encuentra la Oportunidad de Franquicia Perfecta",
+    "opportunitiesDesc": "Ofrecemos una amplia gama de oportunidades de franquicia en múltiples industrias, asegurando que encuentres la opción perfecta para tus intereses y objetivos.",
+    "guidanceTitle": "Orientación de Expertos para el Éxito de Franquicia",
+    "guidanceDesc": "Nuestro equipo de profesionales experimentados te proporcionará el conocimiento y la experiencia necesarios para tomar decisiones informadas y lograr el éxito a largo plazo.",
+    "legalTitle": "Navega Aspectos Legales y Financieros",
+    "legalDesc": "Te ayudaremos a entender y gestionar los aspectos legales y financieros de iniciar y ejecutar una franquicia, asegurando cumplimiento y minimizando riesgos.",
+    "advantageTitle": "Los Tres Pilares de Nuestro Modelo",
+    "flowTitle": "Tu Viaje de Inversión en Franquicia",
+    "brandsTitle": "Línea de Franquicias Destacadas",
+    "brandsDesc": "Explora oportunidades de franquicia seleccionadas con cuidado en múltiples sectores con historiales probados y fuerte potencial de crecimiento.",
+    "faqTitle": "Preguntas Frecuentes sobre Inversión en Franquicia",
+    "bookCta": "Reserva Tu Consulta Gratuita",
+    "bookDesc": "Contáctanos para una experiencia excepcional y servicio al cliente de calidad.",
     "pillars": {
       "legalTitle": "Blindaje Legal y Contractual",
       "legalDesc": "Revisamos contratos, cláusulas de salida, obligaciones operativas y requisitos regulatorios para reducir incertidumbre desde el inicio.",
@@ -85,14 +95,16 @@
       "executionDesc": "Coordinamos selección de ubicación, onboarding con la marca y plan de lanzamiento para que la operación arranque con estructura sólida."
     },
     "flow": {
-      "step1Title": "Perfil de Inversionista y Objetivos",
-      "step1Desc": "Definimos el ticket ideal, horizonte de retorno, nivel de participación operativa y tolerancia al riesgo.",
-      "step2Title": "Shortlist Estratégica",
-      "step2Desc": "Presentamos opciones filtradas por sector, reputación de marca, soporte del franquiciante y desempeño histórico.",
-      "step3Title": "Due Diligence y Negociación",
-      "step3Desc": "Auditoría de números, revisión legal y negociación de condiciones para proteger su inversión.",
-      "step4Title": "Plan de Apertura y Escalamiento",
-      "step4Desc": "Diseñamos una hoja de ruta de 90 días para apertura y una estrategia de expansión para siguientes unidades."
+      "step1Title": "Consulta Inicial & Evaluación del Perfil",
+      "step1Desc": "Entendemos sus objetivos de inversión, disponibilidad de capital, nivel de experiencia y preferencias operativas para identificar las oportunidades correctas.",
+      "step2Title": "Investigación de Sectores & Shortlist Estratégica",
+      "step2Desc": "Opciones de franquicia filtradas por sector, fortaleza de marca, calidad del franquiciante, potencial de expansión y métricas de desempeño.",
+      "step3Title": "Due Diligence Integral",
+      "step3Desc": "Auditoría financiera, revisión de acuerdos legales, verificación del franquiciante y análisis comparativo con oportunidades competidoras.",
+      "step4Title": "Negociación & Estructuración de Términos",
+      "step4Desc": "Negociación experta de honorarios de franquicia, derechos de territorio, términos de pago y cláusulas de contingencia para maximizar su posición.",
+      "step5Title": "Ejecución de Apertura & Soporte Continuo",
+      "step5Desc": "Hoja de ruta de apertura de 90 días, selección de ubicación, coordinación de capacitación, configuración operativa y revisiones trimestrales de desempeño."
     },
     "faq": {
       "q1": "¿Cuál es el capital mínimo recomendado para iniciar?",
@@ -129,18 +141,18 @@
     "errorToast": "Ocurrió un error. Por favor inténtelo de nuevo."
   },
   "About": {
-    "aboutTitleLine1": "Ejecución Transfronteriza",
-    "aboutTitleLine2": "con Estándar Institucional",
-    "aboutDesc1": "Diseñamos estructuras de expansión para inversionistas y operadores que se mueven entre Emiratos y Estados Unidos.",
-    "aboutDesc2": "Nuestro enfoque alinea arquitectura legal, preparación operativa y despliegue de capital en un solo modelo de ejecución.",
-    "aboutDesc3": "El resultado es una ruta más clara para lanzar, escalar y gobernar crecimiento transfronterizo con confianza.",
-    "aboutDesc": "Actuamos como socio estratégico para empresarios e inversionistas que expanden operaciones entre Emiratos Árabes Unidos y Estados Unidos, alineando estructura legal, operación y resultados.",
+    "aboutTitleLine1": "Tu Concierge de Alta Gama",
+    "aboutTitleLine2": "para Excelencia Global",
+    "aboutDesc1": "New Life Investments USA, LLC es tu concierge dedicado para servicios de inmigración, reubicación, asesoría de bienes raíces y colocación educativa.",
+    "aboutDesc2": "Nuestro equipo va más allá de lo ordinario, curando servicios personalizados para hacer tu reubicación fluida y sofisticada. Priorizamos eficiencia, confiabilidad y cuidado personalizado.",
+    "aboutDesc3": "Redefinimos la reubicación como un servicio de boutique de alta gama donde cada oferta está cuidadosamente diseñada para superar las necesidades únicas de nuestra clientela diversa.",
+    "aboutDesc": "En New Life Investments USA, LLC, creamos experiencias inolvidables para nuestros clientes, dejando un impacto duradero mientras se embarcan en nuevos comienzos.",
     "statsYears": "Años de experiencia",
     "statsOffices": "Oficinas globales",
-    "statsIntegrity": "Integridad",
-    "imageAlt": "Arquitectura corporativa y excelencia operativa",
+    "statsIntegrity": "100% Integridad",
+    "imageAlt": "Servicios premium de reubicación y estilo de vida",
     "badgeTitle": "NLI",
-    "badgeSubtitle": "Advisory Global"
+    "badgeSubtitle": "Concierge Elite"
   },
   "Process": {
     "eyebrow": "5 pasos clave",

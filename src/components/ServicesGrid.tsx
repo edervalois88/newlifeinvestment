@@ -10,8 +10,7 @@ const icons = {
   immigration: Plane,
   realEstate: Home,
   academic: GraduationCap,
-  franchise: Store,
-  brand: Building2
+  relocation: Building2
 };
 
 type ServiceKey = keyof typeof icons;
@@ -25,8 +24,7 @@ export default function ServicesGrid() {
     { key: 'immigration', icon: 'immigration' },
     { key: 'realEstate', icon: 'realEstate' },
     { key: 'academic', icon: 'academic' },
-    { key: 'franchise', icon: 'franchise' },
-    { key: 'brand', icon: 'brand' }
+    { key: 'relocation', icon: 'relocation' }
   ] as const;
 
   useEffect(() => {
@@ -56,7 +54,7 @@ export default function ServicesGrid() {
           <div className="w-24 h-1 bg-accent/30 mx-auto rounded-full" />
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => {
             const Icon = icons[service.icon as keyof typeof icons];
             
@@ -157,11 +155,11 @@ export default function ServicesGrid() {
 
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href={activeService === 'franchise' ? '/franchises' : '/#contact'}
+                  href="/#contact"
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-accent text-[#fff] font-semibold tracking-wide hover:opacity-90 transition-opacity"
                   onClick={() => setActiveService(null)}
                 >
-                  {activeService === 'franchise' ? t('franchisePageCta') : t('contactCta')}
+                  {t('contactCta')}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
 
