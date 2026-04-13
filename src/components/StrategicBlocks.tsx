@@ -2,8 +2,12 @@
 
 import React, { useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion } from 'motion/react';
-import { BriefcaseBusiness, Building2, CircleDollarSign, GraduationCap, Home, Plane, Scale, Sparkles, TrendingUp } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import {
+  BriefcaseBusiness, Building2, GraduationCap, Home, Plane,
+  Scale, Sparkles, TrendingUp,
+  HeartPulse, Sofa, Wrench, Utensils, Cpu, ArrowRight
+} from 'lucide-react';
 
 const serviceItems = [
   { key: 'immigration', icon: Plane },
@@ -25,6 +29,14 @@ const franchiseBrands = [
 ];
 
 const categoryKeys = ['all', 'food', 'health', 'home', 'services', 'tech'];
+
+const categoryMeta: Record<string, { icon: React.ElementType; gradient: string }> = {
+  health:   { icon: HeartPulse, gradient: 'from-emerald-900/60 via-emerald-800/30 to-transparent' },
+  home:     { icon: Sofa,       gradient: 'from-amber-900/60 via-amber-800/30 to-transparent' },
+  services: { icon: Wrench,     gradient: 'from-sky-900/60 via-sky-800/30 to-transparent' },
+  food:     { icon: Utensils,   gradient: 'from-rose-900/60 via-rose-800/30 to-transparent' },
+  tech:     { icon: Cpu,        gradient: 'from-violet-900/60 via-violet-800/30 to-transparent' },
+};
 
 export default function StrategicBlocks() {
   const t = useTranslations('StrategicBlocks');
@@ -129,58 +141,103 @@ export default function StrategicBlocks() {
           </motion.div>
         </div>
 
+        {/* ── Franchise Pipeline ── */}
         <motion.div
           initial={{ y: 28, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="glass-elegant rounded-3xl p-8"
         >
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-8">
-            <h3 className="text-2xl font-playfair text-white">{t('franchise.title')}</h3>
+          {/* Header + filter tabs */}
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-accent/70 mb-2">{t('franchise.title')}</p>
+              <h3 className="text-3xl md:text-4xl font-playfair text-white leading-tight">
+                {t('franchise.title')}
+              </h3>
+            </div>
+
+            {/* Category pill tabs */}
             <div className="flex flex-wrap gap-2">
-              {categoryKeys.map((category) => (
-                <button
-                  key={category}
-                  type="button"
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-3 py-1.5 rounded-full text-xs tracking-wide border transition-colors ${
-                    selectedCategory === category
-                      ? 'bg-accent/20 border-accent text-accent'
-                      : 'bg-secondary/40 border-white/15 text-white/70 hover:border-accent/50 hover:text-white'
-                  }`}
-                >
-                  {t(`franchise.categories.${category}`)}
-                </button>
-              ))}
+              {categoryKeys.map((category) => {
+                const isActive = selectedCategory === category;
+                const meta = category !== 'all' ? categoryMeta[category] : null;
+                const Icon = meta?.icon;
+                return (
+                  <button
+                    key={category}
+                    type="button"
+                    onClick={() => setSelectedCategory(category)}
+                    className={`relative inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium tracking-widest uppercase border transition-all duration-300 ${
+                      isActive
+                        ? 'bg-accent text-[#001A33] border-accent shadow-[0_0_18px_rgba(197,160,89,0.35)]'
+                        : 'border-white/15 text-white/60 hover:border-accent/50 hover:text-accent bg-secondary/30'
+                    }`}
+                  >
+                    {Icon && <Icon className="w-3 h-3" strokeWidth={2} />}
+                    {t(`franchise.categories.${category}`)}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-3 mb-8">
-            {franchiseSteps.map((step, index) => (
-              <div key={step} className="rounded-2xl border border-white/10 bg-secondary/40 p-4">
-                <span className="text-[10px] text-accent/80 tracking-widest">0{index + 1}</span>
-                <div className="text-white text-sm mt-1">{t(`franchise.process.${step}`)}</div>
-              </div>
-            ))}
+          {/* Brand cards grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <AnimatePresence mode="popLayout">
+              {filteredBrands.map((brand, idx) => {
+                const meta = categoryMeta[brand.category];
+                const Icon = meta.icon;
+                return (
+                  <motion.div
+                    key={brand.key}
+                    layout
+                    initial={{ opacity: 0, y: 20, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -12, scale: 0.96 }}
+                    transition={{ duration: 0.32, delay: idx * 0.06 }}
+                    className="group relative flex flex-col rounded-3xl overflow-hidden border border-white/10 bg-secondary/40 hover:border-accent/40 transition-colors duration-300 premium-card premium-card--soft"
+                  >
+                    {/* Card header — gradient + icon */}
+                    <div className={`relative flex items-center justify-center h-36 bg-gradient-to-b ${meta.gradient} border-b border-white/5`}>
+                      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_rgba(197,160,89,0.6)_0%,_transparent_70%)]" />
+                      <Icon className="w-12 h-12 text-accent/80 group-hover:text-accent transition-colors duration-300" strokeWidth={1.2} />
+                      {/* Category badge */}
+                      <span className="absolute top-4 left-4 text-[9px] uppercase tracking-[0.28em] text-accent/70 font-semibold">
+                        {t(`franchise.categories.${brand.category}`)}
+                      </span>
+                    </div>
+
+                    {/* Card body */}
+                    <div className="flex flex-col flex-1 p-6">
+                      <h4 className="text-xl font-playfair text-white mb-3 leading-snug">
+                        {t(`franchise.featured.${brand.key}.name`)}
+                      </h4>
+                      <p className="text-white/60 text-sm font-light leading-relaxed flex-1">
+                        {t(`franchise.featured.${brand.key}.desc`)}
+                      </p>
+
+                      <button
+                        type="button"
+                        onClick={() => handleRequestInfo(t(`franchise.featured.${brand.key}.name`))}
+                        className="mt-6 inline-flex items-center gap-2 self-start text-xs font-semibold tracking-widest uppercase text-accent hover:gap-3 transition-all duration-200"
+                      >
+                        {t('franchise.requestInfo')}
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </AnimatePresence>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredBrands.map((brand) => (
-              <div key={brand.key} className="rounded-2xl border border-white/10 bg-secondary/50 p-5 hover:border-accent/40 transition-colors">
-                <div className="flex items-center gap-2 text-accent mb-2">
-                  <CircleDollarSign className="w-4 h-4" strokeWidth={1.7} />
-                  <span className="text-xs tracking-widest uppercase">{t(`franchise.categories.${brand.category}`)}</span>
-                </div>
-                <h4 className="text-white font-playfair text-xl mb-2">{t(`franchise.featured.${brand.key}.name`)}</h4>
-                <p className="text-white/65 text-sm font-light leading-relaxed">{t(`franchise.featured.${brand.key}.desc`)}</p>
-                <button
-                  type="button"
-                  onClick={() => handleRequestInfo(t(`franchise.featured.${brand.key}.name`))}
-                  className="mt-4 px-4 py-2 rounded-full border border-accent/50 text-accent text-xs tracking-widest uppercase hover:bg-accent/15 transition-colors"
-                >
-                  {t('franchise.requestInfo')}
-                </button>
+          {/* Process steps — compact row below cards */}
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-5 gap-3">
+            {franchiseSteps.map((step, index) => (
+              <div key={step} className="rounded-2xl border border-white/8 bg-secondary/30 px-4 py-3">
+                <span className="text-[9px] text-accent/60 tracking-[0.25em] font-bold">0{index + 1}</span>
+                <p className="text-white/70 text-xs mt-1 leading-snug">{t(`franchise.process.${step}`)}</p>
               </div>
             ))}
           </div>
