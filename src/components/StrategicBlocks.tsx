@@ -200,7 +200,7 @@ export default function StrategicBlocks() {
                     onClick={() => setSelectedCategory(category.key)}
                     className={`relative inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium tracking-widest uppercase border transition-all duration-300 ${
                       isActive
-                        ? 'bg-accent text-white dark:text-white border-accent shadow-[0_0_24px_rgba(197,160,89,0.45)] font-bold'
+                        ? 'bg-primary text-accent border-accent shadow-[0_0_24px_rgba(197,160,89,0.45)] font-bold'
                         : 'border-gray-300 dark:border-white/15 text-gray-600 dark:text-white/60 hover:border-accent/50 hover:text-accent dark:hover:text-accent bg-white dark:bg-secondary/30'
                     }`}
                   >
