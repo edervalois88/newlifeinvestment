@@ -326,11 +326,11 @@ export default function StrategicBlocks() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 md:gap-16">
               {/* IFPG Member Badge */}
               <div className="flex flex-col items-center gap-4">
-                <div className="w-40 h-40 bg-white/5 backdrop-blur-sm rounded-2xl p-4 flex items-center justify-center border border-white/10 hover:border-accent/30 transition-colors">
+                <div className="w-48 h-48 bg-white rounded-2xl p-3 flex items-center justify-center border border-white/20 hover:shadow-lg transition-all">
                   <img
-                    src="/logos/ifpg-member.svg"
+                    src="/logos/ifpg-member.png"
                     alt="IFPG Member Badge"
-                    className="w-full h-full object-contain drop-shadow-lg"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <p className="text-xs text-white/60 text-center max-w-[160px]">Proud Member of IFPG</p>
@@ -338,11 +338,11 @@ export default function StrategicBlocks() {
 
               {/* IFPG Logo */}
               <div className="flex flex-col items-center gap-4">
-                <div className="w-40 h-24 bg-white/5 backdrop-blur-sm rounded-2xl p-4 flex items-center justify-center border border-white/10 hover:border-accent/30 transition-colors">
+                <div className="w-56 h-32 bg-white rounded-2xl p-4 flex items-center justify-center border border-white/20 hover:shadow-lg transition-all">
                   <img
-                    src="/logos/ifpg-logo.svg"
+                    src="/logos/ifpg-logo.png"
                     alt="IFPG Logo"
-                    className="w-full h-full object-contain drop-shadow-lg"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <p className="text-xs text-white/60 text-center max-w-[160px]">International Franchise Professionals Group</p>
