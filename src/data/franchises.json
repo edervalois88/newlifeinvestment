@@ -1,0 +1,344 @@
+{
+  "franchises": [
+    {
+      "id": "asp",
+      "name": "America's Swimming Pools Company",
+      "shortName": "ASP",
+      "category": "recreation",
+      "description": "Swimming pool construction, renovation, and maintenance services."
+    },
+    {
+      "id": "alexis-lauren",
+      "name": "Alexis Lauren",
+      "shortName": "Alexis Lauren",
+      "category": "beauty",
+      "description": "Premium beauty and personal care franchise with luxury services."
+    },
+    {
+      "id": "archadeck",
+      "name": "Archadeck",
+      "shortName": "Archadeck",
+      "category": "home-services",
+      "description": "Custom decks, patios, and outdoor living spaces design and installation."
+    },
+    {
+      "id": "2nd-family",
+      "name": "2nd Family",
+      "shortName": "2nd Family",
+      "category": "health",
+      "description": "Senior care and family support services for aging populations."
+    },
+    {
+      "id": "1800-plumber",
+      "name": "1-800-Plumber + Air",
+      "shortName": "1-800-Plumber",
+      "category": "services",
+      "description": "24/7 plumbing and HVAC services with rapid response guarantee."
+    },
+    {
+      "id": "1plus1-cares",
+      "name": "1 Plus 1 Cares",
+      "shortName": "1 Plus 1 Cares",
+      "category": "health",
+      "description": "In-home care and elderly assistance services nationwide."
+    },
+    {
+      "id": "american-family-care",
+      "name": "American Family Care",
+      "shortName": "American Family Care",
+      "category": "health",
+      "description": "Urgent care and occupational health services franchise."
+    },
+    {
+      "id": "art-of-drawers",
+      "name": "Art of Drawers",
+      "shortName": "Art of Drawers",
+      "category": "home-services",
+      "description": "Custom closet and storage organization solutions for homes."
+    },
+    {
+      "id": "aamco",
+      "name": "AAMCO Transmissions",
+      "shortName": "AAMCO",
+      "category": "automotive",
+      "description": "Transmission repair and automotive maintenance services."
+    },
+    {
+      "id": "abc-financial",
+      "name": "ABC Financial Services",
+      "shortName": "ABC Financial",
+      "category": "services",
+      "description": "Financial services and accounting support for businesses."
+    },
+    {
+      "id": "awesome-adventures",
+      "name": "Awesome Adventures Day Camps",
+      "shortName": "Awesome Adventures",
+      "category": "recreation",
+      "description": "Youth day camp and summer recreational programs."
+    },
+    {
+      "id": "battery-plus",
+      "name": "Battery Plus Bulbs",
+      "shortName": "Battery Plus",
+      "category": "automotive",
+      "description": "Batteries, bulbs, and automotive accessories retail."
+    },
+    {
+      "id": "budget-blinds",
+      "name": "Budget Blinds",
+      "shortName": "Budget Blinds",
+      "category": "home-services",
+      "description": "Window coverings, blinds, and home decor services."
+    },
+    {
+      "id": "carvel",
+      "name": "Carvel Ice Cream",
+      "shortName": "Carvel",
+      "category": "food",
+      "description": "Premium ice cream and dessert retail franchise."
+    },
+    {
+      "id": "century-21",
+      "name": "Century 21 Real Estate",
+      "shortName": "Century 21",
+      "category": "services",
+      "description": "Real estate brokerage and property management services."
+    },
+    {
+      "id": "choice-hotels",
+      "name": "Choice Hotels International",
+      "shortName": "Choice Hotels",
+      "category": "recreation",
+      "description": "Hotel and hospitality management franchise system."
+    },
+    {
+      "id": "cleaning-authority",
+      "name": "The Cleaning Authority",
+      "shortName": "Cleaning Authority",
+      "category": "home-services",
+      "description": "Professional house cleaning and janitorial services."
+    },
+    {
+      "id": "coffee-holding",
+      "name": "Coffee Holding Company",
+      "shortName": "Coffee Holding",
+      "category": "food",
+      "description": "Premium coffee roasting and retail franchise."
+    },
+    {
+      "id": "colors-workshop",
+      "name": "The Colors Workshop",
+      "shortName": "Colors Workshop",
+      "category": "beauty",
+      "description": "Hair coloring and beauty treatment services."
+    },
+    {
+      "id": "computerease",
+      "name": "ComputerEase",
+      "shortName": "ComputerEase",
+      "category": "tech",
+      "description": "Computer repair and IT support services."
+    },
+    {
+      "id": "concrete-restoration",
+      "name": "Concrete Restoration Inc",
+      "shortName": "Concrete Restoration",
+      "category": "home-services",
+      "description": "Concrete repair, restoration, and coating services."
+    },
+    {
+      "id": "culture-call",
+      "name": "CultureCall",
+      "shortName": "CultureCall",
+      "category": "services",
+      "description": "Employee engagement and company culture software."
+    },
+    {
+      "id": "deck-defense",
+      "name": "Deck Defense",
+      "shortName": "Deck Defense",
+      "category": "home-services",
+      "description": "Deck restoration, cleaning, and maintenance services."
+    },
+    {
+      "id": "dermatology-partners",
+      "name": "Dermatology Partners",
+      "shortName": "Dermatology Partners",
+      "category": "health",
+      "description": "Dermatology medical practice and aesthetic services."
+    },
+    {
+      "id": "desert-sun",
+      "name": "Desert Sun Auto",
+      "shortName": "Desert Sun",
+      "category": "automotive",
+      "description": "Auto detailing and car care services franchise."
+    },
+    {
+      "id": "doctors-express",
+      "name": "Doctors Express",
+      "shortName": "Doctors Express",
+      "category": "health",
+      "description": "Urgent care and walk-in medical clinics."
+    },
+    {
+      "id": "dunkin",
+      "name": "Dunkin' Donuts",
+      "shortName": "Dunkin'",
+      "category": "food",
+      "description": "Coffee, donuts, and breakfast franchise worldwide leader."
+    },
+    {
+      "id": "elitelash",
+      "name": "EliteLash Bar",
+      "shortName": "EliteLash",
+      "category": "beauty",
+      "description": "Eyelash extension and beauty services."
+    },
+    {
+      "id": "fantastic-sams",
+      "name": "Fantastic Sams",
+      "shortName": "Fantastic Sams",
+      "category": "beauty",
+      "description": "Hair salon and family haircare services."
+    },
+    {
+      "id": "festers-plumbing",
+      "name": "Fester's Plumbing",
+      "shortName": "Fester's Plumbing",
+      "category": "home-services",
+      "description": "Full-service plumbing repair and installation."
+    },
+    {
+      "id": "first-choice",
+      "name": "First Choice Healthcare",
+      "shortName": "First Choice",
+      "category": "health",
+      "description": "Occupational health and worker wellness services."
+    },
+    {
+      "id": "fitness-connection",
+      "name": "Fitness Connection",
+      "shortName": "Fitness Connection",
+      "category": "recreation",
+      "description": "Gym and fitness center franchise."
+    },
+    {
+      "id": "fix-it-right",
+      "name": "Fix-It Right",
+      "shortName": "Fix-It Right",
+      "category": "home-services",
+      "description": "Appliance repair and home maintenance services."
+    },
+    {
+      "id": "florida-solar",
+      "name": "Florida Solar Design Group",
+      "shortName": "Florida Solar",
+      "category": "home-services",
+      "description": "Solar energy installation and consultation services."
+    },
+    {
+      "id": "followup",
+      "name": "Follow Up",
+      "shortName": "Follow Up",
+      "category": "services",
+      "description": "Lead generation and sales follow-up services."
+    },
+    {
+      "id": "frontdoor",
+      "name": "Frontdoor Home Services",
+      "shortName": "Frontdoor",
+      "category": "home-services",
+      "description": "Home warranty and maintenance service provider."
+    },
+    {
+      "id": "fun-centers",
+      "name": "Fun Centers",
+      "shortName": "Fun Centers",
+      "category": "recreation",
+      "description": "Family entertainment and amusement center franchise."
+    },
+    {
+      "id": "general-nutrition",
+      "name": "General Nutrition Companies",
+      "shortName": "GNC",
+      "category": "health",
+      "description": "Nutritional supplements and wellness products retail."
+    },
+    {
+      "id": "getflex",
+      "name": "GetFlex",
+      "shortName": "GetFlex",
+      "category": "services",
+      "description": "On-demand services and task completion platform."
+    },
+    {
+      "id": "glass-doctor",
+      "name": "Glass Doctor",
+      "shortName": "Glass Doctor",
+      "category": "home-services",
+      "description": "Glass replacement and repair services."
+    },
+    {
+      "id": "goldstar",
+      "name": "Gold Star Service",
+      "shortName": "Gold Star",
+      "category": "services",
+      "description": "Commercial and residential cleaning services."
+    },
+    {
+      "id": "go-massage",
+      "name": "Go Massage & Wellness",
+      "shortName": "Go Massage",
+      "category": "beauty",
+      "description": "Massage therapy and wellness spa services."
+    },
+    {
+      "id": "goodyear",
+      "name": "Goodyear Tires",
+      "shortName": "Goodyear",
+      "category": "automotive",
+      "description": "Tire sales, service, and auto maintenance."
+    },
+    {
+      "id": "great-clips",
+      "name": "Great Clips",
+      "shortName": "Great Clips",
+      "category": "beauty",
+      "description": "Hair salon and haircut services franchise."
+    },
+    {
+      "id": "gross-electric",
+      "name": "Gross Electric",
+      "shortName": "Gross Electric",
+      "category": "home-services",
+      "description": "Electrical installation and repair services."
+    },
+    {
+      "id": "guardian-alarm",
+      "name": "Guardian Alarm",
+      "shortName": "Guardian Alarm",
+      "category": "services",
+      "description": "Home and business security alarm systems."
+    },
+    {
+      "id": "guidance-care",
+      "name": "GuidanceCare",
+      "shortName": "GuidanceCare",
+      "category": "health",
+      "description": "Healthcare consulting and staffing services."
+    }
+  ],
+  "categories": [
+    { "key": "all", "label": "All Industries" },
+    { "key": "health", "label": "Health & Wellness" },
+    { "key": "home-services", "label": "Home Services" },
+    { "key": "services", "label": "Professional Services" },
+    { "key": "beauty", "label": "Beauty & Personal Care" },
+    { "key": "recreation", "label": "Recreation & Leisure" },
+    { "key": "automotive", "label": "Automotive" },
+    { "key": "food", "label": "Food & Beverage" },
+    { "key": "tech", "label": "Technology" }
+  ]
+}

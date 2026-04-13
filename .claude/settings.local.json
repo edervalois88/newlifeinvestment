@@ -6,7 +6,22 @@
       "Bash(winpty gh:*)",
       "Bash(cmd /c \"gh pr create --help\")",
       "Bash(node -e ':*)",
-      "WebFetch(domain:nlinvestmentsusa.com)"
+      "WebFetch(domain:nlinvestmentsusa.com)",
+      "Bash(chmod +x /tmp/batch_extract.sh)",
+      "Bash(/tmp/batch_extract.sh)",
+      "Bash(chmod +x /tmp/fetch_franchises.sh)",
+      "Bash(chmod +x /tmp/collect_franchises.sh)",
+      "Bash(chmod +x /tmp/extract_all_franchises.sh)",
+      "Bash(chmod +x /tmp/simple_fetch.sh)",
+      "Bash(timeout 15 /tmp/simple_fetch.sh)",
+      "Bash(chmod +x /tmp/extract_via_curl.sh)",
+      "Bash(/tmp/extract_via_curl.sh)",
+      "Bash([ -f /tmp/complete_franchises.json ])",
+      "Bash(ls -lah /tmp/complete*)",
+      "Bash(/tmp/complete_extraction.sh)",
+      "Bash(tee /tmp/extraction_log.txt)",
+      "Bash([ -f /tmp/franchises_sample.json ])",
+      "Bash(ls -la /tmp/franchises*)"
     ]
   }
 }

@@ -6,8 +6,9 @@ import { motion, AnimatePresence } from 'motion/react';
 import {
   BriefcaseBusiness, Building2, GraduationCap, Home, Plane,
   Scale, Sparkles, TrendingUp,
-  HeartPulse, Sofa, Wrench, Utensils, Cpu, ArrowRight
+  HeartPulse, Sofa, Wrench, Utensils, Cpu, ArrowRight, Search, X
 } from 'lucide-react';
+import franchiseData from '@/data/franchises.json';
 
 const serviceItems = [
   { key: 'immigration', icon: Plane },
@@ -19,28 +20,22 @@ const serviceItems = [
 
 const franchiseSteps = ['step1', 'step2', 'step3', 'step4', 'step5'];
 
-const franchiseBrands = [
-  { key: 'brand1', category: 'health' },
-  { key: 'brand2', category: 'home' },
-  { key: 'brand3', category: 'services' },
-  { key: 'brand4', category: 'food' },
-  { key: 'brand5', category: 'tech' },
-  { key: 'brand6', category: 'services' }
-];
-
-const categoryKeys = ['all', 'food', 'health', 'home', 'services', 'tech'];
-
 const categoryMeta: Record<string, { icon: React.ElementType; gradient: string }> = {
-  health:   { icon: HeartPulse, gradient: 'from-emerald-900/60 via-emerald-800/30 to-transparent' },
-  home:     { icon: Sofa,       gradient: 'from-amber-900/60 via-amber-800/30 to-transparent' },
-  services: { icon: Wrench,     gradient: 'from-sky-900/60 via-sky-800/30 to-transparent' },
-  food:     { icon: Utensils,   gradient: 'from-rose-900/60 via-rose-800/30 to-transparent' },
-  tech:     { icon: Cpu,        gradient: 'from-violet-900/60 via-violet-800/30 to-transparent' },
+  'health':           { icon: HeartPulse, gradient: 'from-emerald-900/60 via-emerald-800/30 to-transparent' },
+  'home':             { icon: Sofa,       gradient: 'from-amber-900/60 via-amber-800/30 to-transparent' },
+  'home-services':    { icon: Sofa,       gradient: 'from-amber-900/60 via-amber-800/30 to-transparent' },
+  'services':         { icon: Wrench,     gradient: 'from-sky-900/60 via-sky-800/30 to-transparent' },
+  'food':             { icon: Utensils,   gradient: 'from-rose-900/60 via-rose-800/30 to-transparent' },
+  'tech':             { icon: Cpu,        gradient: 'from-violet-900/60 via-violet-800/30 to-transparent' },
+  'beauty':           { icon: Sparkles,   gradient: 'from-pink-900/60 via-pink-800/30 to-transparent' },
+  'recreation':       { icon: Sparkles,   gradient: 'from-indigo-900/60 via-indigo-800/30 to-transparent' },
+  'automotive':       { icon: Wrench,     gradient: 'from-slate-900/60 via-slate-800/30 to-transparent' },
 };
 
 export default function StrategicBlocks() {
   const t = useTranslations('StrategicBlocks');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleRequestInfo = (brandName: string) => {
     window.dispatchEvent(
@@ -56,9 +51,25 @@ export default function StrategicBlocks() {
   };
 
   const filteredBrands = useMemo(() => {
-    if (selectedCategory === 'all') return franchiseBrands;
-    return franchiseBrands.filter((item) => item.category === selectedCategory);
-  }, [selectedCategory]);
+    let result = franchiseData.franchises;
+
+    // Filter by category
+    if (selectedCategory !== 'all') {
+      result = result.filter((item) => item.category === selectedCategory);
+    }
+
+    // Filter by search query
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      result = result.filter((item) =>
+        item.name.toLowerCase().includes(query) ||
+        item.shortName.toLowerCase().includes(query) ||
+        item.description.toLowerCase().includes(query)
+      );
+    }
+
+    return result;
+  }, [selectedCategory, searchQuery]);
 
   return (
     <section id="strategic-blocks" className="py-24 bg-primary border-t border-white/5">
@@ -148,87 +159,123 @@ export default function StrategicBlocks() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          {/* Header + filter tabs */}
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.3em] text-accent/70 mb-2">{t('franchise.title')}</p>
-              <h3 className="text-3xl md:text-4xl font-playfair text-white leading-tight">
-                {t('franchise.title')}
-              </h3>
+          {/* Header */}
+          <div className="mb-10">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-accent/70 mb-2">{t('franchise.title')}</p>
+            <h3 className="text-3xl md:text-4xl font-playfair text-white leading-tight mb-8">
+              {t('franchise.title')}
+            </h3>
+
+            {/* Search Bar */}
+            <div className="relative mb-6">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40 pointer-events-none" />
+              <input
+                type="text"
+                placeholder="Search franchises..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-secondary/40 border border-white/10 rounded-2xl pl-12 pr-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-accent/50 transition-colors"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white/40 hover:text-white transition-colors"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              )}
             </div>
 
             {/* Category pill tabs */}
             <div className="flex flex-wrap gap-2">
-              {categoryKeys.map((category) => {
-                const isActive = selectedCategory === category;
-                const meta = category !== 'all' ? categoryMeta[category] : null;
+              {franchiseData.categories.map((category) => {
+                const isActive = selectedCategory === category.key;
+                const meta = category.key !== 'all' ? categoryMeta[category.key] : null;
                 const Icon = meta?.icon;
                 return (
                   <button
-                    key={category}
+                    key={category.key}
                     type="button"
-                    onClick={() => setSelectedCategory(category)}
+                    onClick={() => setSelectedCategory(category.key)}
                     className={`relative inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-medium tracking-widest uppercase border transition-all duration-300 ${
                       isActive
-                        ? 'bg-accent text-[#001A33] border-accent shadow-[0_0_18px_rgba(197,160,89,0.35)]'
+                        ? 'bg-accent text-white border-accent shadow-[0_0_24px_rgba(197,160,89,0.45)] font-bold'
                         : 'border-white/15 text-white/60 hover:border-accent/50 hover:text-accent bg-secondary/30'
                     }`}
                   >
                     {Icon && <Icon className="w-3 h-3" strokeWidth={2} />}
-                    {t(`franchise.categories.${category}`)}
+                    {category.label}
                   </button>
                 );
               })}
             </div>
           </div>
 
+          {/* Results counter */}
+          <div className="mb-6 text-sm text-white/60">
+            Showing {filteredBrands.length} of {franchiseData.franchises.length} franchises
+          </div>
+
           {/* Brand cards grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             <AnimatePresence mode="popLayout">
-              {filteredBrands.map((brand, idx) => {
-                const meta = categoryMeta[brand.category];
-                const Icon = meta.icon;
-                return (
-                  <motion.div
-                    key={brand.key}
-                    layout
-                    initial={{ opacity: 0, y: 20, scale: 0.97 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: -12, scale: 0.96 }}
-                    transition={{ duration: 0.32, delay: idx * 0.06 }}
-                    className="group relative flex flex-col rounded-3xl overflow-hidden border border-white/10 bg-secondary/40 hover:border-accent/40 transition-colors duration-300 premium-card premium-card--soft"
-                  >
-                    {/* Card header — gradient + icon */}
-                    <div className={`relative flex items-center justify-center h-36 bg-gradient-to-b ${meta.gradient} border-b border-white/5`}>
-                      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_rgba(197,160,89,0.6)_0%,_transparent_70%)]" />
-                      <Icon className="w-12 h-12 text-accent/80 group-hover:text-accent transition-colors duration-300" strokeWidth={1.2} />
-                      {/* Category badge */}
-                      <span className="absolute top-4 left-4 text-[9px] uppercase tracking-[0.28em] text-accent/70 font-semibold">
-                        {t(`franchise.categories.${brand.category}`)}
-                      </span>
-                    </div>
+              {filteredBrands.length > 0 ? (
+                filteredBrands.map((brand, idx) => {
+                  const meta = categoryMeta[brand.category];
+                  const Icon = meta.icon;
+                  return (
+                    <motion.div
+                      key={brand.id}
+                      layout
+                      initial={{ opacity: 0, y: 20, scale: 0.97 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -12, scale: 0.96 }}
+                      transition={{ duration: 0.32, delay: idx * 0.06 }}
+                      className="group relative flex flex-col rounded-3xl overflow-hidden border border-white/10 bg-secondary/40 hover:border-accent/40 transition-colors duration-300 premium-card premium-card--soft"
+                    >
+                      {/* Card header — gradient + icon */}
+                      <div className={`relative flex items-center justify-center h-36 bg-gradient-to-b ${meta.gradient} border-b border-white/5`}>
+                        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_rgba(197,160,89,0.6)_0%,_transparent_70%)]" />
+                        <Icon className="w-12 h-12 text-accent/80 group-hover:text-accent transition-colors duration-300" strokeWidth={1.2} />
+                        {/* Category badge */}
+                        <span className="absolute top-4 left-4 text-[9px] uppercase tracking-[0.28em] text-accent/70 font-semibold">
+                          {brand.category.replace('-', ' ')}
+                        </span>
+                      </div>
 
-                    {/* Card body */}
-                    <div className="flex flex-col flex-1 p-6">
-                      <h4 className="text-xl font-playfair text-white mb-3 leading-snug">
-                        {t(`franchise.featured.${brand.key}.name`)}
-                      </h4>
-                      <p className="text-white/60 text-sm font-light leading-relaxed flex-1">
-                        {t(`franchise.featured.${brand.key}.desc`)}
-                      </p>
+                      {/* Card body */}
+                      <div className="flex flex-col flex-1 p-6">
+                        <h4 className="text-xl font-playfair text-white mb-2 leading-snug">
+                          {brand.name}
+                        </h4>
+                        <p className="text-xs text-accent/70 mb-3 font-medium">{brand.shortName}</p>
+                        <p className="text-white/60 text-sm font-light leading-relaxed flex-1">
+                          {brand.description}
+                        </p>
 
-                      <button
-                        type="button"
-                        onClick={() => handleRequestInfo(t(`franchise.featured.${brand.key}.name`))}
-                        className="mt-6 inline-flex items-center gap-2 self-start text-xs font-semibold tracking-widest uppercase text-accent hover:gap-3 transition-all duration-200"
-                      >
-                        {t('franchise.requestInfo')}
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
-                  </motion.div>
-                );
-              })}
+                        <button
+                          type="button"
+                          onClick={() => handleRequestInfo(brand.name)}
+                          className="mt-6 inline-flex items-center gap-2 self-start text-xs font-semibold tracking-widest uppercase text-accent hover:gap-3 transition-all duration-200"
+                        >
+                          {t('franchise.requestInfo')}
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    </motion.div>
+                  );
+                })
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="col-span-full py-12 text-center text-white/60"
+                >
+                  <p className="text-lg">No franchises match your search.</p>
+                  <p className="text-sm mt-2">Try adjusting your filters or search terms.</p>
+                </motion.div>
+              )}
             </AnimatePresence>
           </div>
 
