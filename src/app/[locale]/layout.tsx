@@ -2,12 +2,11 @@ import {NextIntlClientProvider} from 'next-intl';
 import { getTranslations, getMessages, setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import {routing} from '@/i18n/routing';
-import { Manrope, Cormorant_Garamond } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import '../globals.css';
 import { notFound } from 'next/navigation';
 
-const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' });
-const cormorant = Cormorant_Garamond({ subsets: ['latin'], variable: '--font-cormorant', weight: ['400', '500', '600', '700'] });
+const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
@@ -64,7 +63,7 @@ export default async function LocaleLayout({
           }}
         />
       </head>
-      <body className={`${manrope.variable} ${cormorant.variable} antialiased`}>
+      <body className={`${outfit.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
