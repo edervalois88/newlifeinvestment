@@ -105,7 +105,6 @@ export default function About() {
               <p>{t('aboutDesc3')}</p>
             </div>
             <div className="grid grid-cols-2 sm:flex gap-4 sm:gap-8 border-t border-white/5 pt-10">
-              <StatCounter value={15} suffix="+" label={t('statsYears')} />
               <StatCounter value={3} label={t('statsOffices')} duration={1200} />
               <div className="col-span-2 sm:col-span-1">
                 <StatCounter value={100} suffix="%" label={t('statsIntegrity')} duration={1600} />
